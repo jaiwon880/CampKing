@@ -5,11 +5,6 @@ import pandas as pd
 import numpy as np
 # 중앙 정렬
 st.set_page_config(layout="wide") 
-# 8:2 비율의 컬럼 생성
-col1, col2 = st.columns([8, 2])
-# 탭 생성 : 첫번째 탭의 이름은 Tab_1로, Tab_2로 표시
-tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
-
 
 # 데이터 프레임 생성 main -> create_df
 def create_df():
@@ -49,7 +44,7 @@ def side_bar(df) :
     else : pass # 아닌 경우 패스
    
   # 검색바 생성 후 입력된 값을 변수 search에 저장 
-  search = s_bar.text_input('상세 검색 \n (시, 교명등의 키워드를 입력 :smile:)')
+  search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)')
 
   # 지역선택한 값 안에서 시험장소를 검색(입력, 위의 search)한 값과 일치하는 값을 담는다.
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
@@ -57,25 +52,29 @@ def side_bar(df) :
   # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 // 지역 변경시 마다 각 행의 고유 인덱스 번호로 출력이 되는걸 1번 부터로 출력하게함
   result.index = np.arange(1, len(result) + 1) 
 
-  return df, result # 데이터프레임과 지역선택의 값을 return // main으로 다시 return
+  return result # 데이터프레임과 지역선택의 값을 return // main으로 다시 return
 
 # 그래프 생성 // 메인에서 image_url를 받아온다.
 def create_graph(image_url):
   # image_url의 값으로 이미지 오픈 해 온다.
   image = Image.open(requests.get(image_url, stream=True).raw)
-  # 오픈된 image 변수를 return -> main in tab_1, tab_2
+  # 오픈된 image 변수를 return -> main 안에 tab_1, tab_2
   return image
   
 # main - 시작점
 def main():
   # create_df 함수를 호출하여 df, df_g_1 의 값을 return 받는다.
-  df, df_g_1 = create_df() 
+  df = create_df() 
   # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
-  df, result = side_bar(df) 
+  result = side_bar(df) 
 
+  # 8:2 비율의 컬럼 생성
+  col1, col2 = st.columns([8, 2])
+  # 탭 생성 : 첫번째 탭의 이름은 Tab_1로, Tab_2로 표시
+  tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
+  
+  # column 에 담을 내용
   with col1 :
-    # column 에 담을 내용
-    
     # 제목
     st.title(':smile: 시험장소를 안내해드립니다 :smile:') 
     
