@@ -37,7 +37,6 @@ def create_graph(image_url):
 
 # main 시작점
 def main():
-  # df, result = side_bar(create_df()) 
   df = create_df()
   result = side_bar(df)
   
