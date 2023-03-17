@@ -10,17 +10,15 @@ st.set_page_config(layout="wide")
 def create_df():
   # DF_URL
   df_URL = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EC%8B%9C%ED%97%98%EC%9E%A5%EC%86%8C_%EA%B0%80%EA%B3%B5%EC%B2%98%EB%A6%AC.csv"
-  df_URL_g_1 = "https://raw.githubusercontent.com/cc5547/Python/main/submission/cc5547/02_second_webapp/%EA%B7%B8%EB%9E%98%ED%94%84_1.csv"
   
   # df을 읽어 오면서 df언네임 삭제
   df = pd.read_csv(df_URL).iloc[:, 1:]
-  df_g_1 = pd.read_csv(df_URL_g_1)
 
   # df인덱스 올림 // df출력시 0부터 인덱스가 출력되는걸 1올려 버림
   df.index += 1
 
   # df 반환 // main으로 다시 return 
-  return df, df_g_1
+  return df
 
 # 사이드바 // 메인에서 df의 값을 받아온다. main -> create_df -> side_bar
 def side_bar(df) :
@@ -65,6 +63,7 @@ def create_graph(image_url):
 def main():
   # create_df 함수를 호출하여 df, df_g_1 의 값을 return 받는다.
   df = create_df() 
+
   # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
   result = side_bar(df) 
 
