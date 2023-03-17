@@ -49,7 +49,7 @@ def side_bar(df) :
   # 지역선택한 값 안에서 시험장소를 검색(입력, 위의 search)한 값과 일치하는 값을 담는다.
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
 
-  # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 // 지역 변경시 마다 각 행의 고유 인덱스 번호로 출력이 되는걸 1번 부터로 출력하게함
+  # result 데이터프레임의 인덱스를 0->1부터 시작하도록 변경 // 지역 변경시 마다 각 행의 고유 인덱스 번호로 출력이 되는걸 1번 부터로 출력하게함
   result.index = np.arange(1, len(result) + 1) 
 
   return result # 데이터프레임과 지역선택의 값을 return // main으로 다시 return
@@ -72,7 +72,7 @@ def main():
   col1, col2 = st.columns([8, 2])
   # 탭 생성 : 첫번째 탭의 이름은 Tab_1로, Tab_2로 표시
   tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
-  
+
   # column 에 담을 내용
   with col1 :
     # 제목
