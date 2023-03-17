@@ -72,7 +72,7 @@ def create_graph(image_url):
   return image
 
 def main():
-  # df, df_g_1 생성 및 함수 호출
+  # create_df 함수를 호출하여 df, df_g_1 의 값을 return 받는다.
   df, df_g_1 = create_df() 
   # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
   df, result = side_bar(df) 
