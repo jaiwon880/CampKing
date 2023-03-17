@@ -3,13 +3,7 @@ from PIL import Image
 import streamlit as st
 import pandas as pd
 import numpy as np
-
-# 중앙 정렬
-st.set_page_config(layout="wide") 
-# 8:2 비율의 컬럼 생성
-col1, col2 = st.columns([8, 2])
-# 탭 생성 : 첫번째 탭의 이름은 Tab_1로, Tab_2로 표시
-tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
+st.set_page_config(layout="wide")
 
 # 데이터 프레임 생성
 def create_df():
@@ -23,8 +17,8 @@ def side_bar(df) :
   s_bar = st.sidebar
   s_bar.title('지역을 선택해주세요.')
   area = df['지사명'].drop_duplicates().tolist()
-  
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
+
   for i in range(len(area)):
     if choice == area[i]: 
       result = df[df['지사명'] == area[i]]
@@ -34,7 +28,7 @@ def side_bar(df) :
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
   result.index = np.arange(1, len(result) + 1) 
 
-  return df, result
+  return result
 
 # 그래프 생성
 def create_graph(image_url):
@@ -43,16 +37,21 @@ def create_graph(image_url):
 
 # main 시작점
 def main():
-  df, result = side_bar(create_df()) 
-
+  # df, result = side_bar(create_df()) 
+  df = create_df()
+  result = side_bar(df)
+  
+  col1, col2 = st.columns([8, 2])   
+  
   with col1 :
-    st.title(':smile: 시험장소를 안내해드립니다 :smile:')
+    st.title(":smile: 시험장소를 안내해드립니다 :smile:")
     st.dataframe(result, width=800, height=500)
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
 
   with col2 : 
     st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
+  tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 : 
     image_url = "https://i.imgur.com/wOY7lUx.png"
     st.image(create_graph(image_url), use_column_width=True)
