@@ -70,6 +70,7 @@ def create_graph(image_url):
   image = Image.open(requests.get(image_url, stream=True).raw)
   # 오픈된 image 변수를 return -> main in tab_1, tab_2
   return image
+  
 # main - 시작점
 def main():
   # create_df 함수를 호출하여 df, df_g_1 의 값을 return 받는다.
