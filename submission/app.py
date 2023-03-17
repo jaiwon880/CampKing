@@ -68,7 +68,7 @@ def side_bar(df) :
 def create_graph(image_url):
   # image_url의 값으로 이미지 오픈 해 온다.
   image = Image.open(requests.get(image_url, stream=True).raw)
-  # 오픈된 image 변수 return -> main으로 
+  # 오픈된 image 변수를 return -> main으로 
   return image
 
 def main():
