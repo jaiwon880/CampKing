@@ -45,7 +45,7 @@ def side_bar(df) :
   area = df['지사명'].drop_duplicates().tolist()
 
   # choice라는 변수에 셀렉트박스의 값에서 선택된 값들을 저장
-  choice = s_bar.selectbox('지역 선택', area, index = 10)
+  choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
 
   # 위 area 리스트의 크기 만큼 반복 그냥 if문을 area의 리스트 크기만큼 작성
   for i in range(len(area)):
@@ -55,9 +55,11 @@ def side_bar(df) :
     else : pass
    
   # 검색바 만들기
-  search = s_bar.text_input('상세 검색(시 혹은 동을 입력 하세요.)')
+  search = s_bar.text_input('상세 검색 \n (시, 교명등의 키워드를 입력 :smile:)')
+
   # 지역선택한 값안에서 시험장소를 검색(입력)한 값과 일치하는 값을 담는다.
   result = df[(df['지사명'] == choice) & (df['시험장소'].str.contains(search))]
+
   # result 데이터프레임의 인덱스를 1부터 시작하도록 변경 
   result.index = np.arange(1, len(result) + 1) 
 
@@ -67,13 +69,11 @@ def create_graph(image_url):
   image = Image.open(requests.get(image_url, stream=True).raw)
   return image
 
-
 def main():
   # df 생성 및 함수 호출
   df, df_g_1 = create_df() 
   # 사이드 바 함수를 호출해서 df, result값을 반환 받는다.
   df, result = side_bar(df) 
-  
 
   with col1 :
     # column 에 담을 내용
