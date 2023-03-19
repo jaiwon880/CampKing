@@ -64,7 +64,7 @@ def side_bar(df) :
   return result # 데이터프레임과 지역선택의 값을 return // main으로 다시 return
 
 # 그래프 로드 // 메인에 tab에서 값을 받아온다.
-def load_graph(df_g1, df_g2):
+def create_graph(df_g1, df_g2):
   # main에 tab 카테고리에서 dg_g1이 None이 아니라면 아래 조건문 실행 반대면 밑 조건문 실행
   if df_g1 is not None:
     # 문자열에서 % 기호 제거 및 실수 타입으로 변환
@@ -136,11 +136,11 @@ def main():
   tab1, tab2= st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
   with tab1 :
     # tab1 에 담을 내용 // 그래프 1
-    st.plotly_chart(load_graph(df_g1, None))
+    st.plotly_chart(create_graph(df_g1, None))
     
   with tab2 :
     # tab2 에 담을 내용 // 그래프 2
-    st.plotly_chart(load_graph(None, df_g2))
+    st.plotly_chart(create_graph(None, df_g2))
     
 if __name__ == '__main__':
   main()
