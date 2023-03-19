@@ -65,12 +65,12 @@ def side_bar(df) :
 
 # 그래프 로드 // 메인에 tab에서 값을 받아온다.
 def create_graph(df_g1, df_g2):
+  fig = go.Figure()
+
   # main에 tab 카테고리에서 dg_g1이 None이 아니라면 아래 조건문 실행 반대면 밑 조건문 실행
   if df_g1 is not None:
     # 문자열에서 % 기호 제거 및 실수 타입으로 변환
     for col in df_g1.columns[1:] : df_g1[col] = df_g1[col].apply(lambda x: float(x[:-1]))
-
-    fig = go.Figure()
 
     # 연도별 색상 지정
     colors = px.colors.qualitative.Set3[:len(df_g1.columns)-1]
@@ -89,12 +89,10 @@ def create_graph(df_g1, df_g2):
     )
 
   elif df_g2 is not None:
-    fig = go.Figure()
     df_g2 = df_g2.drop(df_g2.columns[1], axis=1)
     years = df_g2.columns[1:]
     colors = px.colors.qualitative.Set3[:len(years)] # 연도별 색상 리스트 생성
-    for i, year in enumerate(years):
-        fig.add_trace(go.Bar(x=df_g2['구분'], y=df_g2[year], name=year, marker_color=colors[i]),)
+    for i, year in enumerate(years) : fig.add_trace(go.Bar(x=df_g2['구분'], y=df_g2[year], name=year, marker_color=colors[i]),)
 
     # 레이아웃 설정
     fig.update_layout(
