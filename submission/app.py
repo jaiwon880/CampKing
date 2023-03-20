@@ -91,13 +91,12 @@ def create_graph(df_g1, df_g2):
 
 # main 시작점
 def main():
-  df, df_g1, df_g2 = create_df()
-  result = side_bar(df)
+  df, df_g1, df_g2 = create_df() 
   
   col1, col2 = st.columns([8, 2])   
   with col1 :
     st.title(":smile: 시험장소를 안내해드립니다 :smile:")
-    st.dataframe(result, width=1000, height=500)
+    st.dataframe(side_bar(df), width=1000, height=500)
     st.subheader(":smile: 귀하의 합격을 기원합니다! :smile:")
   with col2 : st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
