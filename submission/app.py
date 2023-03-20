@@ -3,7 +3,6 @@ from PIL import Image
 import requests
 import pandas as pd
 import numpy as np
-
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -31,9 +30,8 @@ def side_bar(df) :
   area = df['지사명'].drop_duplicates().tolist()
   choice = s_bar.selectbox('지역 선택(재검색시 상세 검색을 지워 주세요)', area, index = 10)
 
-  for i in range(len(area)):
-    if choice == area[i] : 
-      result = df[df['지사명'] == area[i]]
+  for i in range(len(area)) : 
+    if choice == area[i] : result = df[df['지사명'] == area[i]]
     else : pass
 
   search = s_bar.text_input('상세 검색 (시, 교명등의 키워드를 입력 :smile:)', value = '')
@@ -101,10 +99,8 @@ def main():
   with col2 : st.markdown("[![Foo](https://i.imgur.com/SywJPmA.png)](https://map.naver.com/)")
 
   tab1, tab2 = st.tabs(['필기 년도 별 합격률' , '응시자 및 합격자 수'])
-  with tab1 : 
-    st.plotly_chart(create_graph(df_g1, None))
-  with tab2 : 
-    st.plotly_chart(create_graph(None, df_g2))
+  with tab1 : st.plotly_chart(create_graph(df_g1, None))
+  with tab2 : st.plotly_chart(create_graph(None, df_g2))
     
 if __name__ == '__main__':
   main()
