@@ -64,7 +64,7 @@ def create_graph(df_g1, df_g2):
         yaxis_title='합격률%',
         yaxis=dict(range=[0, 100]),
         plot_bgcolor='#e2f3ea', # 차트 배경색 지정
-        width=1500,
+        width=1000,
         height=700,
     )
 
@@ -82,7 +82,7 @@ def create_graph(df_g1, df_g2):
         xaxis_title='시험 분류',
         yaxis_title='인원수',
         plot_bgcolor='#e2f3ea', # 차트 배경색 지정
-        width=1500,
+        width=1000,
         height=700,
     )
   else : pass
