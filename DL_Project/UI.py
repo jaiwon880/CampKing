@@ -20,6 +20,7 @@ def user_interface():
         "https://i.imgur.com/fvRG1Tj.gif"
         ]
 
+
     for i in range(len(image)) :
         with st.expander(f"사진_{i+1}"):
             st.image(image[i])
