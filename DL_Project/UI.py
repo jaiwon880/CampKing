@@ -1,5 +1,5 @@
 import streamlit as st
-from Functional import GetResult
+from Functional import GetResult, Map
 st.set_page_config(page_title="DL", layout="wide")
 
 def test() : return GetResult().result_function()

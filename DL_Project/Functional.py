@@ -11,3 +11,7 @@ class GetResult:
 
     def result_function(self) : 
         return self.choice, self.df
+
+class Map:
+    def __init__(self) -> None:
+        pass
