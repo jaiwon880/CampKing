@@ -6,6 +6,8 @@ class GetResult:
         self.df = GetData().result_data()
         self.choice = self.backend_function()
 
-    def backend_function(self) : return GetSideBar().result_sidebar()
+    def backend_function(self) : 
+        return GetSideBar().result_sidebar()
 
-    def result_function(self) : return self.choice, self.df
+    def result_function(self) : 
+        return self.choice, self.df

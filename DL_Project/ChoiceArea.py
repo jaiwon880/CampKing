@@ -12,5 +12,8 @@ class GetSideBar:
         
         self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction) if self.area_choice != "" else None
 
-    def choice_sidebar(self) : return self.direction_choice
-    def result_sidebar(self) : return self.choice_sidebar()
+    def choice_sidebar(self) : 
+        return self.direction_choice
+        
+    def result_sidebar(self) : 
+        return self.choice_sidebar()

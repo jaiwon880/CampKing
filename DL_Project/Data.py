@@ -13,5 +13,7 @@ class GetData:
         # pass
         return self.df_url
 
-    def create_data(self) : return self.df
-    def result_data(self) : return self.create_data()
+    def create_data(self) : 
+        return self.df
+    def result_data(self) : 
+        return self.create_data()
