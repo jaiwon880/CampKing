@@ -12,4 +12,4 @@ class GetData:
         self.df = self.load_data()
 
     def result_data(self) :
-        return create_data()
+        return self.create_data()

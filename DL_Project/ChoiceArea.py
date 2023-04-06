@@ -21,4 +21,4 @@ class GetSideBar:
         return self.result_df
 
     def result_sidebar(self) :
-        return functional_sidebar()
+        return self.functional_sidebar()
