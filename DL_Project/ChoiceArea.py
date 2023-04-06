@@ -1,5 +1,4 @@
 import streamlit as st
-from Data import GetData
 
 class GetSideBar:
     def __init__(self) -> None:
