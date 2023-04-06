@@ -8,6 +8,7 @@ class GetSideBar:
 
         self.df = GetData().result_data()
         self.result_df = None
+        
         self.area = ["경기도"]
         self.direction = ["경기 동부", "경기 서부", "경기 남부", "경기 북부"]
 
