@@ -2,7 +2,7 @@ import streamlit as st
 from Functional import GetResult
 st.set_page_config(page_title="DL", layout="wide")
 import folium
-
+from streamlit_folium import folium_static
 
 def test() : 
     return GetResult().result_function()
