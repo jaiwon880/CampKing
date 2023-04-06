@@ -10,6 +10,9 @@ def user_interface():
 
     image = ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
     
+    with st.expander("Panel title"):
+        st.image(image[0], width = 700)
+
     containers = [st.container() for i in range(len(image))]
     
     for i in range(len(image)) :
