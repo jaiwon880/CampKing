@@ -1,7 +1,10 @@
 import streamlit as st
 from Functional import GetResult
 st.set_page_config(page_title="DL", layout="wide")
+
+from streamlit_folium import st_folium
 import folium
+from folium.plugins import MarkerCluster
 
 def test() : 
     return GetResult().result_function()
@@ -32,7 +35,10 @@ def user_interface():
     #     with containers[i] : 
     #         st.image(image[i], width = 700)
     # =========================================================
-    
+    st.set_page_config(page_title="Map Example")
+
+    st.components.v1.html(open("map.html", "r").read(), width=700, height=500)
+
     # 서울 시청의 위도, 경도
     seoul_city_hall = [37.5665, 126.978]
 
@@ -41,3 +47,5 @@ def user_interface():
 
     # streamlit에 지도 표시
     st.markdown(m._repr_html_(), unsafe_allow_html=True)
+
+    
