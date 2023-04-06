@@ -3,7 +3,7 @@ from ChoiceArea import GetSideBar
 st.set_page_config(page_title="DL", layout="wide")
 
 def test() : 
-    return True if GetSideBar().result_sidebar() is None else False
+    return GetSideBar().result_sidebar()
 
 def user_interface():
     st.title("뼈대 작업 중...")
