@@ -1,5 +1,4 @@
 import UI
-
 # main 시작점
 def main() : 
    UI.user_interface()
