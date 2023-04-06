@@ -33,8 +33,11 @@ def user_interface():
     #         st.image(image[i], width = 700)
     # =========================================================
     
-    # 지도 초기화
-    m = folium.Map(location=[37.5665, 126.9780], zoom_start=12)
+    # 서울 시청의 위도, 경도
+    seoul_city_hall = [37.5665, 126.978]
 
-    # 지도를 Streamlit에 렌더링
-    st.write(m)
+    # folium으로 지도 생성
+    m = folium.Map(location=seoul_city_hall, zoom_start=12)
+
+    # streamlit에 지도 표시
+    st.markdown(m._repr_html_(), unsafe_allow_html=True)
