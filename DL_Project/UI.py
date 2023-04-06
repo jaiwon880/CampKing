@@ -9,4 +9,5 @@ def user_interface():
     image = ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
     containers = [st.container() for i in range(len(image))]
     for i in range(container_count) :
-        with containers[i] : st.image(image[i], width = 700)
+        with containers[i] : 
+            st.image(image[i], width = 700)
