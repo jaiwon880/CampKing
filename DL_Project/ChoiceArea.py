@@ -12,8 +12,5 @@ class GetSideBar:
         self.area_choice = self.sb.selectbox('지역 선택 그..치만....경기도 뿐인걸...', self.area)
         self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction)
 
-    def choice_sidebar(self) :  
-        return self.direction_choice
-
-    def result_sidebar(self) :
-        return self.choice_sidebar()
+    def choice_sidebar(self) : return self.direction_choice
+    def result_sidebar(self) : return self.choice_sidebar()
