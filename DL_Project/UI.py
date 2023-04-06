@@ -3,16 +3,29 @@ from Functional import GetResult
 st.set_page_config(page_title="DL", layout="wide")
 
 import folium
-from streamlit_folium import st_folium
-from folium.plugins import MarkerCluster
-from geopy import distance
 
 def test() : 
     return GetResult().result_function()
 
 def user_interface():
-    st.title("뼈대 작업 중...")
-    result1, result2 = test()
+    # folium 지도 객체 생성
+    m = folium.Map(location=[37.566345, 126.977893], zoom_start=13)
+
+    # streamlit 컴포넌트에 folium 지도 렌더링
+    st.write(m._repr_html_(), unsafe_allow_html=True)
+
+    # 마커 추가
+    folium.Marker(location=[37.566345, 126.977893], popup='서울특별시청').add_to(m)
+
+    # 선 추가
+    locations = [[37.566345, 126.977893], [37.5658859, 126.9754788]]
+    folium.PolyLine(locations=locations, color='red').add_to(m)
+
+    # streamlit 컴포넌트에 folium 지도 렌더링
+    st.write(m._repr_html_(), unsafe_allow_html=True)
+
+    # st.title("뼈대 작업 중...")
+    # result1, result2 = test()
     # result2 = True if result2 is None else False
 
     # st.write(f"""
@@ -36,17 +49,3 @@ def user_interface():
     #     with containers[i] : 
     #         st.image(image[i], width = 700)
     # =========================================================
-    st.set_page_config(page_title="Map Example")
-
-    st.components.v1.html(open("map.html", "r").read(), width=700, height=500)
-
-    # 서울 시청의 위도, 경도
-    seoul_city_hall = [37.5665, 126.978]
-
-    # folium으로 지도 생성
-    m = folium.Map(location=seoul_city_hall, zoom_start=12)
-
-    # streamlit에 지도 표시
-    st.markdown(m._repr_html_(), unsafe_allow_html=True)
-
-    
