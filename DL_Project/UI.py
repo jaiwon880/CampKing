@@ -8,7 +8,7 @@ def test() :
 def user_interface():
     st.title("뼈대 작업 중...")
 
-    st.subheader("연결 성공 여부는? : ", test())
+    st.subheader(f"연결 성공 여부는? : {test()}")
 
     image = ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
     
