@@ -4,6 +4,3 @@ numpy
 # statsmodels
 # plotly
 # matplotlib
-folium
-streamlit_folium
-geopy
