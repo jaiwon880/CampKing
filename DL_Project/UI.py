@@ -1,5 +1,6 @@
 import streamlit as st
-from Functional import GetResult, Map
+from Functional import GetResult
+from Functional import Map
 st.set_page_config(page_title="DL", layout="wide")
 import folium
 
