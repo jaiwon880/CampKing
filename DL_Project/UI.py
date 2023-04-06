@@ -5,6 +5,7 @@ st.set_page_config(page_title="DL", layout="wide")
 import folium
 from streamlit_folium import st_folium
 from folium.plugins import MarkerCluster
+from geopy import distance
 
 def test() : 
     return GetResult().result_function()
