@@ -6,10 +6,11 @@ class GetData:
         self.df = self.load_data()
 
     def load_data(self) :
-        try : 
-            return pd.read_csv(self.df_url)
-        except Exception as e : 
-            return st.error(e)
+        # try : 
+        #     return pd.read_csv(self.df_url)
+        # except Exception as e : 
+        #     return st.error(e)
+        return self.df_url
 
     def create_data(self) :
         return self.df
