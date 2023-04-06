@@ -2,7 +2,6 @@ import streamlit as st
 from Functional import GetResult
 st.set_page_config(page_title="DL", layout="wide")
 import folium
-from streamlit_folium import folium_static
 
 def test() : 
     return GetResult().result_function()
@@ -16,6 +15,7 @@ def user_interface():
         ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result1}
         ### Data -> Functional -> UI 모듈 연동 결과는? = {result2}
     """)
+
     image = [
         "https://i.imgur.com/t4O7ozH.jpg", 
         "https://i.imgur.com/idnsDBs.gif", 
@@ -32,25 +32,9 @@ def user_interface():
     #     with containers[i] : 
     #         st.image(image[i], width = 700)
     # =========================================================
-    # 서울 위도, 경도
-    latitude = 37.5665
-    longitude = 126.9780
+    
+    # 지도 초기화
+    m = folium.Map(location=[37.5665, 126.9780], zoom_start=12)
 
-    # 지도 생성
-    map = folium.Map(location=[latitude, longitude], zoom_start=13)
-
-    # streamlit에 지도 출력
-    st.write(map._repr_html_(), unsafe_allow_html=True)
-
-    # 서울 시청 위도, 경도
-    city_hall_latitude = 37.5666791
-    city_hall_longitude = 126.9782914
-
-    # 마크 생성
-    marker = folium.Marker(location=[city_hall_latitude, city_hall_longitude], popup='서울 시청')
-
-    # 마크를 지도에 추가
-    marker.add_to(map)
-
-    # streamlit에 지도 출력
-    st.write(map._repr_html_(), unsafe_allow_html=True)
+    # 지도를 Streamlit에 렌더링
+    folium_static(m)
