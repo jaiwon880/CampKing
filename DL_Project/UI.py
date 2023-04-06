@@ -7,7 +7,7 @@ def test() : return GetResult().result_function()
 def user_interface():
     st.title("뼈대 작업 중...")
 
-    st.subheader(f"ChoiceArea -> Functional -> user_interface 연동 결과는? = {test()}")
+    st.subheader(f"ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {test()}")
 
     image = [
         "https://i.imgur.com/t4O7ozH.jpg", 
