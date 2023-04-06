@@ -11,5 +11,7 @@ class GetData:
     def create_data(self) :
         self.df = self.load_data()
 
+        return self.df
+
     def result_data(self) :
         return self.create_data()
