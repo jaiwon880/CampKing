@@ -7,7 +7,7 @@ def test() : return GetResult().result_function()
 def user_interface():
     st.title("뼈대 작업 중...")
     result1, result2 = test()
-    result2 = True if result2 is None else result2 = False
+    result2 = True if result2 is None else False
 
     st.subheader(f"""
         ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result1}
