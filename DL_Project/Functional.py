@@ -8,4 +8,4 @@ class GetResult:
 
     def backend_function(self) : return GetSideBar().result_sidebar()
 
-    def result_function(self) : return self.choice
+    def result_function(self) : return self.df, self.choice

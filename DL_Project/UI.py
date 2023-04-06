@@ -6,10 +6,10 @@ def test() : return GetResult().result_function()
 
 def user_interface():
     st.title("뼈대 작업 중...")
-
+    result1, result2 = test()
     st.subheader(f"""
-        ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {test()[0]}
-        Data -> Functional -> UI 모듈 연동 결과는? = {test()[1]}
+        ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result1}
+        Data -> Functional -> UI 모듈 연동 결과는? = {result2}
     """)
     image = [
         "https://i.imgur.com/t4O7ozH.jpg", 
