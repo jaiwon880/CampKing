@@ -1,4 +1,3 @@
-import folium
 from ChoiceArea import GetSideBar
 from Data import GetData
 
@@ -36,9 +35,3 @@ class GetResult:
     
 #     def result_map(self):
 #         return self.create_map()
-
-
-
-
-
-    
