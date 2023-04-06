@@ -17,7 +17,7 @@ class GetSideBar:
 
     def functional_sidebar(self) : 
         # 기능부 연동 작성 예정 
-        self.result_df = self.df 
+        self.result_df = self.choice2 
         return self.result_df
 
     def result_sidebar(self) :
