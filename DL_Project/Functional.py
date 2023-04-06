@@ -1,3 +1,4 @@
+import folium
 from ChoiceArea import GetSideBar
 from Data import GetData
 

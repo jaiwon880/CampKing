@@ -6,7 +6,7 @@ class GetSideBar:
         self.sb.title('지역을 선택해주세요.')
         
         self.area = ["", "경기도"]
-        self.direction = ["경기 동부", "경기 서부", "경기 남부", "경기 북부"]
+        self.direction = ["", "경기 동부", "경기 서부", "경기 남부", "경기 북부"]
 
         self.area_choice = self.sb.selectbox('지역 선택 그..치만....경기도 뿐인걸...', self.area)
         
