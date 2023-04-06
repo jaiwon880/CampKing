@@ -1,4 +1,4 @@
-import stream as st
+import streamlit as st
 from Data import GetData
 
 class GetSideBar:
