@@ -9,9 +9,9 @@ def user_interface():
     result1, result2 = test()
     result2 = True if result2 is None else False
 
-    st.subheader(f"""
-        ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result1}
-        Data -> Functional -> UI 모듈 연동 결과는? = {result2}
+    st.write(f"""
+        ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result1}
+        ### Data -> Functional -> UI 모듈 연동 결과는? = {result2}
     """)
     image = [
         "https://i.imgur.com/t4O7ozH.jpg", 
