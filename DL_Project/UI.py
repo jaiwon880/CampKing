@@ -4,7 +4,8 @@ st.set_page_config(page_title="DL", layout="wide")
 import folium
 
 
-def test() : return GetResult().result_function()
+def test() : 
+    return GetResult().result_function()
 
 def user_interface():
     st.title("뼈대 작업 중...")
@@ -32,24 +33,24 @@ def user_interface():
     #         st.image(image[i], width = 700)
     # =========================================================
     # 서울 위도, 경도
-    latitude = 37.5665
-    longitude = 126.9780
+    # latitude = 37.5665
+    # longitude = 126.9780
 
-    # 지도 생성
-    map = folium.Map(location=[latitude, longitude], zoom_start=13)
+    # # 지도 생성
+    # map = folium.Map(location=[latitude, longitude], zoom_start=13)
 
-    # streamlit에 지도 출력
-    st.write(map._repr_html_(), unsafe_allow_html=True)
+    # # streamlit에 지도 출력
+    # st.write(map._repr_html_(), unsafe_allow_html=True)
 
-    # 서울 시청 위도, 경도
-    city_hall_latitude = 37.5666791
-    city_hall_longitude = 126.9782914
+    # # 서울 시청 위도, 경도
+    # city_hall_latitude = 37.5666791
+    # city_hall_longitude = 126.9782914
 
-    # 마크 생성
-    marker = folium.Marker(location=[city_hall_latitude, city_hall_longitude], popup='서울 시청')
+    # # 마크 생성
+    # marker = folium.Marker(location=[city_hall_latitude, city_hall_longitude], popup='서울 시청')
 
-    # 마크를 지도에 추가
-    marker.add_to(map)
+    # # 마크를 지도에 추가
+    # marker.add_to(map)
 
-    # streamlit에 지도 출력
-    st.write(map._repr_html_(), unsafe_allow_html=True)
+    # # streamlit에 지도 출력
+    # st.write(map._repr_html_(), unsafe_allow_html=True)
