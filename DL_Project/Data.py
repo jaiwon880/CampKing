@@ -1,16 +1,17 @@
+import pandas as pd
+
 class GetData:
     def __init__(self) -> None:
-        # self.df_url = ""
-        self.df = ""
-
-    def load_data(self) :
-        # df load 작성구문 
-        # df 전처리 작성하기.
-        return None
-
-    def create_data(self) :
+        self.df_url = None
         self.df = self.load_data()
 
+    def load_data(self) :
+        try : 
+            return pd.read_csv(self.df_url)
+        except Exception as e : 
+            return st.error(e)
+
+    def create_data(self) :
         return self.df
 
     def result_data(self) :
