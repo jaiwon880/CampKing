@@ -22,7 +22,7 @@ def user_interface():
     for i in range(len(image)) :
         with st.expander(f"사진_{i+1}"):
             st.image(image[i])
-
+    st.write(Map().result_map())
     # containers = [st.container() for i in range(len(image))]
     # for i in range(len(image)) :
     #     with containers[i] : 
