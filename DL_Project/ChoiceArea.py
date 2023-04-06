@@ -4,9 +4,6 @@ class GetSideBar:
     def __init__(self) -> None:
         self.sb = st.sidebar
         self.sb.title('지역을 선택해주세요.')
-        self.area_choice = None
-        self.direction_choice = None
-        self.district_choice = None
 
         self.area = ["", "경기도"]
         self.direction = ["", "경기 동부", "경기 서부", "경기 남부", "경기 북부"]
@@ -16,7 +13,7 @@ class GetSideBar:
         
         self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction) if self.area_choice != "" else None
 
-        self.district_choice = self.sb.selectbox('동네 입력해주세요', self.district) if self.direction_choice and self.area_choice != None  else None
+        self.district_choice = self.sb.selectbox('동네 입력해주세요', self.district) if self.area_choice and self.direction_choice != None else None
 
     def choice_sidebar(self) : 
         return self.district_choice
