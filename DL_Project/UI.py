@@ -13,8 +13,8 @@ def user_interface():
         result1 = "성공!" if result1 is True else "실패"
 
     st.write(f"""
-        ### Data -> Functional -> UI 모듈 연동 결과는? = {result1}
-        ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
+    ### Data -> Functional -> UI 모듈 연동 결과는? = {result1}
+    ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
     """)
 
     image = [
@@ -33,4 +33,9 @@ def user_interface():
     for i in range(len(image)) :
         with containers[i] : 
             st.image(image[i], width = 700)
-    # =========================================================
+
+    messages = ['success', 'info', 'warning', 'error']
+
+    for message in messages:
+        getattr(st, message)(f'This is a {message} message')
+        getattr(st, message)(f'This is another {message} message')
