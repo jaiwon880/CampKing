@@ -9,7 +9,7 @@ class GetSideBar:
         self.df = GetData().result_data()
 
         self.area = ["", "경기도"]
-        self.direction = ["", self.df['시, 군'].drop_duplicates().tolist()]
+        self.direction = self.df['시, 군'].drop_duplicates().tolist()
         # self.direction = [
         #     '', '가평군', '고양시', '과천시', '광명시', '광주시', '구리시', '군포시', '김포시', '남양주시', '동두천시', 
         #     '부천시', '성남시', '수원시', '시흥시', '안산시', '안성시', '안양시', '양주시', '양평군', '여주시', '연천군', 
