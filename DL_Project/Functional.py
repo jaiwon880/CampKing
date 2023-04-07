@@ -7,7 +7,7 @@ class GetResult:
         self.area, self.choice, self.address = GetSideBar().result_sidebar()
 
     def choice_address(self) : 
-        if self.choice != None : 
+        if self.choice != None and "" : 
             return self.plus_index(self.df[self.df['시, 군'] == self.choice])
             
         elif self.address != None :
