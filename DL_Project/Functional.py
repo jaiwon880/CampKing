@@ -11,7 +11,7 @@ class GetResult:
             return self.plus_index(self.df[(self.df['시, 군'] == self.choice)].reset_index(drop=True))
             
         if self.choice and self.address != "" :
-            return self.plus_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True))
+            return self.plus_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].int.contains(self.address))].reset_index(drop=True))
 
         else : return None
 
