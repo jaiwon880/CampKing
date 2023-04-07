@@ -19,7 +19,9 @@ def user_interface():
     ### 동서남북크로스 = {result3}
     ### 글램핑장명 입력 = {result4}
     """)
-    st.write(f"### 데이터프레임 = {result1}")
+    st.write(f"""
+    ### 데이터프레임 = {result1}
+    """)
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
