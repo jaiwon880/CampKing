@@ -11,6 +11,7 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         if result1 is not None : st.dataframe(result1)
+        elif result is "" : st.write("검색 결과 없음")
         else : pass
     
     

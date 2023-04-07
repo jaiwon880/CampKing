@@ -12,7 +12,8 @@ class GetResult:
         else : return None
 
     def plus_index(self, result) :
-        result.index += 1
+        if result != None : result.index += 1
+        else : result = ""
         return result
     
     def result_function(self) : return self.choice_address(), self.area, self.choice, self.address
