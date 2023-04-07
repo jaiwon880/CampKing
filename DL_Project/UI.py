@@ -10,7 +10,12 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         result1, result2, result3 = test()
-        st.dataframe(result1) if result1 != None else st.dataframe(None)
+        if result1:
+            st.dataframe(result1)
+        else:
+            st.write("검색 결과가 없습니다.")
+    
+    
     st.write(f"""
     ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
     """)
