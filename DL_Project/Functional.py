@@ -8,8 +8,6 @@ class GetResult:
 
     def choice_address(self) : 
         if self.choice and self.address != "":
-            pass
-            # return df[df[choice] == address]
-
-    def result_function(self) : 
-        return self.df, self.choice, self.address
+            df[df['시, 군'] == self.choice and df['글램핑장'] == self.address]
+        else : ""
+    def result_function(self) : return self.choice, self.address
