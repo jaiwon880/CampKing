@@ -8,14 +8,16 @@ class GetResult:
 
     def choice_address(self) : 
         if self.start and self.choice != "" : 
-            return self.plus_index(self.df[(self.df['시, 군'] == self.choice)].reset_index(drop=True))
+            return self.plus_index(self.df[(self.df['시, 군'] == self.choice)])
             
             if self.address != "" :
-                return self.plus_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True))
+                return self.plus_index(self.df[(self.df['시, 군'] == self.choice & self.df['글램핑장'].str.contains(self.search))])
+                # return self.plus_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))])
 
         else : return None
 
     def plus_index(self, result):
+        result.reset_index(drop=True)
         result.index += 1 
         return result
 
