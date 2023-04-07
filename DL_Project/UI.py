@@ -14,7 +14,7 @@ def user_interface():
         # if result1 is not None : st.dataframe(result1)
         # elif result1.empty : st.write("검색 결과 없음")
         # else : pass
-        if result1.empty : st.write("검색 결과 없음")
+        if result1 is empty : st.write("검색 결과 없음")
         elif result1 is not None : st.dataframe(result1)
         else : pass
     st.write(f"""
