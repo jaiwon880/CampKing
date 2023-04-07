@@ -12,7 +12,8 @@ def user_interface():
         result1, result2, result3 = test()
         st.write(result1)
         st.dataframe("")
-        # st.dataframe(result1) if result1 != "" else ""
+        if result1 != "" : st.dataframe(result1) 
+        else : pass
 
     st.write(f"""
     ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
