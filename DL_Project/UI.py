@@ -33,9 +33,9 @@ def user_interface():
     for i in range(len(image)) :
         with containers[i] : 
             st.image(image[i], width = 700)
-
+    # =====================================================================
     messages = ['success', 'info', 'warning', 'error']
 
-    for message in messages:
-        getattr(st, message)(f'This is a {message} message')
-        getattr(st, message)(f'This is another {message} message')
+    for i in range(2):
+        for message in messages:
+            getattr(st, message)(f'This is a {message} message')
