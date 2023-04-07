@@ -10,7 +10,9 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         result1, result2, result3 = test()
-        st.dataframe(result1)
+        if result1 is not None : 
+            st.dataframe(result1)
+        else : pass 
     
     
     st.write(f"""
