@@ -13,8 +13,9 @@ def user_interface():
         result2 = True if result2 is None else False
 
     st.write(f"""
-        ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result1}
-        ### Data -> Functional -> UI 모듈 연동 결과는? = {result2}
+        ### Data -> Functional -> UI 모듈 연동 결과는? = {result1}
+        ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
+        
     """)
 
     image = [
