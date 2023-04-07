@@ -11,11 +11,12 @@ def user_interface():
 
     with st.sidebar :
         # 사이드바 
-        if result1 is not None : st.dataframe(result1)
-        elif result1.empty : st.write("검색 결과 없음")
+        # if result1 is not None : st.dataframe(result1)
+        # elif result1.empty : st.write("검색 결과 없음")
+        # else : pass
+        if result1.empty : st.write("검색 결과 없음")
+        elif result1 is not None : st.dataframe(result1)
         else : pass
-    
-    
     st.write(f"""
     ### 지역 선택 = {result2}
     ### 동서남북크로스 = {result3}
