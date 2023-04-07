@@ -14,5 +14,8 @@ class GetResult:
     def plus_index(self, result) :
         result.index += 1
         return result
-
+    
     def result_function(self) : return self.choice_address(), self.area, self.choice, self.address
+
+    # 테스트 끝나면 위에 지울 것 
+    # def result_function(self) : return self.choice_address()
