@@ -10,8 +10,6 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         result1, result2, result3 = test()
-        # st.write(result1)
-        # st.dataframe("")
         st.dataframe(result1)
 
     st.write(f"""
