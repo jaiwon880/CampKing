@@ -14,7 +14,9 @@ def user_interface():
     
     
     st.write(f"""
-    ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
+    ### 여백 경기도 선택칸 {result1}
+    ### 경기도 선택칸 {result2}
+    ### 업체명 검색칸 {result3}
     """)
 
     image = [
