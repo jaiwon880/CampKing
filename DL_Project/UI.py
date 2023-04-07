@@ -15,7 +15,6 @@ def user_interface():
     
     
     st.write(f"""
-    ### TDD중
     ### 지역 선택 = {result2}
     ### 동서남북크로스 = {result3}
     ### 글램핑장명 입력 = {result4}
