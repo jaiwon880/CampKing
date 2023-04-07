@@ -4,10 +4,10 @@ from Data import GetData
 class GetResult:
     def __init__(self) -> None:
         self.df = GetData().result_data()
-        self.start, self.choice, self.address = GetSideBar().result_sidebar()
+        self.area, self.choice, self.address = GetSideBar().result_sidebar()
 
     def choice_address(self) : 
-        if self.start != "" and self.choice != "" : 
+        if self.choice != "" : 
             return self.df[self.df['시, 군'] == self.choice].reset_index(drop=True)
             
         elif self.address != None :
