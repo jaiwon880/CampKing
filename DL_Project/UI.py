@@ -16,9 +16,9 @@ def user_interface():
     
     st.write(f"""
     ### TDD중
-    ### 여백 경기도 선택칸 {result2}
-    ### 경기도 선택칸 {result3}
-    ### 업체명 검색칸 {result4}
+    ### 지역 선택 = {result2}
+    ### 동서남북크로스 = {result3}
+    ### 글램핑장명 입력 = {result4}
     """)
 
     image = [
