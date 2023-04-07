@@ -11,7 +11,7 @@ def user_interface():
         # 사이드바 
         result1, result2, result3 = test()
         st.dataframe(result1)
-
+    result = "성공!" result1 is not None else "실패"
     st.write(f"""
     ### Data -> Functional -> UI 모듈 연동 결과는? = {result1}
     ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
