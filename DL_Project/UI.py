@@ -10,8 +10,7 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         result1, result2, result3 = test()
-        # st.dataframe(result1)
-        st.dataframe(None)
+        st.dataframe(result1) if result1 != None else st.dataframe(None)
     st.write(f"""
     ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
     """)
