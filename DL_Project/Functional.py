@@ -7,21 +7,16 @@ class GetResult:
         self.start, self.choice, self.address = GetSideBar().result_sidebar()
 
     def choice_address(self) : 
-        # if self.choice and self.address != "" :
-        #     result = self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True)
-        #     result.index += 1 
-        #     return result
-        # else : return None
-        
-        if self.start and self.choice != "" :
-            result = self.df[(self.df['시, 군'] == self.choice)].reset_index(drop=True)
-            result.index += 1 
-            return result
+        if self.start and self.choice != "" : 
+            return self.df[(self.df['시, 군'] == self.choice)].reset_index(drop=True)
 
         if self.choice and self.address != "" :
-            result = self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True)
-            result.index += 1 
-            return result
-
+            return self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True)
+        
         else : return None
-    def result_function(self) : return self.choice_address(), self.choice, self.address
+
+    def plus_index(self, result):
+        result.index += 1 
+        return result
+
+    def result_function(self) : return self.plus_index(self.choice_address()), self.choice, self.address
