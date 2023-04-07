@@ -5,7 +5,7 @@ st.set_page_config(page_title="DL", layout="wide")
 def test() : return GetResult().result_function()
 
 def user_interface():
-    st.title("뼈대 작업 중...")
+    st.error("뼈대 작업 중...")
     
     with st.sidebar :
         # 사이드바 
