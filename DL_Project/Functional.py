@@ -11,7 +11,8 @@ class GetResult:
         elif self.address != None : return self.plus_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True))
         else : return None
 
-    def plus_index(self, result):
-        return result + 1
+    def plus_index(self, result) :
+        result.index += 1
+        return result
 
     def result_function(self) : return self.choice_address(), self.choice, self.address
