@@ -5,7 +5,7 @@ class GetResult:
     def __init__(self) -> None:
         self.df = GetData().result_data()
         self.start, self.choice, self.address = GetSideBar().result_sidebar()
-
+        st.write(self.start)
     def choice_address(self) : 
         # if self.choice and self.address != "" :
         #     result = self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))].reset_index(drop=True)
@@ -13,7 +13,7 @@ class GetResult:
         #     return result
         # else : return None
 
-        st.sidebar.write(self.start)
+        
         if self.start != "" and self.choice != "" :
             result = self.df[(self.df['시, 군'] == self.choice)].reset_index(drop=True)
             result.index += 1 
