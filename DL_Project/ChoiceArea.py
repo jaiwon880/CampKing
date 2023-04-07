@@ -3,7 +3,7 @@ import streamlit as st
 class GetSideBar:
     def __init__(self) -> None:
         self.sb = st.sidebar
-        self.sb.warning("## 지역을 선택해주세요.")
+        self.sb.subhedder("지역을 선택해주세요.")
         
         self.area = ["", "경기도"]
         self.direction = [
