@@ -15,4 +15,4 @@ class GetResult:
         result.index += 1
         return result
 
-    def result_function(self) : return self.choice_address(), self.choice, self.address
+    def result_function(self) : return self.choice_address(), self.area, self.choice, self.address

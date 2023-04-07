@@ -6,7 +6,7 @@ def test() : return GetResult().result_function()
 
 def user_interface():
     st.error("## 뼈대 작업 중...")
-    result1, result2, result3 = test()
+    result1, result2, result3, result4 = test()
     with st.sidebar :
         # 사이드바 
         if result1 is not None : st.dataframe(result1)
@@ -14,9 +14,10 @@ def user_interface():
     
     
     st.write(f"""
-    ### 여백 경기도 선택칸 {result1}
-    ### 경기도 선택칸 {result2}
-    ### 업체명 검색칸 {result3}
+    ### TDD중
+    ### 여백 경기도 선택칸 {result2}
+    ### 경기도 선택칸 {result3}
+    ### 업체명 검색칸 {result4}
     """)
 
     image = [
