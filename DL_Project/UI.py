@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from Functional import GetResult
 st.set_page_config(page_title="DL", layout="wide")
 
@@ -11,7 +12,7 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         if result1 is not None : st.dataframe(result1)
-        elif result1 == EmptyDataFrame : st.write("검색 결과 없음")
+        elif result1.empty : st.write("검색 결과 없음")
         else : pass
     
     
