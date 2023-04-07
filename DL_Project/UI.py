@@ -10,7 +10,7 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         result1, result2, result3 = test()
-        result1 = "성공!" if result1 is True else "실패"
+        st.dataframe(result1)
 
     st.write(f"""
     ### Data -> Functional -> UI 모듈 연동 결과는? = {result1}
