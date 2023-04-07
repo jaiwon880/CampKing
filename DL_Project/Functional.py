@@ -6,8 +6,9 @@ class GetResult:
         self.df = GetData().result_data()
         self.choice, self.address = GetSideBar().result_sidebar()
 
-    def backend_function(self) : 
-        pass
+    def choice_address(self) : 
+        if self.choice and self.address != "":
+            df
 
     def result_function(self) : 
         return self.df, self.choice, self.address

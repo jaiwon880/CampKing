@@ -10,9 +10,9 @@ class GetData:
             return pd.read_csv(self.df_url)
         except Exception as e : 
             return st.error(e)
-        pass
 
     def create_data(self) : 
+        self.df.index = pd.RangeIndex(start=1, stop=len(df)+1, step=1)
         return self.df
         
     def result_data(self) : 
