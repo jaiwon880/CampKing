@@ -8,7 +8,7 @@ class GetResult:
 
     def choice_address(self) : 
         if self.start != "" and self.choice != "" : 
-            return self.df[self.df['지사명'] == self.choice].reset_index(drop=True)
+            return self.df[self.df['시, 군'] == self.choice].reset_index(drop=True)
             
         elif self.choice != "" and self.address != "" :
             # return self.plus_index(self.df[self.df['글램핑장'].str.contains(self.address).reset_index(drop=True)])
