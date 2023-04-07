@@ -12,7 +12,7 @@ class GetData:
             return st.error(e)
 
     def create_data(self) : 
-        self.df.index = pd.RangeIndex(start=1, stop=len(df)+1, step=1)
+        self.df.index += 1
         return self.df
         
     def result_data(self) : 
