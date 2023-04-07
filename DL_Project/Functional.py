@@ -10,4 +10,4 @@ class GetResult:
         return GetSideBar().result_sidebar()
 
     def result_function(self) : 
-        return self.choice, self.df
+        return self.df, self.choice, self.address
