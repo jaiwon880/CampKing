@@ -11,7 +11,7 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         if result1 is not None : st.dataframe(result1)
-        else : pass 
+        else : st.write("출력결과가없습니다.") 
     
     
     st.write(f"""
