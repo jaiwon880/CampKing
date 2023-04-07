@@ -11,7 +11,7 @@ def user_interface():
         # 사이드바 
         result1, result2, result3 = test()
         st.write(result1)
-        st.dataframe("")
+        # st.dataframe("")
         if result1 != "" : st.dataframe(result1) 
         else : pass
 
