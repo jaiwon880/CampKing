@@ -12,7 +12,7 @@ class GetResult:
         else : return None
 
     def plus_index(self, result) :
-        if result != None : result.index += 1
+        if result is not None : result.index += 1
         else : result = ""
         return result
     
