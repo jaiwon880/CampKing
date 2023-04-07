@@ -8,7 +8,8 @@ class GetResult:
 
     def choice_address(self) : 
         if self.choice and self.address != "":
-            df
+            pass
+            # return df[df[choice] == address]
 
     def result_function(self) : 
         return self.df, self.choice, self.address
