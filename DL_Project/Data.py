@@ -2,7 +2,7 @@ import pandas as pd
 
 class GetData:
     def __init__(self) -> None:
-        self.df_url = None
+        self.df_url = True
         self.df = self.load_data()
 
     def load_data(self) :

@@ -10,7 +10,7 @@ def user_interface():
     with st.sidebar :
         # 사이드바 
         result1, result2, result3 = test()
-        result1 = True if result1 is None else False
+        result1 = True if result1 is True else False
 
     st.write(f"""
         ### Data -> Functional -> UI 모듈 연동 결과는? = {result1}

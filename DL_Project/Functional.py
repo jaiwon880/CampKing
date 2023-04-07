@@ -10,4 +10,4 @@ class GetResult:
         pass
 
     def result_function(self) : 
-        return self.df, self.choice, self.address
+        return self.__init__()
