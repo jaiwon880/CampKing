@@ -13,7 +13,7 @@ class GetResult:
         #     return result
         # else : return None
 
-
+        st.sidebar.write(self.start)
         if self.start != "" and self.choice != "" :
             result = self.df[(self.df['시, 군'] == self.choice)].reset_index(drop=True)
             result.index += 1 
