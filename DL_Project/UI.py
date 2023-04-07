@@ -9,7 +9,7 @@ def user_interface():
     
     with st.sidebar :
         # 사이드바 
-        result1, result2 = test()
+        result1, result2, result3 = test()
         result2 = True if result2 is None else False
 
     st.write(f"""
