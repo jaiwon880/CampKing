@@ -15,9 +15,9 @@ def user_interface():
     
     st.write(f"""
     ### TDD중
-    ### 여백 경기도 선택칸 {result2}
-    ### 경기도 선택칸 {result3}
-    ### 업체명 검색칸 {result4}
+    ### 여백 경기도 선택칸 {result1}
+    ### 경기도 선택칸 {result2}
+    ### 업체명 검색칸 {result3}
     """)
 
     image = [
