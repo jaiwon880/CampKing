@@ -5,6 +5,7 @@ class GetSideBar:
         self.sb = st.sidebar
         self.sb.error("## 지역을 선택해주세요.")
         
+        
         self.area = ["", "경기도"]
         self.direction = [
             '', '가평군', '고양시', '과천시', '광명시', '광주시', '구리시', '군포시', '김포시', '남양주시', '동두천시', 
