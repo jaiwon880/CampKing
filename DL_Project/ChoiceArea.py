@@ -10,11 +10,11 @@ class GetSideBar:
             '부천시', '성남시', '수원시', '시흥시', '안산시', '안성시', '안양시', '양주시', '양평군', '여주시', '연천군', 
             '오산시', '용인시', '의왕시', '의정부시', '이천시', '파주시', '평택시', '포천시', '하남시', '화성시'
             ]
-        self.sb.warning('''
-            self.area_choice = self.sb.selectbox('지역 선택 그..치만....경기도 뿐인걸...', self.area)
-            self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction) if self.area_choice != "" else None
-            self.address_input = self.sb.text_input("상세 주소 입력") if self.area_choice and self.direction_choice != "" else None
-        ''')
+
+        self.area_choice = self.sb.selectbox('지역 선택 그..치만....경기도 뿐인걸...', self.area)
+        self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction) if self.area_choice != "" else None
+        self.address_input = self.sb.text_input("상세 주소 입력") if self.area_choice and self.direction_choice != "" else None
+
         
 
     def choice_direction(self) : return self.direction_choice
