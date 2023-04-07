@@ -10,9 +10,7 @@ def user_interface():
 
     with st.sidebar :
         # 사이드바 
-        if result1 == type(DataFrame) : 
-            st.dataframe(result1)
-            st.write(type(result1))
+        if result1 is not None : st.dataframe(result1)
         else : pass
     
     
