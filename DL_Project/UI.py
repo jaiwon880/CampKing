@@ -11,7 +11,7 @@ def user_interface():
         # 사이드바 
         result2, result3 = test()
         search_result = Functional().choice_address()
-        st.dataframe(search_result) if search_result != "" else ""
+        # st.dataframe(search_result) if search_result != "" else ""
 
     st.write(f"""
     ### ChoiceArea -> Functional ->  UI 모듈 연동 결과는? = {result2, result3}
