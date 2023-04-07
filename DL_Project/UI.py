@@ -5,8 +5,9 @@ st.set_page_config(page_title="DL", layout="wide")
 def test() : return GetResult().result_function()
 
 def user_interface():
-    st.error("## 뼈대 작업 중...")
+    st.error("## TDD - Testing...")
     result1, result2, result3, result4 = test()
+
     with st.sidebar :
         # 사이드바 
         if result1 is not None : st.dataframe(result1)
