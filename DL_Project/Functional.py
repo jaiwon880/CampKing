@@ -20,7 +20,7 @@ class GetResult:
 
         if self.df is not None :
             return self.handle_index(self.df)
-        elif self.address is not None : return self.handle_index(self.df['글램핑장'].str.contains(self.address))
+        elif self.address is not "" : return self.handle_index(self.df['글램핑장'].str.contains(self.address))
         else : None
 
     def handle_index(self, df):
