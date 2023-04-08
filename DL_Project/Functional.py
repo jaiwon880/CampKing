@@ -1,5 +1,5 @@
 from ChoiceArea import GetSideBar
-from Data import GetData
+# from Data import GetData
 
 class GetResult:
     def __init__(self) -> None:
