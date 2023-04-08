@@ -13,10 +13,14 @@ class GetSideBar:
         self.address_input = self.sb.text_input("글램핑장명으로 구현 중 후에(동, 면 수정)") if self.area_choice and self.direction_choice != "" else None
     
     def get_area_list(self) : return [""] + self.df.iloc[:, 0].drop_duplicates().tolist()
-    def get_direction_list(self) : return [""] + self.df[self.df[self.df.columns[0]] == self.area_choice].drop_duplicates(subset=self.df.columns[1])[self.df.columns[1]].sort_values().tolist() if self.area_choice != "" else None
+    def get_direction_list(self) : return [""] + self.df[self.df[self.df.columns[0]] == self.area_choice]\
+                                                .drop_duplicates(subset=self.df.columns[1])[self.df.columns[1]]\
+                                                .sort_values().tolist() if self.area_choice != "" else None
 
     def get_data(self) : return GetData().create_data()
-    def set_data(self) : return self.df
+    def set_data(self) : return self.df[(self.df[self.df.columns[0]] == self.area_choice) 
+                    & (self.df[self.df.columns[1]] == self.direction_choice) 
+                    & (self.df[self.df.columns[2]].str.contains(self.address_input))]
 
     def get_choice_result(self) : return self.area_choice, self.direction_choice, self.address_input
 

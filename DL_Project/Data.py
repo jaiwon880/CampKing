@@ -1,7 +1,5 @@
 import pandas as pd
 
-import pandas as pd
-
 class GetData:
     def __init__(self):
         self.df_url = "DL_Project/Data_csv/glamping_test.csv"
