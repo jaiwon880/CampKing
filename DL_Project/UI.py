@@ -24,7 +24,7 @@ def user_interface():
     st.write(f"""
             {df}
     """)
-    st.image("https://i.imgur.com/PYE1VIK.jpg", width = 500, height = 1000)
+    st.image("https://i.imgur.com/PYE1VIK.jpg", width = 1000, height = 500)
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
