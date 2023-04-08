@@ -1,4 +1,5 @@
 from SideBar import GetSideBar
+import pandas as pd
 
 class GetResult:
     def __init__(self) -> None:
