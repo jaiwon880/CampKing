@@ -16,8 +16,3 @@ class GetSideBar:
         self.address_input = self.sb.text_input("글램핑장명 입력") if self.area_choice and self.direction_choice != "" else None
 
     def result_sidebar(self) : return self.area_choice, self.direction_choice, self.address_input
-    # def choice_area(self) : return self.area_choice
-    # def choice_direction(self) : return self.direction_choice
-    # def input_address(self) : return self.address_input
-    # def result_sidebar(self) : return self.choice_area(), self.choice_direction(), self.input_address()
-    
