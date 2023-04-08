@@ -16,9 +16,10 @@ class GetResult:
         data.index += 1
 
         if data.empty : 
-            data.index = ["-"] * len(data)
-            data.loc[0, :-1] = ["-"] * (len(data.columns) - 1)
-            data.iloc[0, -1] = "일치 결과 없음"
+            columns = list(data.columns)
+            columns[-1] = "일치 결과 없음"
+            columns[:-1] = ["-"] * (len(columns) - 1)
+            data.columns = columns
         return data
 
     def get_result(self) : return self.choice_address(), self.area, self.choice, self.address
