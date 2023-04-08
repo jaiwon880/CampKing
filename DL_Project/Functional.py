@@ -1,5 +1,4 @@
 from ChoiceArea import GetSideBar
-from Data import GetData
 
 class GetResult:
     def __init__(self) -> None:
@@ -8,7 +7,7 @@ class GetResult:
         self.sidebar = GetSideBar()
         self.df = self.sidebar.set_data()
         self.area, self.choice, self.address = self.sidebar.get_choice_result()
-        
+
     def choice_address(self) : 
         if self.df is not None :
             if self.choice is not None and "" : 
