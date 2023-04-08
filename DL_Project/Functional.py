@@ -21,7 +21,9 @@ class GetResult:
 
 
     def choice_result_df(self) : 
-        return self.handle_index(self.df) if self.df is not None else None
+        if self.df is not None :
+            return self.handle_index(self.df)  
+        else : pass
      
 
     def get_result(self) : 
