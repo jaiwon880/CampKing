@@ -1,12 +1,9 @@
 import streamlit as st
-from Functional import GetResult
 
 class GetSideBar:
     def __init__(self) -> None:
         self.sb = st.sidebar
         self.sb.error("## 지역을 선택해주세요.")
-
-        self.df = GetResult().df
 
         self.area = ["", "경기도"]
         self.direction = [
