@@ -1,4 +1,4 @@
-from ChoiceArea import GetSideBar
+from SideBar import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
