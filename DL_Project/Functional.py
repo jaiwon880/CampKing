@@ -26,9 +26,12 @@ class GetResult:
         # else : return None
 
     def plus_index(self, result) :
+        result = result.iloc[:, 2:].sort_values('평점', ascending=False)
+        
         if result.empty : result.loc[0] = ["결과 없음"] * len(result.columns)
         else : result.index += 1
-        return result.iloc[:, 2:]
+        
+        return result
     
     def result_function(self) : return self.choice_address(), self.area, self.choice, self.address
 
