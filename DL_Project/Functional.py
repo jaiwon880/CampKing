@@ -3,7 +3,7 @@ from Data import GetData
 
 class GetResult:
     def __init__(self) -> None:
-        self.df = GetSideBar().push_df()
+        self.df = GetData().result_data()
         self.area, self.choice, self.address = GetSideBar().result_sidebar()
 
     def choice_address(self) : 
