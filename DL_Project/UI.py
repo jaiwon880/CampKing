@@ -11,7 +11,7 @@ def user_interface():
 
     # 사이드바 
     with st.sidebar :
-        if result1 is not None : st.dataframe(result1)
+        if result1 is not None : st.dataframe(result1, width = 300)
         else : pass
        
     st.write(f"""
