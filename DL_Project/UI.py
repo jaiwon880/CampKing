@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 from Functional import GetResult
 
 st.set_page_config(page_title="DL", layout="wide")
