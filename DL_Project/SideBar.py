@@ -30,8 +30,7 @@ class GetSideBar:
             else:
                 return self.df[(self.df[self.df.columns[0]] == self.area_choice)
                             & (self.df[self.df.columns[1]] == self.direction_choice)]
-        else:
-            return None
+        else : return None
 
 
     def get_choice_result(self):

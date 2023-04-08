@@ -1,33 +1,29 @@
 from SideBar import GetSideBar
-
+import pandas as pd
 class GetResult:
     def __init__(self) -> None:
         self.sidebar = GetSideBar()
         self.df = self.sidebar.set_data()
-        self.area, self.choice, self.address = self.sidebar.get_choice_result()
+        # self.area, self.choice, self.address = self.sidebar.get_choice_result()
 
     def handle_index(self, df):
-        if df.empty:
-            return df
+        if df is None:
+            columns = ["일치 결과 없음"]
+            df = pd.DataFrame(columns=columns)
+        else:
+            if df.empty:
+                columns = list(df.columns)
+                df.index.name = "-"
+                columns[:] = ["-"] * (len(columns))
+                columns[0] = "일치 결과 없음"
+                df.columns = columns
+            else:
+                df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
+                df.index.name = "순위"
+                df.index += 1
+        return df
 
-        columns = list(df.columns)
-        index = columns[0]
-        df[index] = df[index].apply(lambda x: str(x).strip())
 
-        if len(columns) > 1:
-            df = df.set_index(index)
-
-        # if df is None or df.empty:
-        #     columns = list(df.columns)
-        #     df.index.name = "-"
-        #     columns[:] = ["-"] * (len(columns))
-        #     columns[0] = "일치 결과 없음"
-        #     df.columns = columns
-        # else:
-        #     df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
-        #     df.index.name = "순위"
-        #     df.index += 1
-        # return df
     def choice_result_df(self) : return self.handle_index(self.df)
      
 
