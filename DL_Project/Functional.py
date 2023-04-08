@@ -22,7 +22,7 @@ class GetResult:
             columns = list(df.columns)
             df.index.name = "-"
             columns[:] = ["-"] * (len(columns))
-            df.iloc[:, 1:] = "일치 결과 없음"
+            df.iloc[0, 0] = "일치 결과 없음"
             df.columns = columns
         return df
 
