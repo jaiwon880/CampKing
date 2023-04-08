@@ -22,14 +22,17 @@ class GetSideBar:
         else : return None
     
     def set_data(self):
-        if self.area_choice and self.direction_choice and self.address_input:
-            return self.df[(self.df[self.df.columns[0]] == self.area_choice) \
-                            & (self.df[self.df.columns[1]] == self.direction_choice) \
+        if self.area_choice != "" and self.direction_choice != "":
+            if self.address_input:
+                return self.df[(self.df[self.df.columns[0]] == self.area_choice)
+                            & (self.df[self.df.columns[1]] == self.direction_choice)
                             & (self.df[self.df.columns[2]].str.contains(self.address_input))]
-        elif self.area_choice and self.direction_choice:
-            return self.df[(self.df[self.df.columns[0]] == self.area_choice) \
+            else:
+                return self.df[(self.df[self.df.columns[0]] == self.area_choice)
                             & (self.df[self.df.columns[1]] == self.direction_choice)]
-        else : return None
+        else:
+            return None
+
 
     def get_choice_result(self):
         return self.area_choice, self.direction_choice, self.address_input
