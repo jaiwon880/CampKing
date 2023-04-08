@@ -27,9 +27,11 @@ class GetResult:
 
     def plus_index(self, result) :
         result = result.iloc[:, 2:].sort_values('평점', ascending=False)
+        result.index += 1
         
         if result.empty : result.loc[0] = ["결과 없음"] * len(result.columns)
-        else : result.index += 1
+
+        else : pass
         
         return result
     
