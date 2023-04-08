@@ -21,7 +21,7 @@ class GetResult:
         if df.empty : 
             columns = list(df.columns)
             columns[1] = "일치 결과 없음"
-            df = df([["-" for i in range(len(columns))]], columns=columns)
+            df = pd.DataFrame([["-" for i in range(len(columns))]], columns=columns)
             df.index.name = "-"
             # columns = list(df.columns)
             # df.index.name = "-"
