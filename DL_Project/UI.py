@@ -12,8 +12,8 @@ def user_interface():
     # 사이드바 
     with st.sidebar :
         if df is not None : st.write(df if not df.empty else "일치하는 업체가 없습니다.", width = 500)
-         
-       
+    
+    # U_I
     st.write(f"""
             ### 지역 선택 = {area}
             ### 지역 선택 후 지역들 = {direction}
@@ -24,6 +24,8 @@ def user_interface():
     st.write(f"""
             {df}
     """)
+    with st.expander("메커니즘"):
+            st.image("https://i.imgur.com/PYE1VIK.jpg")
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
