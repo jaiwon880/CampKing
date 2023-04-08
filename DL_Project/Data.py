@@ -1,5 +1,6 @@
 import pandas as pd
 
+@st.cache_data
 class GetData:
     def __init__(self):
         self.df_url = "DL_Project/Data_csv/glamping_test.csv"
