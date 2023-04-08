@@ -20,7 +20,7 @@ class GetResult:
         return df
 
     def choice_result_df(self) : 
-        return self.handle_index(self.df) if self.df is not None or self.df.empty else None
+        return self.handle_index(self.df) if self.df is not None and not self.df.empty else None
 
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.choice, self.address
