@@ -2,8 +2,6 @@ from ChoiceArea import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
-        # self.df = GetSideBar().set_data()
-        # self.area, self.choice, self.address = GetSideBar().get_choice_result()
         self.sidebar = GetSideBar()
         self.df = self.sidebar.set_data()
         self.area, self.choice, self.address = self.sidebar.get_choice_result()
