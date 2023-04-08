@@ -22,9 +22,9 @@ class GetResult:
 
         if data.empty : 
             columns = list(data.columns)
-            columns[-1] = "일치 결과 없음"
-            columns[:-1] = ["-"] * (len(columns) - 1)
             data.index.name = "-"
+            columns[:-1] = ["-"] * (len(columns) - 1)
+            columns[-1] = "일치 결과 없음"
             data.columns = columns
         return data
 
