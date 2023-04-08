@@ -18,12 +18,10 @@ def user_interface():
             ### 지역 선택 = {area}
             ### 동서남북크로스 = {direction}
             ### 글램핑장명 입력 = {address}
+            ### 데이터프레임👇
     """)
 
-    st.write(f"""
-            ### 데이터프레임👇
-            ### {df}
-    """)
+    st.dataframe(df)
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
