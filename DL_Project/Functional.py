@@ -20,7 +20,9 @@ class GetResult:
 
         if self.df is not None :
             return self.handle_index(self.df)
+        elif self.address is not None : return self.handle_index(self.df['글램핑장'].str.contains(self.address))
         else : None
+
     def handle_index(self, df):
         df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
         df.index.name = "순위"
