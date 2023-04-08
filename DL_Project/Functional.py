@@ -7,12 +7,13 @@ class GetResult:
         self.area, self.choice, self.address = self.sidebar.get_choice_result()
 
     def handle_index(self, df):
-        if df is None : 
+        if df.empty : 
             columns = list(df.columns)
             df.index.name = "-"
             columns[:] = ["-"] * (len(columns))
             columns[0] = "일치 결과 없음"
             df.columns = columns
+
         else : 
             df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
             df.index.name = "순위"
