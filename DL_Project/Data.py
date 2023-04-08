@@ -5,9 +5,9 @@ import pandas as pd
 class GetData:
     def __init__(self):
         self.df_url = "DL_Project/Data_csv/glamping_test.csv"
-        self.df = self.create_data()
+        self.df = self.load_data()
 
-    def create_data(self):
+    def load_data(self):
         try: 
             df = pd.read_csv(self.df_url)
             df.index += 1
@@ -16,5 +16,4 @@ class GetData:
         except Exception as e:
             return st.error(e)
 
-    def result_data(self):
-        return self.df
+    def create_data(self) : return self.df
