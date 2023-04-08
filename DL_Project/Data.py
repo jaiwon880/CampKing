@@ -4,7 +4,7 @@ import pandas as pd
 
 class GetData:
     def __init__(self):
-        self.df_url = "https://raw.githubusercontent.com/cc5547/project/main/DL_Project/Data_csv/glamping_test.csv"
+        self.df_url = "DL_Project/Data_csv/glamping_test.csv"
         self.df = self.create_data()
 
     def create_data(self):
