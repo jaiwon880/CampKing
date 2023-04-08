@@ -13,6 +13,6 @@ class GetSideBar:
             ]
         self.area_choice = self.sb.selectbox('지역 선택 그..치만....경기도 뿐인걸...', self.area)
         self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction) if self.area_choice != "" else None
-        self.address_input = self.sb.text_input("글램핑장명 입력") if self.area_choice and self.direction_choice != "" else None
+        self.address_input = self.sb.text_input("글램핑장명 입력(동, 면이 될 수도)") if self.area_choice and self.direction_choice != "" else None
 
     def result_sidebar(self) : return self.area_choice, self.direction_choice, self.address_input
