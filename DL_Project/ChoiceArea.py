@@ -17,10 +17,8 @@ class GetSideBar:
             self.direction_choice = self.sb.selectbox('네넴띤선택결과', self.direction)
         else : None
         
-        
         self.address_input = self.sb.text_input("글램핑장명으로 구현 중 후에(동, 면 수정)") if self.area_choice and self.direction_choice != "" else None
     
-    def push_df(self) : return self.df
     def result_sidebar(self) : return self.area_choice, self.direction_choice, self.address_input
 
     # self.direction = [
