@@ -12,10 +12,9 @@ class GetSideBar:
         self.area_choice = self.sb.selectbox('팔도비빔면 그..치만....경기도 뿐인걸...', self.area)
 
         # 선택이 됐다면 
-        if self.area_choice != "":
-            self.direction = [""] + self.df[self.df[self.df.columns[0]] == self.area_choice].drop_duplicates(subset=self.df.columns[1])[self.df.columns[1]].sort_values().tolist() 
-            self.direction_choice = self.sb.selectbox('네넴띤선택결과', self.direction)
-        else : None
+        self.direction = [""] + self.df[self.df[self.df.columns[0]] == self.area_choice].drop_duplicates(subset=self.df.columns[1])[self.df.columns[1]].sort_values().tolist() if self.area_choice != "" else None
+        self.direction_choice = self.sb.selectbox('네넴띤선택결과', self.direction) if self.area_choice != "" else None
+        
         
         self.address_input = self.sb.text_input("글램핑장명으로 구현 중 후에(동, 면 수정)") if self.area_choice and self.direction_choice != "" else None
     
