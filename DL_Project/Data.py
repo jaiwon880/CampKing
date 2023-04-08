@@ -13,5 +13,5 @@ class GetData:
 
         except Exception as e:
             return st.error(e)
-    @st.cache_data
+    @st.cache
     def create_data(self) : return self.df
