@@ -13,6 +13,7 @@ class GetResult:
 
     def handle_index(self, data):
         data = data.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
+        data.index.name = "순위"
         data.index += 1
 
         if data.empty : 
