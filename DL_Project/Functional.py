@@ -16,7 +16,7 @@ class GetResult:
             if self.choice is not None and "" : return self.handle_index(df)
             elif self.address is not None and "" : return self.handle_index(self.df['글램핑장'].str.contains(self.address))
             else : return None
-        else : return None
+        else :  None
 
     def handle_index(self, df):
         df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
