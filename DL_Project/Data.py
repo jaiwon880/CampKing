@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-@st.cache_data
+@st.cache
 class GetData:
     def __init__(self):
         self.df_url = "DL_Project/Data_csv/glamping_test.csv"
