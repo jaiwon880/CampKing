@@ -20,10 +20,14 @@ class GetResult:
 
         if df.empty : 
             columns = list(df.columns)
+            columns[1] = "일치 결과 없음"
+            df = pd.DataFrame([["-" for i in range(len(columns))]], columns=columns)
             df.index.name = "-"
-            columns[:-1] = ["-"] * (len(columns) - 1)
-            columns[-1] = "일치 결과 없음"
-            df.columns = columns
+            # columns = list(df.columns)
+            # df.index.name = "-"
+            # columns[:-1] = ["-"] * (len(columns) - 1)
+            # columns[-1] = "일치 결과 없음"
+            # df.columns = columns
         return df
 
     def get_result(self) : return self.choice_address(), self.area, self.choice, self.address
