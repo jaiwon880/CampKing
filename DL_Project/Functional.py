@@ -10,7 +10,7 @@ class GetResult:
         if df.empty : 
             columns = list(df.columns)
             df.index.name = "-"
-            # columns[:] = ["-"] * (len(columns))
+            columns[:] = ["-"] * (len(columns))
             # columns[0] = "일치 결과 없음"
             # df.columns = columns
 
