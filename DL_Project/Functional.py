@@ -16,6 +16,7 @@ class GetResult:
         data.index += 1
 
         if data.empty : 
+            data.reset_index(drop=True, inplace=True)
             data.loc[0, :-1] = ["-"] * (len(data.columns) - 1)
             data.iloc[0, -1] = "일치 결과 없음"
         return data
