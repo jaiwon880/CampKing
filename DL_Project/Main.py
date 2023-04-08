@@ -1,5 +1,7 @@
 import UI
 
-def main() : UI.user_interface()
+def main() : 
+    UI.user_interface()
 
-if __name__ == '__main__' : main()
+if __name__ == '__main__' : 
+    main()
