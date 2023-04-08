@@ -7,9 +7,12 @@ class GetResult:
         self.area, self.choice, self.address = GetSideBar().get_choice_result()
 
     def choice_address(self) : 
-        if self.choice is not None and "" : return self.handle_index(self.df[self.df['시, 군'] == self.choice])
-        elif self.address is not None : return self.handle_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))])
-        else : return None
+        if self.df is not None :
+            if self.choice is not None and "" : 
+                return self.handle_index(self.df[self.df['시, 군'] == self.choice])
+            elif self.address is not None : 
+                return self.handle_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))])
+            else : return None
 
     def handle_index(self, data):
         data = data.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
