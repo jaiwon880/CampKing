@@ -8,11 +8,7 @@ class GetResult:
 
     def handle_index(self, df):
         if df.empty : 
-            columns = list(df.columns)
-            df.index.name = "-"
-            columns[:] = ["-"] * (len(columns))
-            columns[0] = "일치 결과 없음"
-            df.columns = columns
+            df = pd.DataFrame({"일치 결과 없음": ["-"]})
 
         else : 
             df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
