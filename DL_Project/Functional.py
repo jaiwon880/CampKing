@@ -13,7 +13,8 @@ class GetResult:
 
     def plus_index(self, result) :
         if result.empty :
-            for i in range(len(result.columns)) : result[i] = "결과없음"
+            for i in result.columns : 
+                result[i] = "결과없음"
         else : result.index += 1
             
 
