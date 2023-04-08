@@ -23,27 +23,3 @@ class GetSideBar:
                                          if self.area_choice and self.direction_choice != "" else None
 
     def get_choice_result(self) : return self.area_choice, self.direction_choice, self.address_input
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # self.direction = [
-        #     '', '가평군', '고양시', '과천시', '광명시', '광주시', '구리시', '군포시', '김포시', '남양주시', '동두천시', 
-        #     '부천시', '성남시', '수원시', '시흥시', '안산시', '안성시', '안양시', '양주시', '양평군', '여주시', '연천군', 
-        #     '오산시', '용인시', '의왕시', '의정부시', '이천시', '파주시', '평택시', '포천시', '하남시', '화성시'
-        #     ]
-    # self.direction = [""] + self.df[self.df[self.area_choice] == self.area_choice].drop_duplicates(subset='시, 군')['시, 군'].tolist() if self.area_choice != "" else None
