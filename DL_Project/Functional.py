@@ -14,7 +14,10 @@ class GetResult:
     def plus_index(self, result) :
         if not result.empty :
             result.index += 1
-        else : result = "결과 없음"
+        else : 
+            for i in range(len(result.columns)):
+                result.iloc[:, i] = "결과없음"
+
         return result
     
     def result_function(self) : return self.choice_address(), self.area, self.choice, self.address
