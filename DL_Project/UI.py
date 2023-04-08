@@ -1,10 +1,8 @@
 import streamlit as st
-import pandas as pd
 from Functional import GetResult
 st.set_page_config(page_title="DL", layout="wide")
 
-def get() : 
-    return GetResult().get_result()
+def get() : return GetResult().get_result()
 
 def user_interface():
     st.error("## TDD - Testing...")
@@ -23,7 +21,6 @@ def user_interface():
 
     st.write(f"""
             {df}
-            
     """)
 
     # image = [
