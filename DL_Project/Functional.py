@@ -4,7 +4,7 @@ class GetResult:
     def __init__(self) -> None:
         self.sidebar = GetSideBar()
         self.df = self.sidebar.set_data()
-        # self.area, self.choice, self.address = self.sidebar.get_choice_result()
+        self.area, self.choice, self.address = self.sidebar.get_choice_result()
 
     def handle_index(self, df):
         if df is None:
