@@ -19,8 +19,9 @@ class GetResult:
         # else :  None
 
         if self.df is not None :
-            return self.handle_index(self.df)
-        elif self.address is not "" : return self.handle_index(self.df['글램핑장'].str.contains(self.address))
+            if self.choice is not None and "" : return self.handle_index(self.df)
+            elif self.address is not None : return self.handle_index(self.df['글램핑장'].str.contains(self.address))
+            else return None
         else : None
 
     def handle_index(self, df):
