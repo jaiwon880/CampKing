@@ -1,6 +1,7 @@
 streamlit
 pandas
 numpy
+session-state
 # statsmodels
 # plotly
 # matplotlib
