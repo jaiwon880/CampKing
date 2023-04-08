@@ -11,8 +11,11 @@ def user_interface():
 
     # 사이드바 
     with st.sidebar :
-        if df is not None : st.dataframe(df, width = 300)
-        else : st.write("없음")
+        if df is not None : 
+            if df.empty:
+                st.write("없음")
+            else : st.dataframe(df, width = 300)
+         
        
     st.write(f"""
             ### 지역 선택 = {area}
