@@ -20,7 +20,7 @@ class GetResult:
         return df
 
     def choice_result_df(self) : 
-        if self.df is not None :
+        if self.df is None :
             self.handle_index(self.df)
      
 
