@@ -8,10 +8,8 @@ class GetResult:
 
     def choice_address(self) : 
         if self.df is not None :
-            if self.choice is not None and "" : 
-                return self.handle_index(self.df[self.df['시, 군'] == self.choice])
-            elif self.address is not None : 
-                return self.handle_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))])
+            if self.choice is not None and "" : return self.handle_index(self.df[self.df['시, 군'] == self.choice])
+            elif self.address is not None : return self.handle_index(self.df[(self.df['시, 군'] == self.choice) & (self.df['글램핑장'].str.contains(self.address))])
             else : return None
         else : None
 
