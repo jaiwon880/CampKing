@@ -1,5 +1,4 @@
 import streamlit as st
-from session_state import get_state
 import UI
 
 def main() : 
