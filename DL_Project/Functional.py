@@ -19,7 +19,9 @@ class GetResult:
             df.index += 1
         return df
 
-    def choice_result_df(self) : self.handle_index(self.df)
+    def choice_result_df(self) : 
+        if self.df is not None :
+            self.handle_index(self.df)
      
 
     def get_result(self) : 
