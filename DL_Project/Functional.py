@@ -7,7 +7,7 @@ class GetResult:
         self.area, self.choice, self.address = self.sidebar.get_choice_result()
 
     def handle_index(self, df):
-        if df is None : 
+        if df.empty : 
             columns = list(df.columns)
             df.index.name = "-"
             columns[:] = ["-"] * (len(columns))
