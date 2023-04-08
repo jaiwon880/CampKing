@@ -11,7 +11,7 @@ class GetSideBar:
         self.area = [""] + self.df.iloc[:, 0].drop_duplicates().tolist()
         self.area_choice = self.sb.selectbox('지역 선택 그..치만....경기도 뿐인걸...', self.area)
 
-        self.direction = [""] + self.df[self.df[self.df.columns[0]] == self.area_choice].drop_duplicates(subset=1)[1].tolist() if self.area_choice != "" else None
+        self.direction = [""] + self.df[self.df[self.df.columns[0]] == self.area_choice].drop_duplicates(subset=self.df.columns[1])[self.df.columns[1]].sort_values().tolist() if self.area_choice != "" else None
         # self.direction = [""] + self.df[self.df[self.area_choice] == self.area_choice].drop_duplicates(subset='시, 군')['시, 군'].tolist() if self.area_choice != "" else None
         self.direction_choice = self.sb.selectbox('동서남북크로스', self.direction) if self.area_choice != "" else None
         
