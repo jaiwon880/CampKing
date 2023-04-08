@@ -8,22 +8,22 @@ def get() :
 
 def user_interface():
     st.error("## TDD - Testing...")
-    result1, result2, result3, result4 = get()
+    df, area, direction, address = get()
 
     # 사이드바 
     with st.sidebar :
-        if result1 is not None : st.dataframe(result1, width = 200)
+        if result1 is not None : st.dataframe(result1, width = 300)
         else : pass
        
     st.write(f"""
-            ### 지역 선택 = {result2}
-            ### 동서남북크로스 = {result3}
-            ### 글램핑장명 입력 = {result4}
+            ### 지역 선택 = {area}
+            ### 동서남북크로스 = {direction}
+            ### 글램핑장명 입력 = {address}
     """)
 
     st.write(f"""
             ### 데이터프레임👇
-            ### {result1}
+            ### {df}
     """)
 
     # image = [
