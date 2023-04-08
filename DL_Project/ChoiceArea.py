@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from Data import GetData
 
 class GetSideBar:
@@ -23,7 +24,10 @@ class GetSideBar:
             if self.address_input is "" :
                 return self.df[(self.df[self.df.columns[0]] == self.area_choice)\
                                 & (self.df[self.df.columns[1]] == self.direction_choice)]
-            else : pass
+
+            else : return self.df[(self.df[self.df.columns[0]] == self.area_choice)\
+                                & (self.df[self.df.columns[1]] == self.direction_choice)\
+                                & (self.df[self.df.columns[2]].str.contains(address_input)]
         else : return None
     def get_choice_result(self) : return self.area_choice, self.direction_choice, self.address_input
 
