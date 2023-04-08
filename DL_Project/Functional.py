@@ -25,7 +25,7 @@ class GetResult:
             columns[-1] = "일치 결과 없음"
             columns[:-1] = ["-"] * (len(columns) - 1)
             data.index.name = "-"
-            # data.columns = columns
+            data.columns = columns
         return data
 
     def get_result(self) : return self.choice_address(), self.area, self.choice, self.address
