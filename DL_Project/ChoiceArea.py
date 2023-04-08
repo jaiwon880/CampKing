@@ -8,9 +8,7 @@ class GetSideBar:
 
         self.df = GetData().create_data()
         
-        # self.area = ["", "경기도"]
-        self.area = self.df["경기도"].unique().tolist()
-        self.area.insert(0, "")
+        self.area = [""] + self.df["경기도"].unique().tolist()
 
         self.direction = [
             '', '가평군', '고양시', '과천시', '광명시', '광주시', '구리시', '군포시', '김포시', '남양주시', '동두천시', 
