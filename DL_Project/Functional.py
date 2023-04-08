@@ -15,9 +15,7 @@ class GetResult:
         result = result.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
         result.index += 1
 
-        if result.empty:
-            result = pd.DataFrame([["-"] * len(result.columns)], columns=result.columns)
-
+        if result.empty : result = pd.DataFrame([["-"] * len(result.columns)], columns=result.columns)
         return result
 
     # def handle_index(self, result) :
