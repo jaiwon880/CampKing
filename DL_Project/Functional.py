@@ -16,7 +16,7 @@ class GetResult:
         result = result.reset_index(drop=True)
         result.index += 1
         
-        if result.empty : result.loc[0] = ["결과 없음"] * len(result.columns)
+        if result.empty : result.loc[0] = ["-"] * len(result.columns)
         else : pass
         
         return result
