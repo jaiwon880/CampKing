@@ -21,8 +21,8 @@ class GetResult:
         if df.empty : 
             columns = list(df.columns)
             df.index.name = "-"
-            columns[:-1] = ["-"] * (len(columns))
-            columns[1] = "일치 결과 없음"
+            columns[:-1] = ["-"] * (len(columns) - 1)
+            columns[-1] = "일치 결과 없음"
             df.columns = columns
         return df
 
