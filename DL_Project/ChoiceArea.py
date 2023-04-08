@@ -18,7 +18,7 @@ class GetSideBar:
     def get_data(self) : return GetData().create_data()
     def set_data(self) : pass
 
-    def get_choice_sidebar(self) : return self.area_choice, self.direction_choice, self.address_input
+    def get_choice_result(self) : return self.area_choice, self.direction_choice, self.address_input
 
 
 

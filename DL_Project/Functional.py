@@ -3,8 +3,8 @@ from Data import GetData
 
 class GetResult:
     def __init__(self) -> None:
-        self.df = GetData().create_data()
-        self.area, self.choice, self.address = GetSideBar().get_choice_sidebar()
+        self.df = GetSideBar().get_data()
+        self.area, self.choice, self.address = GetSideBar().get_choice_result()
 
     def choice_address(self) : 
         if self.choice is not None and "" : return self.handle_index(self.df[self.df['시, 군'] == self.choice])
