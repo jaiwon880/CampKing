@@ -2,9 +2,7 @@ from SideBar import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
-        self.sidebar = GetSideBar()
-        self.df = self.sidebar.set_data()
-        self.area, self.choice, self.address = self.sidebar.get_choice_result()
+        self.df, self.area, self.choice, self.address = GetSideBar().get_choice_result()
 
     def handle_index(self, df):
         df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)

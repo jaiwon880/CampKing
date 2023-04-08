@@ -30,6 +30,5 @@ class GetSideBar:
                             & (self.df[self.df.columns[1]] == self.direction_choice)]
         else : return None
 
-
     def get_choice_result(self):
-        return self.area_choice, self.direction_choice, self.address_input
+        return self.set_data(), self.area_choice, self.direction_choice, self.address_input
