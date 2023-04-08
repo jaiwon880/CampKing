@@ -12,11 +12,10 @@ class GetResult:
         else : return None
 
     def plus_index(self, result) :
-        if not result.empty :
-            result.index += 1
-        else : 
-            for i in range(len(result.columns)):
-                result.iloc[:, i] = "결과없음"
+        if result.empty :
+            for i in range(len(result.columns)) : result.iloc[:, i] = "결과없음"
+        else : result.index += 1
+            
 
         return result
     
