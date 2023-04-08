@@ -1,11 +1,11 @@
 import pandas as pd
+import streamlit as st
 
 class GetData:
     def __init__(self):
         self.df_url = "DL_Project/Data_csv/glamping_test.csv"
         self.df = self.load_data()
-        
-    @st.cache_data
+
     def load_data(self):
         try: 
             df = pd.read_csv(self.df_url)
@@ -14,5 +14,6 @@ class GetData:
 
         except Exception as e:
             return st.error(e)
-    
+            
+    @st.cache_data
     def create_data(self) : return self.df
