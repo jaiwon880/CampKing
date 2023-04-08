@@ -24,6 +24,7 @@ def user_interface():
     st.write(f"""
             {df}
     """)
+    st.write("설계 사유 : 용량이 엄청 클 것 으로 예상 되기에 줄여서 백엔드적으로도 줄여서 하기 위함.")
     with st.expander("# 메커니즘_설명"):
         st.image("https://i.imgur.com/PYE1VIK.jpg", width = 1000)
 
