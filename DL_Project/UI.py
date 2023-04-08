@@ -21,7 +21,7 @@ def user_interface():
             ### 데이터프레임👇
     """)
 
-    st.dataframe(df)
+    st.write(df)
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
