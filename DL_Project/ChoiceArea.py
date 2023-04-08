@@ -16,7 +16,7 @@ class GetSideBar:
     def get_direction_list(self) : return [""] + self.df[self.df[self.df.columns[0]] == self.area_choice]\
                                                 .drop_duplicates(subset=self.df.columns[1])[self.df.columns[1]]\
                                                 .sort_values().tolist() if self.area_choice != "" else None
-    
+    @st.cache_data
     def get_data(self) : return GetData().create_data()
     def set_data(self) : return self.df[(self.df[self.df.columns[0]] == self.area_choice)\
                                          & (self.df[self.df.columns[1]] == self.direction_choice)]\
