@@ -24,7 +24,7 @@ def user_interface():
     st.write(f"""
             {df}
     """)
-    with st.expander("메커니즘"):
+    with st.expander("# 메커니즘"):
             st.image("https://i.imgur.com/PYE1VIK.jpg")
 
     # image = [
