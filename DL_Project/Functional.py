@@ -16,17 +16,17 @@ class GetResult:
         else : None
 
     def handle_index(self, data):
-        data = data.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
-        data.index.name = "순위"
-        data.index += 1
+        df = data.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
+        df.index.name = "순위"
+        df.index += 1
 
-        if data.empty : 
-            columns = list(data.columns)
-            data.index.name = "-"
+        if df.empty : 
+            columns = list(df.columns)
+            df.index.name = "-"
             columns[:-1] = ["-"] * (len(columns) - 1)
             columns[-1] = "일치 결과 없음"
-            data.columns = columns
-        return data
+            df.columns = columns
+        return df
 
     def get_result(self) : return self.choice_address(), self.area, self.choice, self.address
 
