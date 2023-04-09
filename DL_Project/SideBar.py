@@ -12,7 +12,7 @@ class GetSideBar:
         self.address_input = self.sb.text_input("글램핑장명으로 구현 중 후에(동, 면 수정)") if self.area_choice and self.direction_choice != "" else None
     
     def get_area_list(self):
-        return [None] + self.df.iloc[:, 0].drop_duplicates().tolist()
+        return [""] + self.df.iloc[:, 0].drop_duplicates().tolist()
 
     def get_direction_list(self):
         return [""] + self.df[self.df[self.df.columns[0]] == self.area_choice] \
