@@ -21,5 +21,4 @@ class GetResult:
     def get_result(self): 
         return self.choice_result_df(), self.area, self.choice, self.address
       
-    # def get_audio(self):
-    #     return self.audio
+    # def get_audio(self) : return self.audio
