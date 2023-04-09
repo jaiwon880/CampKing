@@ -1,8 +1,8 @@
 streamlit
 pandas
 numpy
-pydub
-ffmpeg
+pydub==0.25.1
+ffmpeg==4.4
 
 # statsmodels
 # plotly
