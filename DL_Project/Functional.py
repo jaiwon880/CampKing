@@ -5,10 +5,10 @@ class GetResult:
         self.df, self.area, self.choice, self.address = GetSideBar().get_choice_result()
 
     def handle_index(self, df):
-        # df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
-        df = df.iloc[:, 2:].sort_values('평점', ascending=False)
+        df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
+        # df = df.iloc[:, 2:].sort_values('평점', ascending=False)
         df.index.name = "순위"
-        df.index = np.arange(1, len(df) + 1) 
+        # df.index = np.arange(1, len(df) + 1) 
         # df.index += 1
         return df
 
