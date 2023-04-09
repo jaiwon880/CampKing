@@ -47,4 +47,4 @@ def user_interface():
 
     for i in range(3):
         for message in messages:
-            getattr(st, message)(f'This is a {message} message')
+            getattr(st, message)(f'{message} 메세지')
