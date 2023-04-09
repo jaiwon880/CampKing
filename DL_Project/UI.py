@@ -1,8 +1,8 @@
 import streamlit as st
 from Functional import GetResult
 
-# st.set_page_config(page_title="DL", layout="wide")
-st.set_page_config(page_title="DL")
+st.set_page_config(page_title="DL", layout="wide")
+
 def get() : return GetResult().get_result()
 
 def user_interface():
