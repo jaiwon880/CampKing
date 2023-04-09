@@ -2,9 +2,10 @@ import streamlit as st
 from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def get() : return GetResult().get_result()
-
+def audio() : return GetResult().result_audio()
 def user_interface():
     set_page()
+    audio()
     st.error("## TDD - Testing...")
 
     df, area, direction, address = get()
