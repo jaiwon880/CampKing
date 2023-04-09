@@ -1,6 +1,5 @@
 import streamlit as st
 from Functional import GetResult
-
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def get() : return GetResult().get_result()
 
@@ -46,6 +45,6 @@ def user_interface():
     # =====================================================================
     messages = ['success', 'info', 'warning', 'error']
 
-    for i in range(2):
+    for i in range(3):
         for message in messages:
             getattr(st, message)(f'This is a {message} message')
