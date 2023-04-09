@@ -1,5 +1,5 @@
 from SideBar import GetSideBar
-
+import numpy as np
 class GetResult:
     def __init__(self) -> None:
         self.df, self.area, self.choice, self.address = GetSideBar().get_choice_result()
