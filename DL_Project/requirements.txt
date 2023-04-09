@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-pydub
+pydub==0.25.1
 ffmpeg
 
 # statsmodels
