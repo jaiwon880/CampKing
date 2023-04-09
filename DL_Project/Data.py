@@ -11,7 +11,7 @@ class GetData:
     def load_data(self):
         try: 
             df = pd.read_csv(self.df_url)
-            df.index += 1
+            # df.index += 1
             return df
 
         except Exception as e:
