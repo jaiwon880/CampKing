@@ -43,7 +43,7 @@ def user_interface():
         with containers[i] : 
             st.image(image[i], width = 700)
     # =====================================================================
-    messages = ['succes초록색', 'info파란색', 'warning노란색', 'error빨간색']
+    messages = ['succes', 'info', 'warning', 'error']
 
     for i in range(3):
         for message in messages:
