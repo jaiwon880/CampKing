@@ -21,9 +21,9 @@ class GetData:
             return st.error(e)
 
     def load_audio(self) :
-        audio1 = AudioSegment.from_file("audio1.mp3")
-        audio2 = AudioSegment.from_file("audio2.mp3")
-        audio3 = AudioSegment.from_file("audio3.mp3")
+        audio1 = AudioSegment.from_file("self.audio_path1")
+        audio2 = AudioSegment.from_file("self.audio_path2")
+        audio3 = AudioSegment.from_file("self.audio_path3")
 
         add_audio = audio1 + audio2 + audio3
 
