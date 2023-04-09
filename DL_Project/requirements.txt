@@ -2,7 +2,7 @@ streamlit
 pandas
 numpy
 pydub
-# ffmpeg
+ffmpeg
 
 # statsmodels
 # plotly
