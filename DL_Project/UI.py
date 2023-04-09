@@ -11,7 +11,7 @@ def user_interface():
 
     # 사이드바 
     with st.sidebar :
-        if df is not None : st.dataframe(df if not df.empty else "일치하는 업체가 없습니다.", width = 500)
+        if df is not None : st.write(df if not df.empty else "일치하는 업체가 없습니다.", width = 500)
     
     # U_I
     st.write(f"""
