@@ -8,10 +8,10 @@ class GetData:
         self.df_path = "DL_Project/Data_csv/glamping_test_3000.csv"
         self.df = self.load_data()
 
-        self.audio_path1 = "DL_Project/Data_csv/crackling_wood_sound.mp3"
-        self.audio_path2 = "DL_Project/Data_csv/crackling_sound_of_oak_bark.mp3"
-        self.audio_path3 = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
-        self.audio = self.load_audio()
+        # self.audio_path1 = "DL_Project/Data_csv/crackling_wood_sound.mp3"
+        # self.audio_path2 = "DL_Project/Data_csv/crackling_sound_of_oak_bark.mp3"
+        # self.audio_path3 = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
+        # self.audio = self.load_audio()
 
     def load_data(self):
         try :  
@@ -20,16 +20,16 @@ class GetData:
         except Exception as e : 
             return st.error(e)
 
-    def load_audio(self) :
-        audio1 = AudioSegment.from_file("self.audio_path1")
-        audio2 = AudioSegment.from_file("self.audio_path2")
-        audio3 = AudioSegment.from_file("self.audio_path3")
+    # def load_audio(self) :
+    #     audio1 = AudioSegment.from_file("self.audio_path1")
+    #     audio2 = AudioSegment.from_file("self.audio_path2")
+    #     audio3 = AudioSegment.from_file("self.audio_path3")
 
-        add_audio = audio1 + audio2 + audio3
+    #     add_audio = audio1 + audio2 + audio3
 
-        add_audio.export("result_audio.mp3", format="mp3")
+    #     add_audio.export("result_audio.mp3", format="mp3")
         
-        return add_audio
+    #     return add_audio
 
     def create_data(self) : return self.df
-    def create_audio(self) : return self.audio
+    # def create_audio(self) : return self.audio

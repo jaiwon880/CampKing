@@ -5,7 +5,7 @@ from Data import GetData
 class GetResult:
     def __init__(self) -> None:
         self.df, self.area, self.choice, self.address = GetSideBar().get_choice_result()
-        self.audio = GetData().create_audio()
+        # self.audio = GetData().create_audio()
 
     def handle_df(self, df):
         # df = df.iloc[:, 2:].sort_values('평점', ascending=False)
@@ -21,5 +21,5 @@ class GetResult:
     def get_result(self): 
         return self.choice_result_df(), self.area, self.choice, self.address
       
-    def get_audio(self):
-        return self.audio
+    # def get_audio(self):
+    #     return self.audio
