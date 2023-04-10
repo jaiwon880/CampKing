@@ -8,8 +8,8 @@ def get_df() : return GetResult().get_result()
 def user_interface():
     set_page()
     st.error("## TDD - Testing...")
-    area = get_df()
-    st.write(area)
+    
+    
     # df, area, direction, address = get_df()
 
     # # 사이드바 
