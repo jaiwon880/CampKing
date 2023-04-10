@@ -2,12 +2,13 @@ import streamlit as st
 # from pydub import AudioSegment
 from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
+def title_message() : return st.error("## TDD - Testing...")
 def get_df() : return GetResult().get_result()
 # def audio() : return GetResult().get_audio()
 
 def user_interface():
     set_page()
-    st.error("## TDD - Testing...")
+    title_message()
     df, area, direction, address = get_df()
 
     # # 사이드바 
