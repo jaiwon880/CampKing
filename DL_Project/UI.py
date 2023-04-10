@@ -25,8 +25,8 @@ def user_interface():
     st.write(f"""
             {df}
             """)
-    # with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
-    #     st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
+    with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
+        st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
