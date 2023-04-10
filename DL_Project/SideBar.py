@@ -15,7 +15,7 @@ class GetSideBar:
         return self.df.iloc[:, 3].apply(lambda x: x.split(' ')[i])
 
     def get_area_list(self) : 
-        return [""] + list(set(split_location(0)))
+        return [""] + list(set(self.split_location(0)))
     # def get_area_list(self) : 
     #     return [""] + list(set(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0])))
 
