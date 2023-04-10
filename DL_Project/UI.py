@@ -26,7 +26,9 @@ def user_interface():
         with st.sidebar : sidebar_print_df(df)
         with st.container() : search_result(area, direction, address)
         with st.expander(mecanism_ment()) : mechanism_image()
-    else : st.image(start_image(), width = 1000)
+    else : 
+        st.image(start_image(), width = 1000)
+        st.write("# 아 배고프다.")
 
 
 
