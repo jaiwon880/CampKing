@@ -19,12 +19,12 @@ class GetSideBar:
         return [""] + list(set(self.split_location(0)))
 
     def get_direction_list(self) : 
-        return [""] + list(set(self.df[self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice]\
+        return [""] + list(set(self.df[self.split_location(0) == self.area_choice]\
                                                 .iloc[:, 3].apply(lambda x: x.split(' ')[1])))
     
     def get_address_list(self) : 
-        return [""] + list(set(self.df[(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice) \
-                                        & (self.df.iloc[:, 3].apply(lambda x: x.split(' ')[1]) == self.direction_choice)]\
+        return [""] + list(set(self.df[(self.split_location(0) == self.area_choice) \
+                                        & (self.split_location(1) == self.direction_choice)]\
                                                     .iloc[:, 3].apply(lambda x: x.split(' ')[2])))
 
     def set_choice_result_data(self):
