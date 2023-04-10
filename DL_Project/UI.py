@@ -27,8 +27,7 @@ def user_interface():
         with st.expander(mecanism_ment()) : mechanism_image()
 
         for i in range(len(image())) :
-            with containers()[i] : 
-                st.image(image()[i], width = 700)
+            with containers()[i] : st.image(image()[i], width = 700)
     else : 
         st.image(start_image(), width = 1000)
         st.write("# 아 배고프다.")
