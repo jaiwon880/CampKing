@@ -3,7 +3,7 @@ import streamlit as st
 from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def title_message() : return st.error("## TDD - Testing...")
-def witre_center(area, direction, address) : return st.write(f"""
+def witre_center(df, area, direction, address) : return st.write(f"""
                                         ### 지역 선택 = {area}
                                         ### 지역 선택 후 지역들 = {direction}
                                         ### 유저 인풋 데이터 = {address}
@@ -16,8 +16,7 @@ def get_df() : return GetResult().get_result()
 def user_interface():
     set_page()
     title_message()
-    df, area, direction, address = get_df()
-    witre_center(area, direction, address)
+    witre_center(get_df())
     # 사이드바 
     with st.sidebar : 
         if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
