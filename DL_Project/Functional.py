@@ -4,7 +4,9 @@ from Data import GetData
 
 class GetResult:
     def __init__(self) -> None:
-        self.df, self.area, self.choice, self.address = GetSideBar().get_choice_result()
+        result_sb = GetSideBar()
+        self.df, self.area, self.choice, self.address = result_sb.get_choice_result()
+        self.df = result_sb.set_data()
     #     # self.audio = GetData().create_audio()
     def handle_df(self, df) :
     #     # df = df.iloc[:, 2:].sort_values('평점', ascending=False)
