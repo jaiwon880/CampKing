@@ -4,7 +4,7 @@ from SideBar import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
-        self.df = GetSideBar().set_choice_result_data()
+        self.df, self.area, self.direction, self.address = GetSideBar().choice_result_sidebar()
         # self.audio = GetData().create_audio()
 
     def handle_df(self, df) :
@@ -15,10 +15,9 @@ class GetResult:
             df.index.name = "순위"
             df = df.rename(columns={'name': '업체명', 'ranking': '별점'})
             df.index += 1
-            
             return df
         else : return None
 
     def choice_result_df(self) : return self.handle_df(self.df) if self.df is not None else None
 
-    def get_result(self) : return self.choice_result_df()
+    def get_result(self) : return self.choice_result_df(), self.area, self.direction, self.address

@@ -33,3 +33,5 @@ class GetSideBar:
                 return self.df[(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0] == self.area_choice)) \
                                 & (self.df.iloc[:, 3].apply(lambda x: x.split(' ')[1] == self.direction_choice))]
         else : return None
+
+    def choice_result_sidebar(self) : return slef.set_choice_result_data(), self.area_choice, self.direction_choice, self.address_choice

@@ -10,14 +10,11 @@ def get_df() : return GetResult().get_result()
 def user_interface():
     set_page()
     title_message()
-    df = get_df
+    df, area, direction, address = get_df
     # 사이드바 
-    # with st.sidebar : 
-    #     if df is None : 
-    #         pass
-            
-    #     else : 
-    #         st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
+    with st.sidebar : 
+        if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
+ 
     if df is not None : st.dataframe(df)
     with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
         st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
