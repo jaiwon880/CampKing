@@ -14,6 +14,7 @@ def mecanism_ment() : return "# 메커니즘_설명 / 용량이 엄청 클 것 �
 def mechanism_image() : return st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
 def start_image() : return "https://i.imgur.com/idnsDBs.gif"
 def image() : return ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
+def containers() : return [st.container() for i in range(len(image()))]
 # def audio() : return GetResult().get_audio()
 
 def user_interface():
@@ -23,13 +24,11 @@ def user_interface():
     if df is not None : 
         title_ment(area, direction, address)
         with st.sidebar : sidebar_print_df(df)
-
-        containers = [st.container() for i in range(len(image()))]
-        for i in range(len(image())) :
-            with containers[i] : 
-                st.image(image()[i], width = 700)
-        
         with st.expander(mecanism_ment()) : mechanism_image()
+
+        for i in range(len(image())) :
+            with containers()[i] : 
+                st.image(image()[i], width = 700)
     else : 
         st.image(start_image(), width = 1000)
         st.write("# 아 배고프다.")
