@@ -13,8 +13,8 @@ class GetResult:
         # df = df.iloc[:, 2:].sort_values('평점', ascending=False)
         # df.index = np.arange(1, len(df) + 1)
         if df is not None:
-            df = df.drop_duplicates(subset=['name'], keep='first').reset_index(drop=True)
-            df.sort_values(by='ranking', ascending=False, inplace=True)
+            df = df.drop_duplicates(subset=['name'], keep='first')
+            df.sort_values(by='ranking', ascending=False, inplace=True).reset_index(drop=True)
             df = df[['name', 'ranking']]
             df.index.name = "순위"
             df.index += 1
