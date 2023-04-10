@@ -13,10 +13,10 @@ class GetSideBar:
     
 
     def split_location(self, index_num):
-        return apply(lambda x: x.split(' ')[index_num])
+        return self.df.iloc[:, 3].apply(lambda x: x.split(' ')[index_num])
 
     def get_area_list(self) : 
-        return [""] + list(set(self.df.iloc[:, 3].self.split_location(0)))
+        return [""] + list(set(self.split_location(0)))
 
     def get_direction_list(self) : 
         return [""] + list(set(self.df[self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice]\
