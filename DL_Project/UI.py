@@ -8,23 +8,23 @@ def get_df() : return GetResult().get_result()
 # def audio() : return GetResult().get_audio()
 
 def user_interface():
-    set_page()
-    
     df, area, direction, address = get_df()
 
-    if df is not None : title_message()
-    
-    with st.sidebar : 
-        if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
+    if df is not None : 
+        set_page()
+        title_message()
+
+        with st.sidebar : 
+            st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
  
-    with st.container():
-        if area is not "" and direction is not ("" and None) :
-            st.write(f"""
-                        ### 선택한 결과 입니다. 👉{area} {direction} {address}
-            """)
+        with st.container():
+            if area is not "" and direction is not ("" and None) :
+                st.write(f"""
+                            ### 선택한 결과 입니다. 👉{area} {direction} {address}
+                """)
     
-    with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
-        st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
+        with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
+            st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
 
     # image = [
     #     "https://i.imgur.com/t4O7ozH.jpg", 
