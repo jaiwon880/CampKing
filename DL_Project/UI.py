@@ -8,9 +8,9 @@ def get_df() : return GetResult().get_result()
 def user_interface():
     set_page()
     st.error("## TDD - Testing...")
-    area = get_df()
+    area, direction, address = get_df()
 
-    
+
     # df, area, direction, address = get_df()
 
     # # 사이드바 
@@ -18,12 +18,12 @@ def user_interface():
     #     if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
     
     # # U_I
-    # st.write(f"""
-    #         ### 지역 선택 = {area}
-    #         ### 지역 선택 후 지역들 = {direction}
-    #         ### 유저 인풋 데이터 = {address}
-    #         ### 데이터프레임👇df 컬럼 깨져서 나옴
-    #         """)
+    st.write(f"""
+            ### 지역 선택 = {area}
+            ### 지역 선택 후 지역들 = {direction}
+            ### 유저 인풋 데이터 = {address}
+            ### 데이터프레임👇df 컬럼 깨져서 나옴
+            """)
 
     # st.write(f"""
     #         {df}

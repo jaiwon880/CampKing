@@ -32,4 +32,4 @@ class GetSideBar:
         else : return None
 
     def get_choice_result(self) : 
-        return self.area_choice
+        return self.area_choice, self.direction_choice, self.address_choice
