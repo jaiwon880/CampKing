@@ -12,7 +12,8 @@ class GetResult:
     def handle_df(self, df) :
         # df = df.iloc[:, 2:].sort_values('평점', ascending=False)
         # df.index = np.arange(1, len(df) + 1) 
-        df.drop_duplicates(subset=['name'], keep='first', inplace=True).reset_index(drop=True)
+        df = df.drop_duplicates(subset=['name'], keep='first', inplace=True).reset_index(drop=True)
+
 
         # df = df.iloc[:, 8:].sort_values('평점', ascending=False).reset_index(drop=True)
         df.index.name = "순위"
