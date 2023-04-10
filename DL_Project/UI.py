@@ -16,7 +16,8 @@ def user_interface():
         if df is None : 
             pass
             
-        else : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
+        else : 
+            st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
 
     with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
         st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
