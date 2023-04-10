@@ -3,9 +3,7 @@ import streamlit as st
 from Functional import GetResult
 
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
-
 def get_df() : return GetResult().get_result()
-
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
 def title_ment() : return st.error("## TDD - Testing..."), st.markdown("---")
