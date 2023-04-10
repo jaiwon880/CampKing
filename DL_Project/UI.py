@@ -5,7 +5,7 @@ def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
-def title_ment(area, direction, address) : return st.error(f"👉{area} {direction} {address}"), st.markdown("---")
+def title_ment(area, direction, address) : return st.error(f"# 👉{area} {direction} {address}"), st.markdown("---")
 def search_result(area, direction, address) : return \
     st.write(f"### 선택한 결과 입니다. ") \
     if area is not "" and direction is not ("" and None) else ""
