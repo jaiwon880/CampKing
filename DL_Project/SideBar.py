@@ -11,12 +11,15 @@ class GetSideBar:
         self.direction_choice = self.sb.selectbox('시, 군', self.get_direction_list()) if self.area_choice != "" else None
         self.address_choice = self.sb.selectbox('구, 동, 면, 군, 읍', self.get_address_list()) if self.area_choice and self.direction_choice != "" else None
        
-    def get_area_list(self) : return [""] + list(set(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0])))
+    def get_area_list(self) : 
+        return [""] + list(set(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0])))
 
-    def get_direction_list(self) : return [""] + list(set(self.df[self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice]\
-                                                                .iloc[:, 3].apply(lambda x: x.split(' ')[1])))
+    def get_direction_list(self) : 
+        return [""] + list(set(self.df[self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice]\
+                                                .iloc[:, 3].apply(lambda x: x.split(' ')[1])))
     
-    def get_address_list(self) : return [""] + list(set(self.df[(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice) \
+    def get_address_list(self) : 
+        return [""] + list(set(self.df[(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice) \
                                         & (self.df.iloc[:, 3].apply(lambda x: x.split(' ')[1]) == self.direction_choice)]\
                                                     .iloc[:, 3].apply(lambda x: x.split(' ')[2])))
 
@@ -31,5 +34,4 @@ class GetSideBar:
                                 & (self.df.iloc[:, 3].apply(lambda x: x.split(' ')[1] == self.direction_choice))]
         else : return None
 
-    def get_choice_result(self) : 
-        return self.area_choice, self.direction_choice, self.address_choice
+    def get_choice_result(self) : return self.area_choice, self.direction_choice, self.address_choice
