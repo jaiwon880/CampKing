@@ -10,9 +10,6 @@ def user_interface():
     st.error("## TDD - Testing...")
     area, direction, address = get_df()
 
-
-    # df, area, direction, address = get_df()
-
     # # 사이드바 
     # with st.sidebar : 
     #     if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
