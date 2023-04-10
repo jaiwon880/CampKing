@@ -16,10 +16,10 @@ class GetSideBar:
 
     def get_direction_list(self) :
         # self.area_choice 변수에 저장된 값과 일치하는 세 번째 열의 값을 가진 행만 추출
-        filtered_df = self.df[self.df.iloc[:, 2].apply(lambda x: x.split(' ')[0]) == self.area_choice]
+        filtered_df = self.df[self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice]
 
         # 추출된 행에서 세 번째 열의 값을 문자열에서 공백으로 분리하여 두 번째 요소들을 중복을 제거한 리스트 생성
-        result_list = list(set(filtered_df.iloc[:, 2].apply(lambda x: x.split(' ')[1])))
+        result_list = list(set(filtered_df.iloc[:, 3].apply(lambda x: x.split(' ')[1])))
         return result_list
     
     # def set_data(self):
