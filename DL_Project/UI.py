@@ -3,7 +3,7 @@ import streamlit as st
 from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def title_message() : return st.error("## TDD - Testing..."), st.markdown("---")
-def sidebar_messsage() return st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=500)
+def sidebar_messsage() : return st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=500)
 def get_df() : return GetResult().get_result()
 # def audio() : return GetResult().get_audio()
 
