@@ -11,8 +11,8 @@ def search_result(area, direction, address) :
     return st.write(f"### 선택한 결과 입니다. 👉{area} {direction} {address}") \
                         if area is not "" and direction is not ("" and None) else ""
 
+def mecanism_ment() : return "# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 메모리 최적화. "
 def mechanism_image() : return st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
-def mecanism_ment() : return "# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "
 def start_image() : return "https://i.imgur.com/idnsDBs.gif"
 
 # def audio() : return GetResult().get_audio()
