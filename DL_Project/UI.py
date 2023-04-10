@@ -5,7 +5,7 @@ from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def title_message() : return st.error("## TDD - Testing..."), st.markdown("---")
 def sidebar_messsage(df) : return st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=500)
-def search_result_message() : return st.write(f"### 선택한 결과 입니다. 👉{area} {direction} {address}") \
+def search_result_message(area, direction, address) : return st.write(f"### 선택한 결과 입니다. 👉{area} {direction} {address}") \
                                     if area is not "" and direction is not ("" and None) else ""
 
 def start_image() : return "https://i.imgur.com/idnsDBs.gif"
@@ -23,7 +23,7 @@ def user_interface():
     if df is not None : 
         title_message()
         with st.sidebar : sidebar_messsage(df)
-        with st.container(): search_result_message()
+        with st.container(): search_result_message(area, direction, address)
         with st.expander(mecanism_ment) : mecanism()
     else : st.image(start_image(), width = 1000)
 
