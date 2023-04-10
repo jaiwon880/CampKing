@@ -35,7 +35,8 @@ class GetSideBar:
 
     # def get_choice_result(self):
     #     return self.set_data(), self.area_choice, self.direction_choice, self.address_input
-
+    def get_choice_result(self) : 
+        return self.area_choice
 
         # unique_values = list(set(df.iloc[:, 2].apply(lambda x: x.split(' ')[0])))
         # unique_values = list(set([x.split(' ')[1] for x in df.iloc[:, 2] if x.split(' ')[0] == areachoice]))
