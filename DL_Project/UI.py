@@ -16,7 +16,7 @@ def user_interface():
         title_message()
 
         with st.sidebar : 
-            st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
+            st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=500)
  
         with st.container():
             if area is not "" and direction is not ("" and None) :
