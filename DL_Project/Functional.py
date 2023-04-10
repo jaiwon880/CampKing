@@ -28,7 +28,7 @@ class GetResult:
             .rename_axis("순위")
             .reset_index()
             )
-            df['순위'] += 1
+            
             return df
         else : return None
 
