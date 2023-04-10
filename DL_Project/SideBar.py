@@ -19,7 +19,10 @@ class GetSideBar:
                                                                 .iloc[:, 3].apply(lambda x: x.split(' ')[1])))
     
     def get_address_list(self) :
-        return self.get_direction_list()
+        return list(set(self.df[(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0]) == self.area_choice) \
+                                & (self.df.iloc[:, 3].apply(lambda x: x.split(' ')[1]) == self.direction_choice)]\
+                                            .iloc[:, 3].apply(lambda x: x.split(' ')[2])))
+
     # def set_data(self):
     #     if self.area_choice != "" and self.direction_choice != "":
     #         if self.address_input != "" :
