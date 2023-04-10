@@ -15,7 +15,7 @@ class GetSideBar:
         return [""] + list(set(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[0])))
 
     def get_direction_list(self) :
-        return list(set(self.df.iloc[:, 2].apply(lambda x: x.split(' ')[1]).loc[self.df.iloc[:, 2].apply(lambda x: self.area in x.split(' ')[0])]))
+        return list(set(self.df.iloc[:, 3].apply(lambda x: x.split(' ')[1]).loc[self.df.iloc[:, 3].apply(lambda x: self.area in x.split(' ')[0])]))
     
     # def set_data(self):
     #     if self.area_choice != "" and self.direction_choice != "":
