@@ -5,9 +5,9 @@ def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
-def title_ment() : return st.error("## TDD - Testing..."), st.markdown("---")
+def title_ment(area, direction, address) : return st.error("👉{area} {direction} {address}"), st.markdown("---")
 def search_result(area, direction, address) : return \
-    st.write(f"### 선택한 결과 입니다. 👉{area} {direction} {address}") \
+    st.write(f"### 선택한 결과 입니다. ") \
     if area is not "" and direction is not ("" and None) else ""
 
 def mecanism_ment() : return "# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 메모리 최적화. "
@@ -21,9 +21,9 @@ def user_interface():
     df, area, direction, address = get_df()
 
     if df is not None : 
-        title_ment()
+        title_ment(area, direction, address)
         with st.sidebar : sidebar_print_df(df)
-        with st.container() : search_result(area, direction, address)
+        with st.container() : pass
         with st.expander(mecanism_ment()) : mechanism_image()
     else : 
         st.image(start_image(), width = 1000)
