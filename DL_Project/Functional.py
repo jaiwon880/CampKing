@@ -14,7 +14,8 @@ class GetResult:
         # df.index = np.arange(1, len(df) + 1)
         if df is not None:
             df = df.drop_duplicates(subset=['name'], keep='first').reset_index(drop=True)
-            df = df.iloc[:, 8:].sort_values('ranking', ascending=False)
+            df.sort_values(by='ranking', ascending=False, inplace=True)
+            df[['name', 'ranking']]
             df.index.name = "순위"
             df.index += 1
             return df
