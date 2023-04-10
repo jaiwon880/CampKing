@@ -24,7 +24,7 @@ def user_interface():
     df, area, direction, address = get_df()
 
     if df is not None : 
-        title_message()
+        title_ment()
         with st.sidebar : sidebar_print_df(df)
         with st.container() : search_result(area, direction, address)
         with st.expander(mecanism_ment()) : mechanism_image()
