@@ -17,6 +17,7 @@ class GetResult:
             df.sort_values(by='ranking', ascending=False, inplace=True)
             df = df[['name', 'ranking']].reset_index(drop=True)
             df.index.name = "순위"
+            df = df.rename(columns={'name': '업체명', 'ranking': '순위'})
             df.index += 1
             
             return df
