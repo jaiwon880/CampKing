@@ -13,6 +13,7 @@ class GetResult:
     #     # df.index = np.arange(1, len(df) + 1) 
     #     df = df.iloc[:, 2:].sort_values('평점', ascending=False).reset_index(drop=True)
     #     df.index.name = "순위"
+        df.reset_index(drop=True)
         df.index += 1
         return df
 
