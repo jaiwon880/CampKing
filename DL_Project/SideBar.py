@@ -5,7 +5,7 @@ class GetSideBar:
     def __init__(self) -> None:
         self.sb = st.sidebar
         self.sb.write("## 지역을 선택해주세요.")
-        self.df = GetData().create_data().drop_duplicates()
+        self.df = GetData().create_data()
 
         self.area_choice = self.sb.selectbox('팔도 선택', self.get_area_list())
         self.direction_choice = self.sb.selectbox('시, 군', self.get_direction_list()) if self.area_choice != "" else None
