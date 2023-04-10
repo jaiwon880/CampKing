@@ -16,7 +16,7 @@ def user_interface():
         if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
  
     with st.container():
-        st.wtire(f"""
+        st.write(f"""
                     ### 선택한 결과 입니다. 👉{area} {direction} {address}
         """)
     st.makedown("---")
