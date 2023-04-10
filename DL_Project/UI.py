@@ -4,12 +4,12 @@ from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def title_message() : return st.error("## TDD - Testing...")
 def witre_center(df, area, direction, address) : return st.write(f"""
-                                        ### 지역 선택 = {area}
-                                        ### 지역 선택 후 지역들 = {direction}
-                                        ### 유저 인풋 데이터 = {address}
-                                        ### 데이터프레임👇df 컬럼 깨져서 나옴
-                                                {df}
-                                        """)
+                                                                    ### 지역 선택 = {area}
+                                                                    ### 지역 선택 후 지역들 = {direction}
+                                                                    ### 유저 인풋 데이터 = {address}
+                                                                    ### 데이터프레임👇df 컬럼 깨져서 나옴
+                                                                        {df}
+                                                                    """)
 def get_df() : return GetResult().get_result()
 # def audio() : return GetResult().get_audio()
 
