@@ -3,7 +3,7 @@ import streamlit as st
 from Functional import GetResult
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def title_message() : return st.error("## TDD - Testing..."), st.markdown("---")
-
+def sidebar_messsage() return st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=500)
 def get_df() : return GetResult().get_result()
 # def audio() : return GetResult().get_audio()
 
@@ -12,17 +12,11 @@ def user_interface():
     df, area, direction, address = get_df()
 
     if df is not None : 
-        
         title_message()
-
-        with st.sidebar : 
-            st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=500)
- 
+        with st.sidebar : sidebar_messsage()
         with st.container():
             if area is not "" and direction is not ("" and None) :
-                st.write(f"""
-                            ### 선택한 결과 입니다. 👉{area} {direction} {address}
-                """)
+                st.write(f"### 선택한 결과 입니다. 👉{area} {direction} {address}")
     
         with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
             st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
