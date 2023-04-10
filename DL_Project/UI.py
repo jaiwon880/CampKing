@@ -15,7 +15,11 @@ def user_interface():
     with st.sidebar : 
         if df is not None : st.write("일치하는 업체가 없습니다.") if df.empty else st.dataframe(df, width=700)
  
-    if df is not None : st.dataframe(df)
+    with st.containers:
+        st.wtire(f"""
+                    ### 선택한 결과 입니다. 👉{area} {direction} {address}
+        """)
+    st.makedown("---")
     with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
         st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
 
