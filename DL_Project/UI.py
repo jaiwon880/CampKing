@@ -9,6 +9,7 @@ def user_interface():
     set_page()
     st.error("## TDD - Testing...")
     st.write(get_df())
+    
     # df, area, direction, address = get_df()
 
     # # 사이드바 
@@ -26,27 +27,27 @@ def user_interface():
     # st.write(f"""
     #         {df}
     #         """)
-    with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
-        st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
+    # with st.expander("# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 백엔드적으로도 줄여서 하기 위함. "):
+    #     st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
 
-    image = [
-        "https://i.imgur.com/t4O7ozH.jpg", 
-        "https://i.imgur.com/idnsDBs.gif", 
-        "https://i.imgur.com/fvRG1Tj.gif"
-        ]
+    # image = [
+    #     "https://i.imgur.com/t4O7ozH.jpg", 
+    #     "https://i.imgur.com/idnsDBs.gif", 
+    #     "https://i.imgur.com/fvRG1Tj.gif"
+    #     ]
 
-    for i in range(len(image)) :
-        with st.expander(f"사진_{i+1}"):
-            st.image(image[i])
+    # for i in range(len(image)) :
+    #     with st.expander(f"사진_{i+1}"):
+    #         st.image(image[i])
 
 
-    containers = [st.container() for i in range(len(image))]
-    for i in range(len(image)) :
-        with containers[i] : 
-            st.image(image[i], width = 700)
-    # =====================================================================
-    messages = ['success', 'info', 'warning', 'error']
+    # containers = [st.container() for i in range(len(image))]
+    # for i in range(len(image)) :
+    #     with containers[i] : 
+    #         st.image(image[i], width = 700)
+    # # =====================================================================
+    # messages = ['success', 'info', 'warning', 'error']
 
-    for i in range(3):
-        for message in messages:
-            getattr(st, message)(f'{message} 메세지')
+    # for i in range(3):
+    #     for message in messages:
+    #         getattr(st, message)(f'{message} 메세지')
