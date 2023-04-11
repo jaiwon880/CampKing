@@ -7,7 +7,7 @@ def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
 def title_ment(area, direction, address) : return st.error(f"# 👉{area} {direction} {address}"), st.markdown("---")
-def search_result(area, direction, address) : 
+def search_result(area, direction) : 
     return st.write(f"### 선택한 결과 입니다. ") \
             if area is not "" and direction is not ("" and None) else ""
 
@@ -23,7 +23,7 @@ def user_interface():
     df, area, direction, address = get_df()
 
     if df is not None : 
-        title_ment(area, direction, address)
+        title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
         with st.expander(mecanism_ment()) : mechanism_image()
 

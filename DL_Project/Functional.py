@@ -4,11 +4,11 @@ from SideBar import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
-        self.df, self.area, self.direction, self.address = GetSideBar().choice_result_sidebar()
+        self.df, self.area, self.direction = GetSideBar().choice_result_sidebar()
         # self.audio = GetData().create_audio()
 
     def handle_df(self, df) :
-        if df is not None:
+        if df is not None :
             df = df.drop_duplicates(subset=['name'], keep='first')
             df.sort_values(by='ranking', ascending=False, inplace=True)
             df = df[['name', 'ranking']].reset_index(drop=True)
@@ -20,4 +20,4 @@ class GetResult:
 
     def choice_result_df(self) : return self.handle_df(self.df) if self.df is not None else None
 
-    def get_result(self) : return self.choice_result_df(), self.area, self.direction, self.address
+    def get_result(self) : return self.choice_result_df(), self.area, self.direction
