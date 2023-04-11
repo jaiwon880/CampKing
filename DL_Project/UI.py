@@ -20,7 +20,7 @@ def containers() : return [st.container() for i in range(len(image()))]
 
 def user_interface():
     set_page()
-    df, area, direction, address = get_df()
+    df, area, direction = get_df()
 
     if df is not None : 
         title_ment(area, direction)
