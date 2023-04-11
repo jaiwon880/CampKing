@@ -20,7 +20,7 @@ class GetSideBar:
 
     def get_direction_list(self) : 
         return [""] + list(set(self.df[self.split_location(0) == self.area_choice]\
-                                    .iloc[:, 3].apply(lambda x: x.split(' ')[1])))
+                                    .iloc[:, 3].apply(lambda x: x.split(' ')[1]))).sort()
     
     def get_address_list(self) : 
         return [""] + list(set(self.df[(self.split_location(0) == self.area_choice)\
