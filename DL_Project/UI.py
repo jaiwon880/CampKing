@@ -1,6 +1,5 @@
 import streamlit as st
 from Functional import GetResult
-# from pydub import AudioSegment
 
 def set_page() : return st.set_page_config(page_title="DL", layout="wide")
 def get_df() : return GetResult().get_result()
