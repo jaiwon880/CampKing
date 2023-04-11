@@ -18,7 +18,6 @@ class GetData:
 
     def create_data(self) : return self.df
 
-
     # def create_audio(self) : return self.audio
     # def load_audio(self) :
     #     audio1 = AudioSegment.from_file("self.audio_path1")
