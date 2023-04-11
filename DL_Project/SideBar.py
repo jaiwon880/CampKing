@@ -26,7 +26,7 @@ class GetSideBar:
     #     return [""] + sorted(list(set(self.df[(self.split_location(0) == self.area_choice)\
     #                                         & (self.split_location(1) == self.direction_choice)]\
     #                                             .iloc[:, 3].apply(lambda x: x.split(' ')[2]))))
-# 시간은 내는거다.
+
     def set_choice_result_data(self):
         if self.area_choice != "" and self.direction_choice != "":
             return self.df[(self.split_location(0) == self.area_choice)\
