@@ -55,6 +55,8 @@ def user_interface():
             # sidebar_print_df(df)
             st.dataframe(df, width=600)
             clicked = st.table(df)
+            if clicked:
+                st.write(clicked)
         # with st.expander(mecanism_ment()) : mechanism_image()
         
         
