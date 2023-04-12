@@ -24,6 +24,22 @@ def user_interface():
     df, area, direction = get_df()
 
     if df is not None : 
+        # 배경 이미지 URL ==============================================
+        bg_image = "https://i.imgur.com/VyUr4kU.gif"
+
+        # 배경 스타일
+        page_bg_style = '''
+        <style>
+        body {
+        background-image: url("''' + bg_image + '''");
+        background-size: cover;
+        }
+        </style>
+        '''
+
+        # 배경 스타일 렌더링
+        st.markdown(page_bg_style, unsafe_allow_html=True)
+        # ==============================================================
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
         with st.expander(mecanism_ment()) : mechanism_image()
@@ -40,22 +56,6 @@ def user_interface():
 
         # ====================================================================================================================
         
-        # 배경 이미지 URL
-        bg_image = "https://i.imgur.com/VyUr4kU.gif"
-
-        # 배경 스타일
-        page_bg_style = '''
-        <style>
-        body {
-        background-image: url("''' + bg_image + '''");
-        background-size: cover;
-        }
-        </style>
-        '''
-
-        # 배경 스타일 렌더링
-        st.markdown(page_bg_style, unsafe_allow_html=True)
-
 
 
 
