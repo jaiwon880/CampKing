@@ -23,14 +23,20 @@ def start_background() :
                         }
                         </style> """, unsafe_allow_html=True)
     
-    
-    # return st.image("https://i.imgur.com/idnsDBs.gif", width = 1200)
+def sidebar_background() :
+    return st.markdown("""<style>
+                        .main {
+                            background-image: url('https://i.imgur.com/PmsHlGA.gif');
+                            background-size: cover;
+                        }
+                        </style> """, unsafe_allow_html=True)
+
 
 def get_df() : return GetResult().get_result()
 
 def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
-def title_ment(area, direction) : return st.error(f"# 👉{area} {direction}")
+def title_ment(area, direction) : return st.write(f"# 👉{area} {direction}")
 
 def cutting() : return st.markdown("---")
 
@@ -51,7 +57,9 @@ def user_interface():
         
         cutting()
 
-        with st.sidebar : sidebar_print_df(df)
+        with st.sidebar : 
+            sidebar_print_df(df)
+
 
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
@@ -76,7 +84,7 @@ def user_interface():
 
 
 
-
+# return st.image("https://i.imgur.com/idnsDBs.gif", width = 1200)
 # with st.expander(mecanism_ment()) : mechanism_image()
 # def search_result(area, direction) : return st.write(f"### 선택한 결과 입니다. ") 
 
