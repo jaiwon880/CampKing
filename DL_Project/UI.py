@@ -54,13 +54,10 @@ def user_interface():
         with st.sidebar : sidebar_print_df(df)
         # with st.expander(mecanism_ment()) : mechanism_image()
         containers = [st.container() for i in range(len(df['업체명']))]
-        for i in range(len(df['업체명'])) :
-            
-            with containers[i] : 
+        for i in range(len(df['업체명'])):
+            with containers[i]:
                 result = df.loc[i, '업체명']
-                st.markdown(f"""<h1 style='background-color: pink; padding: 10px;'>
-                                # {result}
-                </h1> """, unsafe_allow_html=True)
+                st.markdown(f"<h1 style='background-color: pink; padding: 10px;'>{result}</h1>", unsafe_allow_html=True)
         
         
     else : 
