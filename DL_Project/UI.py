@@ -48,7 +48,7 @@ def result_chart() :
 
 def user_interface():
     set_page()
-    audio_BGM()
+    # audio_BGM()
     
     df, area, direction = get_search_result()
 
@@ -67,7 +67,8 @@ def user_interface():
         #     with containers[i]:
         #         st.write(df.loc[i, 1])
 
-    else : start_background()
+    else : 
+        start_background()
         
      
         
