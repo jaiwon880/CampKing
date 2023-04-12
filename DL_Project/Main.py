@@ -35,10 +35,10 @@ def main() :
 
         ui.result_chart()
     
-        containers = [st.container() for i in range(len(df.head()))]
-        for i in range(len(df.head())) :
-            with containers[i]:
-                st.write(df.loc[i, 1])
+        # containers = [st.container() for i in range(len(df.head()))]
+        # for i in range(len(df.head())) :
+        #     with containers[i]:
+        #         st.write(df.loc[i, 1])
 
     else : 
         ui.start_background()
