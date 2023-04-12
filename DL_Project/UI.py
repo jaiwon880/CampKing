@@ -30,7 +30,11 @@ def get_df() : return GetResult().get_result()
 
 def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
-def title_ment(area, direction) : return st.write(f"# 👉{area} {direction}")
+def title_ment(area, direction) : 
+    return st.markdown(f"<div style='background-color: yellow; \
+                        padding: 10px'> 👉 {area} {direction} </div>", \
+                        unsafe_allow_html=True)
+# st.write(f"# 👉{area} {direction}")
 
 def cutting() : return st.markdown("---")
 
@@ -46,7 +50,7 @@ def user_interface():
 
     if df is not None : 
         set_background()
-        
+
         title_ment(area, direction)
         
         cutting()
