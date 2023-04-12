@@ -3,14 +3,8 @@ import base64
 from Functional import GetResult
 from pydub.playback import play
 
-
 def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded")
-def set_BGM() : 
-    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
-    audio_bytes = audio_file.read()
-    return st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
-
-     
+    
 def set_background() : return st.markdown("""
     <style>
     .main {
@@ -53,8 +47,10 @@ def user_interface():
         #     with containers()[i] : st.image(image()[i], width = 700)
     else : 
         start_background()
-        set_BGM()
-        # ====================================================================================================================
+        audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
+        audio_bytes = audio_file.read()
+        st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
+     
         
 
 
