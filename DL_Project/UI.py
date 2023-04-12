@@ -51,7 +51,13 @@ def user_interface():
         title_ment(area, direction)
         cutting()
 
-        with st.sidebar : sidebar_print_df(df)
+        with st.sidebar : 
+            sidebar_print_df(df)
+
+        containers = [st.container() for i in range(len(3))]
+        for i in range(len(3)) :
+            with containers[i]:
+                st.write("안녕")
 
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
