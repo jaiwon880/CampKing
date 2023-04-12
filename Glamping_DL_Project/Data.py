@@ -8,6 +8,7 @@ class GetData:
         self.df_path = "DL_Project/Data_csv/glamping_data.csv"
         self.df = self.load_data()
 
+        
     def load_data(self):
         try :  
             return pd.read_csv(self.df_path)

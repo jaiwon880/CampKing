@@ -1,6 +1,6 @@
 import streamlit as st
 from Functional import GetResult
-# from pydub.playback import play
+from pydub.playback import play
 import base64
 
 def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
