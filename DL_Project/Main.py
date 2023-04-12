@@ -19,7 +19,8 @@ def sidebar_print_df(df) :
     if len(df) < 10 :
         return st.write("업체가 충분하지 않거나 없습니다.")
     else : 
-        return st.dataframe(df.head(), width=600), st.dataframe(df.tail(), width=600)
+        return st.write("Best!"), st.dataframe(df.head(), width=600), \
+                st.write("Worst!"), st.dataframe(df.tail(), width=600)
 
 def main() : 
     ui.set_page()
