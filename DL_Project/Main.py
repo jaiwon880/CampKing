@@ -4,7 +4,7 @@ import base64
 from pydub.playback import play
 
 def main() : 
-    ui.set.page()
+    ui.set_page()
     ui.audio_BGM()
     ui.user_interface()
 
