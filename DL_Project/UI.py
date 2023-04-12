@@ -37,14 +37,20 @@ def get_df() :
 
 def sidebar_print_df(df) : 
     return st.dataframe(df, width=600)
-    
+
+def audio_BGM():
+    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
+    return st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
+
 def user_interface():
+    # audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
+    # st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
+    audio_BGM()
+
     set_page()
     
     df, area, direction = get_df()
 
-    # audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
-    # st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
 
     if df is not None : 
         set_background()
