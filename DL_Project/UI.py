@@ -54,8 +54,8 @@ def user_interface():
         with st.sidebar : 
             sidebar_print_df(df)
 
-        containers = [st.container() for i in range(len(3))]
-        for i in range(len(3)) :
+        containers = [st.container() for i in range(3)]
+        for i in range(3) :
             with containers[i]:
                 st.image("https://i.imgur.com/NuieMp3.png")
 
