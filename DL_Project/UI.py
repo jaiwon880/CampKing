@@ -33,25 +33,28 @@ def user_interface():
     else : 
         # https://i.imgur.com/VyUr4kU.gif <- 자연 
         st.image(start_image(), width = 1000)
-        st.write("# 아 배고프다.")
         audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
         audio_bytes = audio_file.read()
         st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>'\
                     ,unsafe_allow_html=True)
 
         # ====================================================================================================================
+        
+        # 배경 이미지 URL
         bg_image = "https://i.imgur.com/VyUr4kU.gif"
 
-        # 배경 이미지 설정
-        page_bg_img = '''
-            <style>
-            body {
-            background-image: url(bg_image);
-            background-size: cover;
-            }
-            </style>
-            '''
-        st.markdown(page_bg_img, unsafe_allow_html=True)
+        # 배경 스타일
+        page_bg_style = '''
+        <style>
+        body {
+        background-image: url("''' + bg_image + '''");
+        background-size: cover;
+        }
+        </style>
+        '''
+
+        # 배경 스타일 렌더링
+        st.markdown(page_bg_style, unsafe_allow_html=True)
 
 
 
