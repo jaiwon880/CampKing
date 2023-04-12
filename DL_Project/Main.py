@@ -15,8 +15,8 @@ def set_BGM():
 def get_search_result() : 
     return GetResult().get_result()
 
-def get_df() : 
-    return GetResult().just_df()
+# def get_df() : 
+#     return GetResult().just_df()
 
 def sidebar_print_df(df) : 
     if len(df) < 10 :
@@ -28,10 +28,10 @@ def sidebar_print_df(df) :
 def main() : 
     ui.set_page()
     # set_BGM()
+    get = GetResult()
+    df, area, direction = get.get_result()
+    just_df = get.just_df()
 
-    df, area, direction = get_search_result()
-    just_df = get_df()
-    
     if df is not None : 
         ui.set_background()
         ui.title_ment(area, direction)
