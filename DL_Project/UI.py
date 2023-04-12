@@ -47,7 +47,7 @@ def user_interface():
 
     if df is not None : 
         set_background()
-
+        set_page2()
         title_ment(area, direction)
         
         cutting()
