@@ -39,9 +39,6 @@ def user_interface():
     df, area, direction = get_df()
 
     if df is not None : 
-        # 배경 이미지 URL ==============================================
-        
-        # ==============================================================
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
         with st.expander(mecanism_ment()) : mechanism_image()
