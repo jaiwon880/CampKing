@@ -48,10 +48,11 @@ def user_interface():
         with st.sidebar : 
             sidebar_print_df(df)
             clicked = st.table(df)
+            if clicked:
+                st.write(clicked)
         with st.expander(mecanism_ment()) : mechanism_image()
         
-        if clicked:
-            st.write(clicked)
+        
         # for i in range(len(image())) :
         #     with containers()[i] : st.image(image()[i], width = 700)
     else : 
