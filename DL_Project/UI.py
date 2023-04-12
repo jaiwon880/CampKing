@@ -36,8 +36,9 @@ def user_interface():
         for i in range(len(image())) :
             with containers()[i] : st.image(image()[i], width = 700)
     else : 
+        # https://i.imgur.com/VyUr4kU.gif <- 자연 
         st.image(start_image(), width = 1000)
-        get_audio()
+        # get_audio()
         st.write("# 아 배고프다.")
 
 

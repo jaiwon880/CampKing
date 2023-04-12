@@ -5,7 +5,7 @@ import streamlit as st
 class GetData:
     def __init__(self) -> None : 
         # self.df_path = "DL_Project/Data_csv/glapingdata.csv"
-        self.df_path = "DL_Project/Data_csv/glamping_data.csv"
+        self.df_path = "DL_Project/Data_csv/final__data.csv"
         self.df = self.load_data()
 
         
