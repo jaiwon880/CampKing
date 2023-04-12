@@ -27,6 +27,7 @@ def start_background() :
                             background-size: cover;
                         }
                         </style> """, unsafe_allow_html=True)
+
 def title_ment(area, direction) : 
     return st.markdown(f"<div style='background-color: green; \
                         padding: 10px; color: black; font-size: 48px;\
@@ -37,18 +38,19 @@ def title_ment(area, direction) :
 def cutting() : return st.markdown("---")
 
 def get_search_result() : 
-    get_result = GetResult()
-    return get_result.get_result(), get_result.just_df()
+    return GetResult().get_result()
 
-def sidebar_print_df(df) : return st.dataframe(df, width=600)
+def sidebar_print_df(df) : 
+    return st.dataframe(df, width=600)
 
-def result_chart() : return st.image("https://i.imgur.com/NuieMp3.png")
+def result_chart() : 
+    return st.image("https://i.imgur.com/NuieMp3.png")
 
 def user_interface():
     set_page()
     audio_BGM()
     
-    df, area, direction, just_df = get_search_result()
+    df, area, direction = get_search_result()
 
     if df is not None : 
         set_background()
