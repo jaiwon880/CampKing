@@ -1,8 +1,4 @@
 import streamlit as st
-import base64
-from pydub.playback import play
-
-
 
 def set_page() : 
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
@@ -15,11 +11,7 @@ def set_background():
                             background-size: cover;
                         }
                         </style> """, unsafe_allow_html=True)
-def audio_BGM():
-    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
-    return st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
-                        {base64.b64encode(audio_file).decode()}"></audio>',\
-                        unsafe_allow_html=True)
+
 
 def start_background() : 
     return st.markdown("""<style>
@@ -36,7 +28,8 @@ def title_ment(area, direction) :
                         👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
 
-def cutting() : return st.markdown("---")
+def cutting() : 
+    return st.markdown("---")
 
 def result_chart() : 
     return st.image("https://i.imgur.com/NuieMp3.png")
