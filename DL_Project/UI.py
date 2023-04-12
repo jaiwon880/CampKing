@@ -45,11 +45,11 @@ def user_interface():
     
     df, area, direction = get_df()
 
-    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
-    st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
+    # audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
+    # st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
 
     if df is not None : 
-        set_background()
+        # set_background()
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
         # with st.expander(mecanism_ment()) : mechanism_image()
