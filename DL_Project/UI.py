@@ -22,7 +22,7 @@ def start_background() :
 
 def title_ment(area, direction) : 
     return st.markdown(f"<div style='background-color: green; \
-                        padding: 10px; color: black; font-size: 48px;\
+                        padding: 10px; color: white; font-size: 48px;\
                         font-weight: bold; display: inline-block;'> \
                         👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
