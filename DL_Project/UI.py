@@ -31,7 +31,7 @@ def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
 def title_ment(area, direction) : 
-    return st.markdown(f"<div style='background-color: yellow; \
+    return st.markdown(f"<div style='background-color: green; \
                         padding: 10px; color: black; font-size: 24px; font-weight: bold;'> \
                         👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
