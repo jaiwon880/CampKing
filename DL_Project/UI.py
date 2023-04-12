@@ -4,20 +4,24 @@ from Functional import GetResult
 from pydub.playback import play
 
 def set_page() : 
-    return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded"),\
-            st.markdown("""<style>
+    return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
+                                initial_sidebar_state="expanded"),\
+            
+def set_background():
+    return st.markdown("""<style>
                         .main {
-                                background-image: url('https://i.imgur.com/PSeW0pm.gif');
-                                background-size: cover;
-                            }
+                            background-image: url('https://i.imgur.com/PSeW0pm.gif');
+                            background-size: cover;
+                        }
                         </style> """, unsafe_allow_html=True)
 
-def start_background() : return st.markdown("""<style>
-                                    .main {
-                                            background-image: url('https://i.imgur.com/idnsDBs.gif');
-                                            background-size: cover;
-                                        }
-                                    </style> """, unsafe_allow_html=True)
+def start_background() : 
+    return st.markdown("""<style>
+                        .main {
+                            background-image: url('https://i.imgur.com/idnsDBs.gif');
+                            background-size: cover;
+                        }
+                        </style> """, unsafe_allow_html=True)
     
     
     # return st.image("https://i.imgur.com/idnsDBs.gif", width = 1200)
@@ -26,7 +30,9 @@ def get_df() : return GetResult().get_result()
 
 def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
-def title_ment(area, direction) : return st.error(f"# 👉{area} {direction}"), st.markdown("---")
+def title_ment(area, direction) : return st.error(f"# 👉{area} {direction}")
+
+def cutting() : return st.markdown("---")
 
 
     
@@ -40,15 +46,18 @@ def user_interface():
 
     if df is not None : 
         set_background()
+
         title_ment(area, direction)
+        
+        cutting()
+
         with st.sidebar : sidebar_print_df(df)
-        # with st.expander(mecanism_ment()) : mechanism_image()
-        containers = [st.container() for i in range(len(df['업체명']))]
-        for i in range(len(df['업체명'])) :
-            with containers[i]:
-                st.write(df.loc[i, 1])
-    else : 
-        start_background()
+
+        # containers = [st.container() for i in range(len(df['업체명']))]
+        # for i in range(len(df['업체명'])) :
+        #     with containers[i]:
+        #         st.write(df.loc[i, 1])
+    else : start_background()
         
      
         
@@ -68,7 +77,7 @@ def user_interface():
 
 
 
-
+# with st.expander(mecanism_ment()) : mechanism_image()
 # def search_result(area, direction) : return st.write(f"### 선택한 결과 입니다. ") 
 
 # def mecanism_ment() : return "# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 메모리 최적화. "
