@@ -5,7 +5,6 @@ from SideBar import GetSideBar
 class GetResult:
     def __init__(self) -> None:
         self.df, self.area, self.direction = GetSideBar().choice_result_sidebar()
-        # self.audio = GetData().create_audio()
 
     def handle_df(self, df) :
         if df is not None :
