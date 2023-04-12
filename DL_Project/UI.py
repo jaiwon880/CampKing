@@ -47,7 +47,7 @@ def result_chart() :
     return st.image("https://i.imgur.com/NuieMp3.png")
 
 def user_interface():
-    set_page()
+    # set_page()
     # audio_BGM()
     
     df, area, direction = get_search_result()
