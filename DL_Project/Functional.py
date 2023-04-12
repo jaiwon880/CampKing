@@ -21,3 +21,5 @@ class GetResult:
     def choice_result_df(self) : return self.handle_df(self.df) if self.df is not None else None
 
     def get_result(self) : return self.choice_result_df(), self.area, self.direction
+
+    def just_df(self) : return self.df
