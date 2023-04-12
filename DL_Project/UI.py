@@ -5,7 +5,6 @@ from pydub.playback import play
 
 def set_page() : 
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
-
                                 initial_sidebar_state="expanded", background_color="yellow")
    
 def set_background():
