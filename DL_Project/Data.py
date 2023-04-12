@@ -11,7 +11,7 @@ class GetData:
 
     def load_data(self):
         try :  
-            return pd.read_csv(self.df_path, encoding="CP949")
+            return pd.read_csv(self.df_path)
             
         except Exception as e : 
             return st.error(e)
