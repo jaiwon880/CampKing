@@ -56,7 +56,7 @@ def user_interface():
         containers = [st.container() for i in range(len(df['업체명']))]
         for i in range(len(df['업체명'])) :
             with containers[i] : 
-                st.markdown("<h1 style='background-color: green; padding: 10px;'>안녕</h1>", unsafe_allow_html=True)
+                st.markdown("<h1 style='background-color: blue; padding: 10px;'>안녕</h1>", unsafe_allow_html=True)
         
         
     else : 
