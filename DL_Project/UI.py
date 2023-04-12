@@ -32,7 +32,7 @@ def user_interface():
             with containers()[i] : st.image(image()[i], width = 700)
     else : 
         # https://i.imgur.com/VyUr4kU.gif <- 자연 
-        st.image(start_image(), width = 1000)
+        # st.image(start_image(), width = 1000)
         audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
         audio_bytes = audio_file.read()
         st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>'\
