@@ -1,15 +1,8 @@
 import streamlit as st
-import base64
-from pydub.playback import play
 
 def set_page() : 
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
-def set_BGM():
-    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
 
-    return st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
-                        {base64.b64encode(audio_file).decode()}"></audio>',\
-                        unsafe_allow_html=True)
 def set_background():
     return st.markdown("""<style>
                         .main {
