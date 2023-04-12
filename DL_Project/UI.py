@@ -28,9 +28,8 @@ def get_df() : return GetResult().get_result()
 
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
-def title_ment(area, direction) : return st.error(f"# 👉{area} {direction}" if area is not "" and direction is not ("" and None) else ""), st.markdown("---")
-def search_result(area, direction) : 
-    return st.write(f"### 선택한 결과 입니다. ") 
+def title_ment(area, direction) : return st.error(f"# 👉{area} {direction}"), st.markdown("---")
+def search_result(area, direction) : return st.write(f"### 선택한 결과 입니다. ") 
 
 def mecanism_ment() : return "# 메커니즘_설명 / 용량이 엄청 클 것 으로 예상 되기에 메모리 최적화. "
 def mechanism_image() : return st.image("https://i.imgur.com/SgRVHOk.jpg", width = 1000)
