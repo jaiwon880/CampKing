@@ -26,7 +26,7 @@ def start_background() : return st.markdown("""
 
 def get_df() : return GetResult().get_result()
 
-def sidebar_print_df(df) : return st.dataframe(df, width=600)
+def sidebar_print_df(df) : return st.table(df, width=600)
 
 def title_ment(area, direction) : return st.error(f"# 👉{area} {direction}"), st.markdown("---")
 
