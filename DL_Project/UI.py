@@ -38,7 +38,7 @@ def user_interface():
     else : 
         # https://i.imgur.com/VyUr4kU.gif <- 자연 
         st.image(start_image(), width = 1000)
-        # get_audio()
+        get_audio()
         st.write("# 아 배고프다.")
 
 
