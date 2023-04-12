@@ -5,6 +5,20 @@ from pydub.playback import play
 
 
 def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded")
+def set_background() : return st.markdown("""
+            <style>
+            .main {
+                background-image: url('https://i.imgur.com/t4O7ozH.jpg');
+                background-size: cover;
+                }
+            </style>
+            
+            <div class="main">
+            Content goes here
+            </div>
+            """
+            , unsafe_allow_html=True
+        )
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
@@ -21,25 +35,12 @@ def containers() : return [st.container() for i in range(len(image()))]
 
 def user_interface():
     set_page()
+    set_background()
     df, area, direction = get_df()
 
     if df is not None : 
         # 배경 이미지 URL ==============================================
-        st.markdown(
-            """
-            <style>
-            .main {
-                background-image: url('https://i.imgur.com/t4O7ozH.jpg');
-                background-size: cover;
-                }
-            </style>
-            
-            <div class="main">
-            Content goes here
-            </div>
-            """
-            , unsafe_allow_html=True
-        )
+        
         # ==============================================================
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
