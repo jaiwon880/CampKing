@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+pydub
+ffmpeg
+
+# statsmodels
+# plotly
+# matplotlib
