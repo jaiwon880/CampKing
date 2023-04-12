@@ -47,6 +47,9 @@ def user_interface():
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
         with st.expander(mecanism_ment()) : mechanism_image()
+        clicked = st.table(df)
+        if clicked:
+            st.write(clicked)
         # for i in range(len(image())) :
         #     with containers()[i] : st.image(image()[i], width = 700)
     else : 
