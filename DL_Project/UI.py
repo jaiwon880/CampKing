@@ -60,6 +60,12 @@ def user_interface():
         with st.sidebar : 
             sidebar_background()
             sidebar_print_df(df)
+            st.markdown("""<style>
+                        .main {
+                            background-image: url('https://i.imgur.com/PmsHlGA.gif');
+                            background-size: cover;
+                        }
+                        </style> """, unsafe_allow_html=True)
 
 
         # containers = [st.container() for i in range(len(df['업체명']))]
