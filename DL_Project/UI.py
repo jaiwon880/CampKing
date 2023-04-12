@@ -3,8 +3,7 @@ import base64
 from pydub.playback import play
 
 def set_page() : 
-    return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
-                                initial_sidebar_state="expanded")
+    return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
 def set_BGM():
     audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
 
