@@ -15,6 +15,9 @@ def set_BGM():
 def get_search_result() : 
     return GetResult().get_result()
 
+def get_df() : 
+    return GetResult().just_df()
+
 def sidebar_print_df(df) : 
     if len(df) < 10 :
         return st.write("업체가 충분하지 않거나 없습니다.")
@@ -27,7 +30,8 @@ def main() :
     # set_BGM()
 
     df, area, direction = get_search_result()
-
+    just_df = get_df()
+    
     if df is not None : 
         ui.set_background()
         ui.title_ment(area, direction)
