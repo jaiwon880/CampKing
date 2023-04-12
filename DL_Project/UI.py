@@ -36,23 +36,22 @@ def user_interface():
         st.write("# 아 배고프다.")
         audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
         audio_bytes = audio_file.read()
-        st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
-
+        st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>'\
+                    ,unsafe_allow_html=True)
+                    
+        # ====================================================================================================================
         bg_image = "https://i.imgur.com/VyUr4kU.gif"
 
         # 배경 이미지 설정
         page_bg_img = '''
         <style>
         body {
-        background-image: url("https://i.imgur.com/VyUr4kU.gif");
+        background-image: url("https://source.unsplash.com/1600x900/?nature,water");
         background-size: cover;
         }
         </style>
         '''
-
-        # 배경 이미지 렌더링
         st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 
 
