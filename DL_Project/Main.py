@@ -41,10 +41,5 @@ def main() :
     else : 
         ui.start_background()
 
-
-
-
-
-    
 if __name__ == '__main__' : 
     main()
