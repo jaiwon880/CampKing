@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 from pydub.playback import play
-from Functional import GetResult
+
 
 
 def set_page() : 
@@ -37,12 +37,6 @@ def title_ment(area, direction) :
                         </div>", unsafe_allow_html=True)
 
 def cutting() : return st.markdown("---")
-
-def get_search_result() : 
-    return GetResult().get_result()
-
-def sidebar_print_df(df) : 
-    return st.dataframe(df, width=600)
 
 def result_chart() : 
     return st.image("https://i.imgur.com/NuieMp3.png")
