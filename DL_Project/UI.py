@@ -38,19 +38,19 @@ def user_interface():
         audio_bytes = audio_file.read()
         st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>'\
                     ,unsafe_allow_html=True)
-                    
+
         # ====================================================================================================================
         bg_image = "https://i.imgur.com/VyUr4kU.gif"
 
         # 배경 이미지 설정
         page_bg_img = '''
-        <style>
-        body {
-        background-image: url("https://source.unsplash.com/1600x900/?nature,water");
-        background-size: cover;
-        }
-        </style>
-        '''
+            <style>
+            body {
+            background-image: url(bg_image);
+            background-size: cover;
+            }
+            </style>
+            '''
         st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
