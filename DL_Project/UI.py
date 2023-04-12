@@ -8,18 +8,12 @@ def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:"
 def set_background() : return st.markdown("""
     <style>
     .main {
-        background-image: url('https://i.imgur.com/PSeW0pm.gif');
+        background-image: url('https://i.imgur.com/fvRG1Tj.gif', width = 800);
         background-size: cover;
         }
     </style> """, unsafe_allow_html=True)
 
-def start_background() : return st.markdown("""
-    <style>
-    .main {
-        background-image: url('https://i.imgur.com/fvRG1Tj.gif');
-        background-size: cover;
-        }
-    </style> """, unsafe_allow_html=True)
+def start_background() : return st.write("")
 
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
