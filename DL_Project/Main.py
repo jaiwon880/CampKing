@@ -1,5 +1,7 @@
 import UI as ui
 import streamlit as st
+import base64
+from pydub.playback import play
 from Functional import GetResult
 
 def get_search_result() : 
