@@ -61,8 +61,6 @@ def user_interface():
             sidebar_print_df(df)
 
         result_chart()
-
-        st.write(just_df)
     
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
