@@ -5,8 +5,9 @@ from pydub.playback import play
 
 def set_page() : 
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
-                                initial_sidebar_state="expanded"),\
-            
+                                initial_sidebar_state="expanded")
+def set_page2() : 
+    return st.set_page_config(background_color="yellow")          
 def set_background():
     return st.markdown("""<style>
                         .main {
@@ -23,13 +24,7 @@ def start_background() :
                         }
                         </style> """, unsafe_allow_html=True)
     
-def sidebar_background() :
-    return st.markdown("""<style>
-                        .main {
-                            background-image: url('https://i.imgur.com/PmsHlGA.gif');
-                            background-size: cover;
-                        }
-                        </style> """, unsafe_allow_html=True)
+
 
 
 def get_df() : return GetResult().get_result()
@@ -58,14 +53,9 @@ def user_interface():
         cutting()
 
         with st.sidebar : 
-            sidebar_background()
+            
             sidebar_print_df(df)
-            st.markdown("""<style>
-                        .main {
-                            background-image: url('https://i.imgur.com/PmsHlGA.gif');
-                            background-size: cover;
-                        }
-                        </style> """, unsafe_allow_html=True)
+            
 
 
         # containers = [st.container() for i in range(len(df['업체명']))]
