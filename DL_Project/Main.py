@@ -14,7 +14,7 @@ def sidebar_print_df(df) :
 def main() : 
     ui.set_page()
 
-    audio_BGM()
+    ui.audio_BGM()
 
     df, area, direction = get_search_result()
 
