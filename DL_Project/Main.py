@@ -42,8 +42,8 @@ def main() :
 
         ui.result_chart()
 
-        st.datafame(just_df.head())
-        
+        st.datafame(just_df)
+
     
         # containers = [st.container() for i in range(len(df.head()))]
         # for i in range(len(df.head())) :

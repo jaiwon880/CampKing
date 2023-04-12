@@ -43,3 +43,6 @@ class GetSideBar:
 
     def choice_result_sidebar(self) : 
         return self.set_choice_result_data(), self.area_choice, self.direction_choice
+
+    def just_df(self) : 
+        return self.df

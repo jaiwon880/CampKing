@@ -4,8 +4,9 @@ from SideBar import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
-        self.df, self.area, self.direction = GetSideBar().choice_result_sidebar()
-
+        get_sb = GetSideBar()
+        self.df, self.area, self.direction = get_sb.choice_result_sidebar()
+        self.just_df = get_sb.just_df()
     def handle_df(self, df) :
         if df is not None :
             df = df.drop_duplicates(subset=['name'], keep='first')
@@ -21,4 +22,4 @@ class GetResult:
 
     def get_result(self) : return self.choice_result_df(), self.area, self.direction
 
-    def just_df(self) : return self.df
+    def just_df(self) : return self.just_df
