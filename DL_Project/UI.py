@@ -36,7 +36,9 @@ def title_ment(area, direction) :
 
 def cutting() : return st.markdown("---")
 
-def get_search_result() : return GetResult().get_result()
+def get_search_result() : 
+    get_result = GetResult()
+    return get_result.get_result(), get_result.just_df()
 
 def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
@@ -46,7 +48,7 @@ def user_interface():
     set_page()
     audio_BGM()
     
-    df, area, direction = get_search_result()
+    df, area, direction, just_df = get_search_result()
 
     if df is not None : 
         set_background()
@@ -57,8 +59,9 @@ def user_interface():
             sidebar_print_df(df)
 
         result_chart()
-        just_df = GetResult().just_df()
+
         st.write(just_df)
+    
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
         #     with containers[i]:
