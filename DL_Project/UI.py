@@ -4,7 +4,7 @@ from Functional import GetResult
 from pydub.playback import play
 
 
-def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
+def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded")
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
