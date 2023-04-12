@@ -32,6 +32,7 @@ def main() :
             sidebar_print_df(df)
 
         ui.result_chart()
+        ui.result_chart()
     
         # containers = [st.container() for i in range(len(df.head()))]
         # for i in range(len(df.head())) :
