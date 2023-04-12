@@ -56,7 +56,7 @@ def user_interface():
         containers = [st.container() for i in range(len(df['업체명']))]
         for i in range(len(df['업체명'])) :
             with containers[i]:
-                st.write(df['업체명'])
+                st.write(df.loc[i, '업체명'])
     else : 
         start_background()
         
