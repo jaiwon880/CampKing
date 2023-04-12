@@ -47,9 +47,9 @@ def user_interface():
         title_ment(area, direction)
         with st.sidebar : 
             sidebar_print_df(df)
-            clicked = st.table(df)
-            if clicked:
-                st.write(clicked)
+            # clicked = st.table(df)
+            # if clicked:
+            #     st.write(clicked)
         with st.expander(mecanism_ment()) : mechanism_image()
         
         
