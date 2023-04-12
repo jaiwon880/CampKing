@@ -8,7 +8,7 @@ def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:"
 def set_background() : return st.markdown("""
             <style>
             .main {
-                background-image: url('https://i.imgur.com/t4O7ozH.jpg');
+                background-image: url('https://i.imgur.com/VyUr4kU.gif');
                 background-size: cover;
                 }
             </style>
@@ -49,7 +49,6 @@ def user_interface():
         for i in range(len(image())) :
             with containers()[i] : st.image(image()[i], width = 700)
     else : 
-        # https://i.imgur.com/VyUr4kU.gif <- 자연 
         st.image(start_image(), width = 1000)
         audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
         audio_bytes = audio_file.read()
