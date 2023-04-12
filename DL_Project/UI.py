@@ -13,7 +13,13 @@ def set_background() : return st.markdown("""
         }
     </style> """, unsafe_allow_html=True)
 
-def start_image() : return "https://i.imgur.com/idnsDBs.gif"
+def start_background() : return st.markdown("""
+    <style>
+    .main {
+        background-image: url('https://i.imgur.com/fvRG1Tj.gif');
+        background-size: cover;
+        }
+    </style> """, unsafe_allow_html=True)
 
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
@@ -36,12 +42,11 @@ def user_interface():
     if df is not None : 
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
-        with st.expander(mecanism_ment()) : mechanism_image()
-
+        # with st.expander(mecanism_ment()) : mechanism_image()
         # for i in range(len(image())) :
         #     with containers()[i] : st.image(image()[i], width = 700)
     else : 
-        st.image(start_image(), width = 1000)
+        start_background()
         audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
         audio_bytes = audio_file.read()
         st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
