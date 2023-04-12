@@ -58,6 +58,7 @@ def user_interface():
         cutting()
 
         with st.sidebar : 
+            sidebar_background()
             sidebar_print_df(df)
 
 
