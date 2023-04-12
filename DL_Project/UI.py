@@ -40,6 +40,8 @@ def get_search_result() : return GetResult().get_result()
 
 def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
+def result_chart() : return st.image("https://i.imgur.com/NuieMp3.png")
+
 def user_interface():
     set_page()
     audio_BGM()
@@ -53,11 +55,6 @@ def user_interface():
 
         with st.sidebar : 
             sidebar_print_df(df)
-
-        containers = [st.container() for i in range(3)]
-        for i in range(3) :
-            with containers[i]:
-                st.image("https://i.imgur.com/NuieMp3.png")
 
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
