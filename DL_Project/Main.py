@@ -5,8 +5,11 @@ import base64
 from pydub.playback import play
 from Functional import GetResult
 
-def audio_BGM():
+def set_page_BGM():
+    ui.set_page()
+
     audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
+
     return st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
                         {base64.b64encode(audio_file).decode()}"></audio>',\
                         unsafe_allow_html=True)
@@ -18,8 +21,7 @@ def sidebar_print_df(df) :
     return st.dataframe(df, width=600)
 
 def main() : 
-    ui.set_page()
-    ui.audio_BGM()
+    set_page_BGM()
 
     df, area, direction = get_search_result()
 
