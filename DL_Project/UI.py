@@ -32,9 +32,10 @@ def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
 def title_ment(area, direction) : 
     return st.markdown(f"<div style='background-color: yellow; \
-                        padding: 10px'> 👉 {area} {direction} </div>", \
-                        unsafe_allow_html=True)
-# st.write(f"# 👉{area} {direction}")
+                        padding: 10px; color: black; font-size: 24px;'> \
+                        👉{area} {direction} \
+                        </div>", unsafe_allow_html=True)
+# st.write("# ")
 
 def cutting() : return st.markdown("---")
 
