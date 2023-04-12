@@ -36,7 +36,7 @@ def containers() : return [st.container() for i in range(len(image()))]
 
 def user_interface():
     set_page()
-    set_background()
+    # set_background()
     df, area, direction = get_df()
 
     if df is not None : 
