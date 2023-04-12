@@ -5,11 +5,13 @@ from pydub.playback import play
 
 
 def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded")
-def set_background() : return st.markdown("<style>.main {background-image: url('https://i.imgur.com/VyUr4kU.gif');background-size: cover;}</style><div class="main"></div>", unsafe_allow_html=True)
-
-    
-
-
+def set_background() : return st.markdown("""
+    <style>
+    .main {
+        background-image: url('https://i.imgur.com/idnsDBs.gif');
+        background-size: cover;
+        }
+    </style> """, unsafe_allow_html=True)
 
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
