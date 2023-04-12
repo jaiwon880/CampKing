@@ -57,7 +57,7 @@ def user_interface():
         containers = [st.container() for i in range(len(3))]
         for i in range(len(3)) :
             with containers[i]:
-                st.write("안녕")
+                st.image("https://i.imgur.com/NuieMp3.png")
 
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
