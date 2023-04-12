@@ -1,7 +1,8 @@
 import streamlit as st
+import base64
 from Functional import GetResult
 from pydub.playback import play
-import base64
+
 
 def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
 def get_df() : return GetResult().get_result()
@@ -18,12 +19,6 @@ def start_image() : return "https://i.imgur.com/idnsDBs.gif"
 def image() : return ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
 def containers() : return [st.container() for i in range(len(image()))]
 
-def get_audio() : 
-    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
-    audio_bytes = audio_file.read()
-    return  st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
-
-
 def user_interface():
     set_page()
     df, area, direction = get_df()
@@ -38,8 +33,10 @@ def user_interface():
     else : 
         # https://i.imgur.com/VyUr4kU.gif <- 자연 
         st.image(start_image(), width = 1000)
-        get_audio()
         st.write("# 아 배고프다.")
+        audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
+        audio_bytes = audio_file.read()
+        st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
 
 
 
