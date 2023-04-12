@@ -25,7 +25,7 @@ def user_interface():
 
     if df is not None : 
         # 배경 이미지 URL ==============================================
-        bg_image = "https://i.imgur.com/SgRVHOk.jpg"
+        bg_image = "https://i.imgur.com/t4O7ozH.jpg"
 
         # 배경 스타일
         page_bg_style = '''
