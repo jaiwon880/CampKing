@@ -1,4 +1,6 @@
 import streamlit as st
+import base64
+from pydub.playback import play
 
 def audio_BGM():
     audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
