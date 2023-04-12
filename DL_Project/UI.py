@@ -53,9 +53,11 @@ def user_interface():
         title_ment(area, direction)
         with st.sidebar : 
             # sidebar_print_df(df)
-            clicked = st.dataframe(df)
-            if clicked:
-                st.write(clicked)
+            table = st.table(df)
+            if table:
+                if st.button('Show Clicked Value'):
+                # table의 클릭된 값을 출력
+                st.write(table)
         # with st.expander(mecanism_ment()) : mechanism_image()
         
         
