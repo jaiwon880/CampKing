@@ -53,7 +53,10 @@ def user_interface():
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
         # with st.expander(mecanism_ment()) : mechanism_image()
-        
+        containers = [st.container() for i in range(len(df['업체명']))]
+        for i in range(len(df['업체명'])) :
+            with containers[i] : 
+                st.write(f"안녕{i}")
         
         
     else : 
