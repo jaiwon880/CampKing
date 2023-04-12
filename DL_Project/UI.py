@@ -13,7 +13,7 @@ def set_background() : return st.markdown("""
         }
     </style> """, unsafe_allow_html=True)
 
-def start_background() : return st.image("https://i.imgur.com/fvRG1Tj.gif", width = 1000)
+def start_background() : return st.image("https://i.imgur.com/idnsDBs.gif", width = 1000)
 
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
