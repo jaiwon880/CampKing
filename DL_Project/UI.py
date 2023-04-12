@@ -42,24 +42,22 @@ def user_interface():
     
     df, area, direction = get_df()
 
+    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
+    audio_bytes = audio_file.read()
+    st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
+
     if df is not None : 
         # set_background()
         title_ment(area, direction)
-        with st.sidebar : 
-            sidebar_print_df(df)
-            # clicked = st.table(df)
-            # if clicked:
-            #     st.write(clicked)
-        with st.expander(mecanism_ment()) : mechanism_image()
+        with st.sidebar : sidebar_print_df(df)
+        # with st.expander(mecanism_ment()) : mechanism_image()
         
         
         # for i in range(len(image())) :
         #     with containers()[i] : st.image(image()[i], width = 700)
     else : 
         start_background()
-        audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
-        audio_bytes = audio_file.read()
-        st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
+        
      
         
 
