@@ -30,15 +30,15 @@ def containers() : return [st.container() for i in range(len(image()))]
 
 def user_interface():
     set_page()
-    # set_background()
+    set_background()
     df, area, direction = get_df()
 
     if df is not None : 
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
-        with tab : 
-            st.write("안녕")
-        # with st.expander(mecanism_ment()) : mechanism_image()
+        # with tab : 
+        #     st.write("안녕")
+        with st.expander(mecanism_ment()) : mechanism_image()
         # for i in range(len(image())) :
         #     with containers()[i] : st.image(image()[i], width = 700)
     else : 
