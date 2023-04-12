@@ -28,9 +28,7 @@ def sidebar_print_df(df) :
 def main() : 
     ui.set_page()
     # set_BGM()
-    get = GetResult()
-    df, area, direction = get.get_result()
-    just_df = get.just_df()
+    df, area, direction = get_search_result()
 
     if df is not None : 
         ui.set_background()
@@ -42,7 +40,6 @@ def main() :
 
         ui.result_chart()
 
-        st.datafame(just_df)
 
     
         # containers = [st.container() for i in range(len(df.head()))]
