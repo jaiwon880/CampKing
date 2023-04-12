@@ -24,7 +24,8 @@ def start_background() :
                         </style> """, unsafe_allow_html=True)
 def title_ment(area, direction) : 
     return st.markdown(f"<div style='background-color: white; \
-                        padding: 10px; color: black; font-size: 24px; font-weight: bold;'> \
+                        padding: 10px; color: black; font-size: 48px;\
+                        font-weight: bold; display: inline-block;'> \
                         👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
 
