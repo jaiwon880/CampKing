@@ -45,9 +45,11 @@ def audio_BGM():
 def user_interface():
     # audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
     # st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
+    set_page()
+    
     audio_BGM()
 
-    set_page()
+    
     
     df, area, direction = get_df()
 
