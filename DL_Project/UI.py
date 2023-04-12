@@ -45,9 +45,11 @@ def user_interface():
     if df is not None : 
         # set_background()
         title_ment(area, direction)
-        with st.sidebar : sidebar_print_df(df)
+        with st.sidebar : 
+            sidebar_print_df(df)
+            clicked = st.table(df)
         with st.expander(mecanism_ment()) : mechanism_image()
-        clicked = st.table(df)
+        
         if clicked:
             st.write(clicked)
         # for i in range(len(image())) :
