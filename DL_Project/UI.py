@@ -8,7 +8,7 @@ def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:"
 def set_background() : return st.markdown("""
     <style>
     .main {
-        background-image: url('https://i.imgur.com/idnsDBs.gif');
+        background-image: url('https://i.imgur.com/PSeW0pm.gif');
         background-size: cover;
         }
     </style> """, unsafe_allow_html=True)
