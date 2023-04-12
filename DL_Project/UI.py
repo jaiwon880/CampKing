@@ -25,20 +25,21 @@ def user_interface():
 
     if df is not None : 
         # 배경 이미지 URL ==============================================
-        bg_image = "https://i.imgur.com/t4O7ozH.jpg"
-
-        # 배경 스타일
-        page_bg_style = '''
-        <style>
-        body {
-        background-image: url("''' + bg_image + '''");
-        background-size: cover;
-        }
-        </style>
-        '''
-
-        # 배경 스타일 렌더링
-        st.markdown(page_bg_style, unsafe_allow_html=True)
+        st.markdown(
+            """
+            <style>
+            .main {
+                background-image: url('https://i.imgur.com/t4O7ozH.jpg');
+                background-size: cover;
+                }
+            </style>
+            
+            <div class="main">
+            Content goes here
+            </div>
+            """
+            , unsafe_allow_html=True
+        )
         # ==============================================================
         title_ment(area, direction)
         with st.sidebar : sidebar_print_df(df)
