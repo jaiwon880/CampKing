@@ -51,13 +51,7 @@ def user_interface():
     if df is not None : 
         # set_background()
         title_ment(area, direction)
-        with st.sidebar : 
-            # sidebar_print_df(df)
-            table = st.table(df)
-            if table:
-                if st.button('Show Clicked Value'):
-                # table의 클릭된 값을 출력
-                    st.write(table)
+        with st.sidebar : sidebar_print_df(df)
         # with st.expander(mecanism_ment()) : mechanism_image()
         
         
