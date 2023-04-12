@@ -56,7 +56,7 @@ def user_interface():
         containers = [st.container() for i in range(len(df['업체명']))]
         for i in range(len(df['업체명'])):
             with containers[i]:
-                result = df.loc[i, '업체명']
+                result = df.loc[i, 0]
                 st.markdown(f"<h1 style='background-color: pink; padding: 10px;'>{result}</h1>", unsafe_allow_html=True)
         
         
