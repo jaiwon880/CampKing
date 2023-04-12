@@ -1,8 +1,8 @@
-import UI
+import UI as ui
 
 def main() : 
-    UI.audio_BGM()
-    UI.user_interface()
+    ui.audio_BGM()
+    ui.user_interface()
 
 
 
