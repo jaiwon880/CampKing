@@ -7,7 +7,8 @@ from pydub.playback import play
 def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded")
 def set_background() : return st.markdown("<style>.main {background-image: url('https://i.imgur.com/VyUr4kU.gif');background-size: cover;}</style><div class="main"></div>", unsafe_allow_html=True)
 def set_audio() : 
-    audio_bytes = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
+    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
+    audio_bytes = audio_file.read()
     return  st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
 
 
