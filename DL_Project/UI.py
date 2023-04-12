@@ -57,7 +57,7 @@ def user_interface():
             if table:
                 if st.button('Show Clicked Value'):
                 # table의 클릭된 값을 출력
-                st.write(table)
+                    st.write(table)
         # with st.expander(mecanism_ment()) : mechanism_image()
         
         
