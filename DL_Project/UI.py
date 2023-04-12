@@ -7,7 +7,8 @@ def set_page() :
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
                                 initial_sidebar_state="expanded")
 def set_page2() : 
-    return st.set_page_config(background_color="yellow")          
+    return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide", \
+                                initial_sidebar_state="expanded", background_color="yellow")          
 def set_background():
     return st.markdown("""<style>
                         .main {
