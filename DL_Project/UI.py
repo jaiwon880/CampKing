@@ -1,7 +1,8 @@
 import streamlit as st
 from Functional import GetResult
+# from pydub.playback import play
 
-def set_page() : return st.set_page_config(page_title="DL", layout="wide")
+def set_page() : return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
 def get_df() : return GetResult().get_result()
 def sidebar_print_df(df) : return st.dataframe(df, width=500)
 
@@ -15,7 +16,12 @@ def mechanism_image() : return st.image("https://i.imgur.com/SgRVHOk.jpg", width
 def start_image() : return "https://i.imgur.com/idnsDBs.gif"
 def image() : return ["https://i.imgur.com/t4O7ozH.jpg", "https://i.imgur.com/idnsDBs.gif", "https://i.imgur.com/fvRG1Tj.gif"]
 def containers() : return [st.container() for i in range(len(image()))]
-# def audio() : return GetResult().get_audio()
+
+def get_audio() : 
+    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb')
+    audio_bytes = audio_file.read()
+    return  st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_bytes).decode()}"></audio>',unsafe_allow_html=True)
+
 
 def user_interface():
     set_page()
@@ -30,6 +36,7 @@ def user_interface():
             with containers()[i] : st.image(image()[i], width = 700)
     else : 
         st.image(start_image(), width = 1000)
+        get_audio()
         st.write("# 아 배고프다.")
 
 
