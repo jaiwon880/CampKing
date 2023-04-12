@@ -1,6 +1,7 @@
-import streamlit as st
 import UI as ui
+import streamlit as st
 import base64
+
 from pydub.playback import play
 from Functional import GetResult
 
@@ -33,10 +34,10 @@ def main() :
 
         ui.result_chart()
     
-        # containers = [st.container() for i in range(len(df['업체명']))]
-        # for i in range(len(df['업체명'])) :
-        #     with containers[i]:
-        #         st.write(df.loc[i, 1])
+        containers = [st.container() for i in range(len(df.head()))]
+        for i in range(len(df.head())) :
+            with containers[i]:
+                st.write(df.loc[i, 1])
 
     else : 
         ui.start_background()

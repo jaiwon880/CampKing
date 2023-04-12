@@ -32,7 +32,7 @@ def cutting() :
     return st.markdown("---")
 
 def result_chart() : 
-    return st.image("https://i.imgur.com/NuieMp3.png")
+    return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
 
 def user_interface():
 
