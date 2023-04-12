@@ -33,44 +33,6 @@ def cutting() :
 def result_chart() : 
     return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
 
-def user_interface():
-
-    df, area, direction = get_search_result()
-
-    if df is not None : 
-        set_background()
-        title_ment(area, direction)
-        cutting()
-
-        with st.sidebar : 
-            sidebar_print_df(df)
-
-        result_chart()
-    
-        # containers = [st.container() for i in range(len(df['업체명']))]
-        # for i in range(len(df['업체명'])) :
-        #     with containers[i]:
-        #         st.write(df.loc[i, 1])
-
-    else : 
-        start_background()
-        
-     
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # return st.image("https://i.imgur.com/idnsDBs.gif", width = 1200)
 # with st.expander(mecanism_ment()) : mechanism_image()
