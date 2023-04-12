@@ -14,6 +14,11 @@ def set_background():
                             background-size: cover;
                         }
                         </style> """, unsafe_allow_html=True)
+def audio_BGM():
+    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
+    return st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
+                        {base64.b64encode(audio_file).decode()}"></audio>',\
+                        unsafe_allow_html=True)
 
 def start_background() : 
     return st.markdown("""<style>
@@ -29,48 +34,30 @@ def title_ment(area, direction) :
                         👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
 
-def cutting() : 
-    return st.markdown("---")
+def cutting() : return st.markdown("---")
 
-def get_df() : 
-    return GetResult().get_result()
+def get_search_result() : return GetResult().get_result()
 
-def sidebar_print_df(df) : 
-    return st.dataframe(df, width=600)
-
-def audio_BGM():
-    audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
-    return st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
+def sidebar_print_df(df) : return st.dataframe(df, width=600)
 
 def user_interface():
-    # audio_file = open('DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3', 'rb').read()
-    # st.markdown(f'<audio autoplay="true" src="data:audio/mp3;base64,{base64.b64encode(audio_file).decode()}"></audio>',unsafe_allow_html=True)
     set_page()
-    
     audio_BGM()
-
     
-    
-    df, area, direction = get_df()
-
+    df, area, direction = get_search_result()
 
     if df is not None : 
         set_background()
-
         title_ment(area, direction)
-        
         cutting()
 
-        with st.sidebar : 
-            
-            sidebar_print_df(df)
-            
-
+        with st.sidebar : sidebar_print_df(df)
 
         # containers = [st.container() for i in range(len(df['업체명']))]
         # for i in range(len(df['업체명'])) :
         #     with containers[i]:
         #         st.write(df.loc[i, 1])
+
     else : start_background()
         
      
