@@ -102,24 +102,22 @@ def total_load():
     # st.pyplot(fig)
 
 
-    fig, ax = plt.subplots()
-    ax.plot(total['importance'])
-    st.pyplot(fig)
-    
+    # fig, ax = plt.subplots()
+    # ax.plot(total['importance'])
+    # st.pyplot(fig)
 
+    fig = go.Figure(go.Bar(
+        x=total['importance'],
+        y=total.columns,
+        orientation='h'))
 
-    # fig = go.Figure(go.Bar(
-    #     x=total['importance'],
-    #     y=total.index,
-    #     orientation='h'))
+    fig.update_layout(
+        height=600,
+        width=800,
+        xaxis_title='importance',
+        yaxis_title='Index')
 
-    # fig.update_layout(
-    #     height=600,
-    #     width=800,
-    #     xaxis_title='importance',
-    #     yaxis_title='Index')
-
-    # return st.plotly_chart(fig)
+    return st.plotly_chart(fig)
 
 
 
