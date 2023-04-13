@@ -2,6 +2,7 @@ import UI as ui
 import streamlit as st
 import base64
 import pickle
+import matplotlib.pyplot as plt
 
 from pydub.playback import play
 from Functional import GetResult
@@ -39,7 +40,7 @@ def main() :
         ui.result_chart()
         ui.cutting()
 
-        gapyeong = ui.gapyung_load()
+        ui.gapyung_load()
 
         st.dataframe(gapyeong)
 
