@@ -41,14 +41,14 @@ def total_load():
 
     fig = go.Figure(go.Bar(
     x=total['importance'],
-    # y=total['Feature'],
+    y=total.index,
     orientation='h' ))
 
     fig.update_layout(
         height=600,
         width=800,
         xaxis_title='importance',
-        # yaxis_title='Feature',
+        yaxis_title='Feature',
         margin=dict(l=100, r=20, t=30, b=20), )
 
     return st.plotly_chart(fig)
