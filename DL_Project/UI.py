@@ -74,8 +74,8 @@ def refactoring() :
                         </div>", unsafe_allow_html=True)
 
 def this_direction(direction) : 
-    return st.markdown(f"<div style='background-color: white; \
-                        padding: 10px; color: green; font-size: 48px;\
+    return st.markdown(f"<div style='background-color: green; \
+                        padding: 10px; color: white; font-size: 48px;\
                         font-weight: bold; display: inline-block;'> \
                         👉{direction} \
                         </div>", unsafe_allow_html=True)
