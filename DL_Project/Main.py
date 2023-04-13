@@ -45,7 +45,7 @@ def main() :
             ui.cutting()
             ui.pocheon_load()
 
-        elif direcion == "" : 
+        else : 
             ui.this_direction("전체")
             ui.cutting()
             ui.total_load()
