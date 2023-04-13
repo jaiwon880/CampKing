@@ -34,9 +34,6 @@ def title_ment(area, direction) :
 def cutting() : 
     return st.markdown("---")
 
-def result_chart() : 
-    return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
-
 # def total_load():
 #     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 

@@ -34,7 +34,6 @@ def main() :
 
         with st.sidebar : sidebar_print_df(df)
 
-        ui.result_chart()
         ui.cutting()
 
         ui.total_load()
