@@ -19,9 +19,7 @@ def get_search_result() :
     return GetResult().get_result()
 
 
-def sidebar_print_df(df) :
-    return st.write("업체가 충분하지 않거나 없습니다.") if len(df) < 10 else st.write("# Best!"), st.dataframe(df.head(), width=600), \
-                                                                            st.write("# Worst!"), st.dataframe(df.tail(), width=600)
+
 def main() : 
     ui.set_page()
     set_BGM()
@@ -30,23 +28,22 @@ def main() :
     if df is not None : 
         ui.set_background()
         # ui.title_ment(area, direction)
-        
 
         with st.sidebar : 
-            sidebar_print_df(df)
+            ui.sidebar_print_df(df)
 
         if direction == "가평군" :
-            ui.this_direction("경기 가평군")
+            ui.print_direction("경기 가평군")
             ui.cutting()
             ui.gapyeong_load()
             
         elif direction == "포천시":
-            ui.this_direction("경기 포천시")
+            ui.print_direction("경기 포천시")
             ui.cutting()
             ui.pocheon_load()
 
         elif direction == "전체":
-            ui.this_direction("전체")
+            ui.print_direction("전체")
             ui.cutting()
             ui.total_load()
     else : 
