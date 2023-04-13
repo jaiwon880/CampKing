@@ -27,7 +27,7 @@ def sidebar_print_df(df) :
 
 def main() : 
     ui.set_page()
-    # set_BGM()
+    set_BGM()
     df, area, direction = get_search_result()
 
     if df is not None : 
