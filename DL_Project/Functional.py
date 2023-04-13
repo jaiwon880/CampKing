@@ -11,8 +11,8 @@ class GetResult:
             df = df.drop_duplicates(subset=['name'], keep='first')
             df.sort_values(by='ranking', ascending=False, inplace=True)
             df = df[['name', 'ranking']].reset_index(drop=True)
-            df.index.name = ":트로피: 순위"
-            df = df.rename(columns={'name': ':야영: 업체명', 'ranking': ':별: 별점'})
+            df.index.name = "🏆 순위"
+            df = df.rename(columns={'name': '🏕️ 업체명', 'ranking': '⭐ 별점'})
             df.index += 1
             return df
         else : return None
