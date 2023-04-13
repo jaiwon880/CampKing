@@ -38,7 +38,11 @@ def main() :
         with st.sidebar : 
             sidebar_print_df(df)
         ui.result_chart()
+        gapyeong, pocheon, total = ui.pkl_load()
 
+        st.write(gapyeong.sumary())
+        st.write(pocheon.sumary())
+        st.write(total.sumary())
 
     
         # containers = [st.container() for i in range(len(df.head()))]
