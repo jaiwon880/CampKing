@@ -48,8 +48,8 @@ def total_load():
         height=600,
         width=800,
         xaxis_title='importance',
-        yaxis_title='Feature',
-        margin=dict(l=100, r=20, t=30, b=20), )
+        yaxis_title='',
+        )
 
     return st.plotly_chart(fig)
 
