@@ -30,7 +30,7 @@ def main() :
     df, area, direction = get_search_result()
 
     if df is not None : 
-        # ui.set_background()
+        ui.set_background()
         ui.title_ment(area, direction)
         ui.cutting()
 
