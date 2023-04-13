@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 
-@st.cache
+# @st.cache
 class GetData:
     def __init__(self) -> None : 
         self.path = ["DL_Project/Data_csv/df_final.csv",\
