@@ -28,3 +28,7 @@ class GetResult:
 
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
+
+    
+    def get_price(self) : 
+        pass
