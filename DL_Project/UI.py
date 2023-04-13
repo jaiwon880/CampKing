@@ -40,7 +40,7 @@ def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
     fig, ax = plt.subplots(figsize=(10, 8))
-    ax.barh(total['feature'])
+    ax.barh(total['importance'])
     ax.set_xlabel('Importance')
     ax.tick_params(axis='y', labelsize=8)
     plt.tight_layout()
