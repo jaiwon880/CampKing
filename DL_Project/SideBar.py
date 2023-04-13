@@ -4,7 +4,7 @@ from Data import GetData
 class GetSideBar:
     def __init__(self) -> None:
         self.sb = st.sidebar
-        self.sb.write("## 🌳Go Glamping!🌳")
+        self.sb.write("## 🌳 CampKing 🌳")
         self.df = GetData().create_data()
 
         self.area_choice = self.sb.selectbox('Choice Area!', self.get_area_list())

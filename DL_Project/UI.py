@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 
 def set_page() : 
-    return st.set_page_config(page_title="for Doksan Seo teacher", page_icon=":야영:", layout="wide", \
+    return st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", \
                                 initial_sidebar_state="expanded")
 
 def set_background():
