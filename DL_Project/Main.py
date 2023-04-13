@@ -42,9 +42,9 @@ def main() :
         ui.result_chart()
         gapyeong, pocheon, total = ui.pkl_load()
 
-        st.write(gapyeong.sumary())
-        st.write(pocheon.sumary())
-        st.write(total.sumary())
+        st.write(np.sum(gapyeong))
+        st.write(np.sum(pocheon))
+        st.write(np.sum(total))
 
     
         # containers = [st.container() for i in range(len(df.head()))]
