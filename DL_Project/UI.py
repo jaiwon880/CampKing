@@ -61,7 +61,8 @@ def total_load():
 
     # st.dataframe(total)
 
-
+def total_image() : 
+    return st.image("https://i.imgur.com/qZJvwRB.png"), st.image("https://i.imgur.com/Bgv83pb.png"), st.image("https://i.imgur.com/QGxbZJa.png")
 
 
 # return st.image("https://i.imgur.com/idnsDBs.gif", width = 1200)

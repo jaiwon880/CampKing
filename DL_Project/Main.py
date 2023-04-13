@@ -35,6 +35,7 @@ def main() :
         with st.sidebar : sidebar_print_df(df)
 
         ui.total_load()
+        ui.total_image()
 
     else : ui.start_background()
 
