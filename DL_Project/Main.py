@@ -38,12 +38,12 @@ def main() :
         elif direction == "포천시":
             ui.print_direction("경기 포천시")
             ui.cutting()
-            GetResult().total_price()
+            ui.gapyeong_load()
 
         elif direction == "전체":
             ui.print_direction("전체")
             ui.cutting()
-            ui.total_load()
+            GetResult().total_price()
     else : 
         ui.start_background()
 
