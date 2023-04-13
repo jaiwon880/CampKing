@@ -49,13 +49,8 @@ def main() :
             ui.this_direction("전체")
             ui.cutting()
             ui.total_load()
-        
-        
-
-        # ui.total_image()
-        # ui.refactoring()
-        
-    else : ui.start_background()
+    else : 
+        ui.start_background()
 
 if __name__ == '__main__' : 
     main()
