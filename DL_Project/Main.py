@@ -18,8 +18,6 @@ def set_BGM():
 def get_search_result() : 
     return GetResult().get_result()
 
-
-
 def main() : 
     ui.set_page()
     set_BGM()
