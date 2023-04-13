@@ -59,15 +59,26 @@ def total_load():
 
     # fi = best_model.varimp(use_pandas=True)
     # fi_subset = fi.loc[:, ['variable', 'relative_importance', 'percentage']]
-    fig, ax = plt.subplots(figsize=(16, 12))
-    total_subset.plot(x='variable', y='relative_importance', kind='barh')
-    plt.xlabel('Importance', fontsize=18)
-    plt.ylabel('Variable', fontsize=18)
-    plt.tick_params(axis='y', labelsize=14)
-    plt.tight_layout()
-    plt.show()
+    # fig, ax = plt.subplots(figsize=(16, 12))
+    # total_subset.plot(x='variable', y='relative_importance', kind='barh')
+    # plt.xlabel('Importance', fontsize=18)
+    # plt.ylabel('Variable', fontsize=18)
+    # plt.tick_params(axis='y', labelsize=14)
+    # plt.tight_layout()
+    # plt.show()
 
-    # fig = go.Figure(go.Bar(x=df['importance'], y=df.index, orientation='h'))
+    fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h'))
+    fig.update_layout(
+    height=600,
+    width=800,
+    xaxis_title='importance',
+    yaxis_title='',
+    margin=dict(l=100, r=20, t=30, b=20)
+    )
+    # Streamlit에서 그래프 출력
+    st.plotly_chart(fig)
+
+    
     # fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
     #             color_continuous_scale='Blues',
     #             labels={'x': 'Importance', 'y': 'index'},
