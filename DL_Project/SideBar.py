@@ -5,7 +5,7 @@ class GetSideBar:
     def __init__(self) -> None:
         self.sb = st.sidebar
         self.sb.write("## 🌳Go Glamping!🌳")
-        self.df = GetData().create_data()
+        self.df, self.pkl_gapyeong, self.pkl_pocheon, self.pkl_total = GetData().create_data()
 
         self.area_choice = self.sb.selectbox('Choice Area!', self.get_area_list())
         self.direction_choice = self.sb.selectbox('City!', self.get_direction_list()) if self.area_choice != "" else None

@@ -11,7 +11,9 @@ class GetData:
         self.df = self.load_data()
 
         self.pkl_gapyeong_path = "DL_Project/Data_csv/autogluon_gapyeong.pkl"
-        elf.pkl_gapyeong = self.load_pkl()
+        self.pkl_pocheon_path = "DL_Project/Data_csv/autogluon_pocheon.pkl"
+        self.pkl_total = "DL_Project/Data_csv/autogluon_total.pkl"
+        self.pkl_gapyeong, self.pkl_pocheon, self.pkl_total = self.load_pkl()
 
     def load_data(self):
         try :  
@@ -20,8 +22,7 @@ class GetData:
             return st.error(e)
 
     def load_pkl(self) : 
-        with open(self.pkl_gapyeong_path, 'rb') as f:
-            file_path = "example.pkl"
-            return pickle.load(f)
+        with open(self.pkl_gapyeong, 'rb') as gapyeong, open(self.pkl_pocheon_path, 'rb') as pocheon, open(self.pkl_total, 'rb') as total:
+            return pikle.load(gapyeong), pikle.load(pocheon), pikle.load(total)
 
-    def create_data(self) : return self.df
+    def create_data(self) : return self.df, self.pkl_gapyeong, self.pkl_pocheon, self.pkl_total
