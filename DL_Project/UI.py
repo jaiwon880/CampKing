@@ -57,27 +57,31 @@ def result_chart() :
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
-    fig = go.Figure(go.Bar(
-        x=total['importance'],
-        y=total.index,
-        orientation='h'))
-
+    fig = px.bar(total, x=total['Importance'], y=total.index, color=total.index,
+                color_continuous_scale='Blues',
+                labels={'x': 'Importance', 'y': 'index'},
+                height=400)
     fig.update_layout(
-        height=600,
-        width=800,
-        xaxis_title='importance',
-        yaxis_title='Index')
-
-    return fig  # plotly 그래프 객체 반환
-
-st.plotly_chart(total_load())  # 반환된 plotly 그래프 객체를 plotly_chart() 함수에 전달
+        title='돼라 ㅋㅋ',
+        showlegend=False,
+        xaxis_title='',
+        yaxis_title='알빠노',
+        font=dict(size=3),
+    )
 
 
+    # fig = go.Figure(go.Bar(
+    #     x=total['importance'],
+    #     y=total.index,
+    #     orientation='h'))
 
+    # fig.update_layout(
+    #     height=600,
+    #     width=800,
+    #     xaxis_title='importance',
+    #     yaxis_title='Index')
 
-
-
-
+    # return st.plotly_chart(fig)
 
 
 
