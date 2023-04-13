@@ -4,7 +4,9 @@ from SideBar import GetSideBar
 
 class GetResult:
     def __init__(self) -> None:
-        self.df, self.area, self.direction = GetSideBar().choice_result_sidebar()
+        self.df, \
+        self.area, \
+        self.direction = GetSideBar().choice_result_sidebar()
 
     def handle_df(self, df) :
         if df is not None :
@@ -17,6 +19,8 @@ class GetResult:
             return df
         else : return None
 
-    def choice_result_df(self) : return self.handle_df(self.df) if self.df is not None else None
+    def choice_result_df(self) : 
+        return self.handle_df(self.df) if self.df is not None else None
 
-    def get_result(self) : return self.choice_result_df(), self.area, self.direction
+    def get_result(self) : 
+        return self.choice_result_df(), self.area, self.direction
