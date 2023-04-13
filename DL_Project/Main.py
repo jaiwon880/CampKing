@@ -36,14 +36,17 @@ def main() :
             sidebar_print_df(df)
 
         if direction == "가평군" :
+            ui.this_direction("경기 가평군")
             ui.cutting()
             ui.gapyeong_load()
             
         elif direction == "포천시":
+            ui.this_direction("경기 포천시")
             ui.cutting()
             ui.pocheon_load()
 
         elif direcion == "" : 
+            ui.this_direction("전체")
             ui.cutting()
             ui.total_load()
         
