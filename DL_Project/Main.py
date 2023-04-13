@@ -32,7 +32,7 @@ def main() :
     set_BGM()
     df, area, direction = get_search_result()
 
-    if df is not None and area is not "" and direction is not "" : 
+    if df is not None : 
         ui.set_background()
         ui.title_ment(area, direction)
         ui.cutting()
