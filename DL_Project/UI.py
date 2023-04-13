@@ -46,6 +46,7 @@ def gapyung_load():
     ax.tick_params(axis='y', labelsize=8)
     ax.set_yticklabels(gapyung['feature'])
     plt.tight_layout()
+    
     return st.pyplot(fig)
 
 
