@@ -36,8 +36,8 @@ def cutting() :
 def result_chart() : 
     return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
 
-def gapyung_load():
-    gapyung = pd.read_csv("DL_Project/Data_csv/gapyeong.csv", encoding = "utf-8")
+def total_load():
+    gapyung = pd.read_csv("DL_Project/Data_csv/total.csv", encoding = "utf-8")
 
     fig, ax = plt.subplots(figsize=(10, 8))
     ax.barh(df.iloc[:, 0])

@@ -40,8 +40,7 @@ def main() :
         ui.result_chart()
         ui.cutting()
 
-        ui.gapyung_load()
-
+        ui.total_load()
 
         # st.write(gapyeong.summary())
         # st.write(pocheon.summary())
