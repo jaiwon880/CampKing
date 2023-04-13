@@ -57,81 +57,13 @@ def result_chart() :
 
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv",index_col =0, encoding="utf-8")
+
+
     fig, ax = plt.subplots(figsize=(10, 8))
     total.plot(kind='barh', ax=ax)
     st.pyplot(fig)
 
     # st.dataframe(total)
-    # fig, ax = plt.subplots(figsize=(10, 8))
-    # total.plot(kind='barh', ax=ax)
-    # ax.set_xlabel('Importance')
-    # ax.set_ylabel('Index')
-    # ax.set_yticklabels(total.index)
-    # ax.tick_params(axis='y', labelsize=8)
-    # plt.tight_layout()
-    # st.pyplot(fig)
-
-    # fi = best_model.varimp(use_pandas=True)
-    # fi_subset = fi.loc[:, ['variable', 'relative_importance', 'percentage']]
-    # fig, ax = plt.subplots(figsize=(16, 12))
-    # total_subset.plot(x='variable', y='relative_importance', kind='barh')
-    # plt.xlabel('Importance', fontsize=18)
-    # plt.ylabel('Variable', fontsize=18)
-    # plt.tick_params(axis='y', labelsize=14)
-    # plt.tight_layout()
-    # plt.show()
-
-    # fig, ax = plt.subplots(figsize=(10, 8))
-    # total_subset.plot(kind='barh', ax=ax)
-    # ax.set_xlabel('Importance')
-    # ax.set_ylabel(total.index)
-    # ax.tick_params(axis='y', labelsize=8)
-    # plt.tight_layout()
-    # plt.show()  
-
-    # fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total['importance']))
-    # fig.update_layout(
-    # height=600,
-    # width=800,
-    # xaxis_title='importance',
-    # yaxis_title='',
-    # margin=dict(l=100, r=20, t=30, b=20)
-    # )
-    # # Streamlit에서 그래프 출력
-    # st.plotly_chart(fig)
-
-    # # 막대 그래프 생성
-    # fig, ax = plt.pyplot(figsize=(10, 8))
-    # total.plot(kind='barh', ax=ax)
-
-    # # 축 레이블 설정
-    # ax.set_xlabel('Importance')
-    # ax.set_ylabel('Feature')
-    # ax.tick_params(axis='y', labelsize=8)
-
-    # # 그래프 레이아웃 설정
-    # plt.tight_layout()
-
-    # # Streamlit에서 그래프 출력
-    # st.pyplot(fig)
-
-
-    # fig, ax = plt.subplots()
-    # ax.plot(total['importance'])
-    # st.pyplot(fig)
-
-    # fig = go.Figure(go.Bar(
-    #     x=total['importance'],
-    #     y=total.index.astype(str),
-    #     orientation='h'))
-
-    # fig.update_layout(
-    #     height=600,
-    #     width=800,
-    #     xaxis_title='importance',
-    #     yaxis_title='Index')
-
-    # return st.plotly_chart(fig)
 
 
 
