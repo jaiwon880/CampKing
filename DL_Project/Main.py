@@ -34,8 +34,6 @@ def main() :
 
         with st.sidebar : sidebar_print_df(df)
 
-        ui.cutting()
-
         ui.total_load()
 
     else : ui.start_background()
