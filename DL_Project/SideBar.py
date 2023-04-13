@@ -11,7 +11,6 @@ class GetSideBar:
         self.direction_choice = self.sb.selectbox('City!', self.get_direction_list()) if self.area_choice != "" else None
         # self.address_choice = self.sb.selectbox('구, 동, 면, 군, 읍', self.get_address_list()) if self.area_choice and self.direction_choice != "" else None
     
-
     def split_location(self, index_num):
         return self.df.iloc[:, 3].apply(lambda x: x.split(' ')[index_num])
 
