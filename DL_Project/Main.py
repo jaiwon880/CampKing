@@ -15,13 +15,12 @@ def set_BGM():
                         {base64.b64encode(audio_file).decode()}"></audio>',\
                         unsafe_allow_html=True)
 
-def get_search_result() : 
-    return GetResult().get_result()
-
 def main() : 
     ui.set_page()
     set_BGM()
-    df, area, direction = get_search_result()
+
+    get = GetResult()
+    df, area, direction = get.get_result()
 
     if df is not None : 
         ui.set_background()
@@ -43,7 +42,7 @@ def main() :
         elif direction == "전체":
             ui.print_direction("전체")
             ui.cutting()
-            GetResult().total_price()
+            get.total_price()
     else : 
         ui.start_background()
 
