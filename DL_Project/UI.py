@@ -67,16 +67,24 @@ def total_load():
     # plt.tight_layout()
     # plt.show()
 
-    fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total['importance']))
-    fig.update_layout(
-    height=600,
-    width=800,
-    xaxis_title='importance',
-    yaxis_title='',
-    margin=dict(l=100, r=20, t=30, b=20)
-    )
-    # Streamlit에서 그래프 출력
-    st.plotly_chart(fig)
+    fig, ax = plt.subplots(figsize=(10, 8))
+    total_subset.plot(kind='barh', ax=ax)
+    ax.set_xlabel('Importance')
+    ax.set_ylabel(total.index)
+    ax.tick_params(axis='y', labelsize=8)
+    plt.tight_layout()
+    plt.show()  
+
+    # fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total['importance']))
+    # fig.update_layout(
+    # height=600,
+    # width=800,
+    # xaxis_title='importance',
+    # yaxis_title='',
+    # margin=dict(l=100, r=20, t=30, b=20)
+    # )
+    # # Streamlit에서 그래프 출력
+    # st.plotly_chart(fig)
 
 
     # fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
