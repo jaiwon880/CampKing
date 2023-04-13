@@ -37,7 +37,7 @@ def cutting() :
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv",index_col =0, encoding="utf-8")
 
-    total_ranking_keyword = total['importance'][:11]
+    total_ranking_keyword = total['importance'][:11].transpose()
 
     fig, ax = plt.subplots(figsize=(10, 8))
     total.plot(kind='barh', ax=ax)
