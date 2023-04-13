@@ -42,7 +42,7 @@ def total_load():
     fig, ax = plt.subplots(figsize=(10, 8))
     ax.barh(df.index, df['importance'])
     ax.set_xlabel('Importance')
-    ax.set_ylabel('Features')
+    # ax.set_ylabel('Features')
     ax.tick_params(axis='y', labelsize=8)
     ax.set_yticklabels(df.index)
     plt.tight_layout()
