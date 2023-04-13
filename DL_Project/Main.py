@@ -32,9 +32,9 @@ def main() :
     set_BGM()
     df, area, direction = get_search_result()
 
-    if df is not None : 
+    if df is not None and area is not "" and direction is not "" : 
         ui.set_background()
-        ui.title_ment(area, direction) if len(df) > 10 else st.title("충분치 않다.")
+        ui.title_ment(area, direction)
         ui.cutting()
 
         with st.sidebar : sidebar_print_df(df)
