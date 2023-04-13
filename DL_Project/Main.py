@@ -29,17 +29,17 @@ def main() :
 
     if df is not None : 
         ui.set_background()
-        ui.title_ment(area, direction)
+        # ui.title_ment(area, direction)
         ui.cutting()
 
-        with st.sidebar : sidebar_print_df(df)
+        with st.sidebar : 
+            sidebar_print_df(df)
         
         ui.total_load()
         ui.gapyeong_load()
         ui.pocheon_load()
 
         # ui.total_image()
-        
         # ui.refactoring()
         
     else : ui.start_background()
