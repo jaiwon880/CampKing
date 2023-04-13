@@ -19,7 +19,6 @@ def set_background():
                         }
                         </style> """, unsafe_allow_html=True)
 
-
 def start_background() : 
     return st.markdown("""<style>
                         .main {
