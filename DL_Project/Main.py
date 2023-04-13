@@ -20,12 +20,9 @@ def get_search_result() :
 # def get_df() : 
 #     return GetResult().just_df()
 
-def sidebar_print_df(df) : 
-    if len(df) < 10 :
-        return st.write("업체가 충분하지 않거나 없습니다.")
-    else : 
-        return st.write("# Best!"), st.dataframe(df.head(), width=600), \
-                st.write("# Worst!"), st.dataframe(df.tail(), width=600)
+def sidebar_print_df(df) :
+    return st.write("업체가 충분하지 않거나 없습니다.") if len(df) < 10 else st.write("# Best!"), st.dataframe(df.head(), width=600), \
+                                                                            st.write("# Worst!"), st.dataframe(df.tail(), width=600)
 
 def main() : 
     ui.set_page()
@@ -45,7 +42,6 @@ def main() :
         # st.write(gapyeong.summary())
         # st.write(pocheon.summary())
         # st.write(total.summary())
-        st.write(type(gapyeong))
 
         # containers = [st.container() for i in range(len(df.head()))]
         # for i in range(len(df.head())) :
