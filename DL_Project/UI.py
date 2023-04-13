@@ -40,14 +40,14 @@ def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
     fig = go.Figure(go.Bar(
-    x=total['Importance'],
+    x=total['importance'],
     y=total['Feature'],
     orientation='h' ))
 
     fig.update_layout(
         height=600,
         width=800,
-        xaxis_title='Importance',
+        xaxis_title='importance',
         yaxis_title='Feature',
         margin=dict(l=100, r=20, t=30, b=20), )
 
