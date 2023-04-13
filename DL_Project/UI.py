@@ -67,13 +67,28 @@ def total_load():
     # plt.tight_layout()
     # plt.show()
 
-    fig = plt.subplots(figsize=(10, 8))
-    total_subset.plot(kind='barh', ax=ax)
+    # 막대 그래프 생성
+    fig, ax = plt.subplots(figsize=(10, 8))
+    total.plot(kind='barh', ax=ax)
+
+    # 축 레이블 설정
     ax.set_xlabel('Importance')
-    ax.set_ylabel(total.index)
+    ax.set_ylabel('Feature')
     ax.tick_params(axis='y', labelsize=8)
+
+    # 그래프 레이아웃 설정
     plt.tight_layout()
-    plt.show()  
+
+    # Streamlit에서 그래프 출력
+    st.pyplot(fig)
+
+    # fig, ax = plt.subplots(figsize=(10, 8))
+    # total_subset.plot(kind='barh', ax=ax)
+    # ax.set_xlabel('Importance')
+    # ax.set_ylabel(total.index)
+    # ax.tick_params(axis='y', labelsize=8)
+    # plt.tight_layout()
+    # plt.show()  
 
     # fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total['importance']))
     # fig.update_layout(
