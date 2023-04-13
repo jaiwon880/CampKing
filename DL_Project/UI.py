@@ -67,7 +67,7 @@ def total_load():
     # plt.tight_layout()
     # plt.show()
 
-    fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total.index))
+    fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total['importance']))
     fig.update_layout(
     height=600,
     width=800,
