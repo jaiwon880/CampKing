@@ -34,7 +34,7 @@ def main() :
 
     if df is not None : 
         ui.set_background()
-        ui.title_ment(area, direction)
+        ui.title_ment(area, direction) if len(df) > 10 else st.title("충분치 않다.")
         ui.cutting()
 
         with st.sidebar : sidebar_print_df(df)
