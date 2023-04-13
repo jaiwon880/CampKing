@@ -1,6 +1,11 @@
 from SideBar import GetSideBar
 from Data import GetData
 
+import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+
 class GetResult:
     def __init__(self) -> None:
         self.df, \
@@ -29,5 +34,12 @@ class GetResult:
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
-    def get_price(self) : 
-        pass
+    def total_price(self):
+        total_ranking_keyword = pd.DataFrame(self.total["importance"][:11]).transpose()
+
+        fig, ax = plt.subplots(figsize=(10, 8))
+        self.total.plot(kind="barh", ax=ax)
+
+        st.image("https://i.imgur.com/qZJvwRB.png")
+        st.pyplot(fig)
+        st.write(total_ranking_keyword)

@@ -38,7 +38,7 @@ def main() :
         elif direction == "포천시":
             ui.print_direction("경기 포천시")
             ui.cutting()
-            ui.pocheon_load()
+            GetResult().total_price()
 
         elif direction == "전체":
             ui.print_direction("전체")
