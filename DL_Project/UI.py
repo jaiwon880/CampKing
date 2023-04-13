@@ -41,7 +41,7 @@ def total_load():
 
     fig = go.Figure(go.Bar(
     x=total['importance'],
-    # y=total['Feature'],
+    y=total['Feature'],
     orientation='h' ))
 
     fig.update_layout(
