@@ -37,8 +37,6 @@ def main() :
 
         with st.sidebar : 
             sidebar_print_df(df)
-
-        col
         ui.result_chart()
 
 
