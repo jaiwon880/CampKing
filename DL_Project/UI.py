@@ -61,7 +61,7 @@ def total_load():
     # total.plot(kind='barh', ax=ax)
     # st.pyplot(fig)
 
-    # st.dataframe(total)
+    st.dataframe(total)
     # fig, ax = plt.subplots(figsize=(10, 8))
     # total.plot(kind='barh', ax=ax)
     # ax.set_xlabel('Importance')
