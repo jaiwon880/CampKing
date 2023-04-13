@@ -44,6 +44,26 @@ def total_load():
 
     return st.pyplot(fig), st.write(total_ranking_keyword)
 
+def gapyeong_load():
+    gapyeong = pd.read_csv("DL_Project/Data_csv/gapyeong.csv",index_col =0, encoding="utf-8")
+
+    gapyeong_ranking_keyword = pd.DataFrame(gapyeong['importance'][:11]).transpose()
+
+    fig1, ax = plt.subplots(figsize=(10, 8))
+    gapyeong.plot(kind='barh', ax=ax)
+
+    return st.pyplot(fig1), st.write(gapyeong_ranking_keyword)
+
+def pocheon_load():
+    pocheon = pd.read_csv("DL_Project/Data_csv/pocheon.csv",index_col =0, encoding="utf-8")
+
+    pocheon_ranking_keyword = pd.DataFrame(pocheon['importance'][:11]).transpose()
+
+    fig2, ax = plt.subplots(figsize=(10, 8))
+    pocheon.plot(kind='barh', ax=ax)
+
+    return st.pyplot(fig2), st.write(pocheon_ranking_keyword)
+
 def total_image() : 
     return st.image("https://i.imgur.com/qZJvwRB.png"), \
             st.image("https://i.imgur.com/Bgv83pb.png"), \
