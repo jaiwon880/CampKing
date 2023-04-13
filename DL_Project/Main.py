@@ -15,6 +15,9 @@ def set_BGM():
                         {base64.b64encode(audio_file).decode()}"></audio>',\
                         unsafe_allow_html=True)
 
+def print_this(direction) : 
+    return ui.print_direction(direction), ui.cutting()
+
 def main() : 
     ui.set_page()
     set_BGM()
@@ -30,18 +33,15 @@ def main() :
             ui.sidebar_print_df(df)
 
         if direction == "가평군" :
-            ui.print_direction("경기 가평군")
-            ui.cutting()
-            ui.gapyeong_load()
+            print_this("경기 가평군")
+            get.gapyeong_price()
             
         elif direction == "포천시":
-            ui.print_direction("경기 포천시")
-            ui.cutting()
-            ui.gapyeong_load()
+            print_this("경기 포천시")
+            get.gapyeong_price()
 
         elif direction == "전체":
-            ui.print_direction("전체")
-            ui.cutting()
+            print_this("전체")
             get.total_price()
     else : 
         ui.start_background()
