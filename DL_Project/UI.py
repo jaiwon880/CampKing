@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 
 def set_page() : 
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
@@ -56,7 +57,9 @@ def result_chart() :
 
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
-
+    fig, ax = plt.subplots(figsize=(10, 8))
+    total.plot(kind='barh', ax=ax)
+    st.pyplot(fig)
     # fi = best_model.varimp(use_pandas=True)
     # fi_subset = fi.loc[:, ['variable', 'relative_importance', 'percentage']]
     # fig, ax = plt.subplots(figsize=(16, 12))
@@ -106,19 +109,18 @@ def total_load():
     # ax.plot(total['importance'])
     # st.pyplot(fig)
 
-    fig = go.Figure(go.Bar(
-        x=total['importance'],
-        y=total.index.astype(str),
-        orientation='h'))
+    # fig = go.Figure(go.Bar(
+    #     x=total['importance'],
+    #     y=total.index.astype(str),
+    #     orientation='h'))
 
-    fig.update_layout(
-        height=600,
-        width=800,
-        xaxis_title='importance',
-        yaxis_title='Index')
+    # fig.update_layout(
+    #     height=600,
+    #     width=800,
+    #     xaxis_title='importance',
+    #     yaxis_title='Index')
 
-    return st.plotly_chart(fig)
-
+    # return st.plotly_chart(fig)
 
 
 
