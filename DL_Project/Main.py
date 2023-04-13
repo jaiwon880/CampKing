@@ -33,7 +33,7 @@ def main() :
         ui.cutting()
 
         with st.sidebar : sidebar_print_df(df)
-
+        
         ui.total_load()
         ui.total_image()
 
