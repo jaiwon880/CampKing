@@ -18,8 +18,6 @@ def set_BGM():
 def get_search_result() : 
     return GetResult().get_result()
 
-# def get_df() : 
-#     return GetResult().just_df()
 
 def sidebar_print_df(df) :
     return st.write("업체가 충분하지 않거나 없습니다.") if len(df) < 10 else st.write("# Best!"), st.dataframe(df.head(), width=600), \
@@ -34,22 +32,12 @@ def main() :
         ui.title_ment(area, direction)
         ui.cutting()
 
-        with st.sidebar : 
-            sidebar_print_df(df)
+        with st.sidebar : sidebar_print_df(df)
 
         ui.result_chart()
         ui.cutting()
 
         ui.total_load()
-
-        # st.write(gapyeong.summary())
-        # st.write(pocheon.summary())
-        # st.write(total.summary())
-
-        # containers = [st.container() for i in range(len(df.head()))]
-        # for i in range(len(df.head())) :
-        #     with containers[i]:
-        #         st.write(df.loc[i, 1])
 
     else : ui.start_background()
 
