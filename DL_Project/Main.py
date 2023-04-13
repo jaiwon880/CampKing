@@ -23,7 +23,6 @@ def get_search_result() :
 def sidebar_print_df(df) :
     return st.write("업체가 충분하지 않거나 없습니다.") if len(df) < 10 else st.write("# Best!"), st.dataframe(df.head(), width=600), \
                                                                             st.write("# Worst!"), st.dataframe(df.tail(), width=600)
-
 def main() : 
     ui.set_page()
     set_BGM()
@@ -34,10 +33,12 @@ def main() :
         ui.title_ment(area, direction)
         ui.cutting()
 
-        with st.sidebar : sidebar_print_df(df)
+        with st.sidebar : 
+            sidebar_print_df(df)
+
         ui.result_chart()
         ui.cutting()
-        gapyeong, pocheon, total = ui.pkl_load()
+        gapyeong = ui.gapyung_load()
 
         # st.write(gapyeong.summary())
         # st.write(pocheon.summary())

@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import pandas as pd
 
 def set_page() : 
     return st.set_page_config(page_title="DL", page_icon=":smiley:", layout="wide")
@@ -34,15 +35,21 @@ def cutting() :
 def result_chart() : 
     return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
 
-def pkl_load():
-    pkl_gapyeong_path = "DL_Project/Data_csv/autogluon_gapyeong.pkl"
-    pkl_pocheon_path = "DL_Project/Data_csv/autogluon_pocheon.pkl"
-    pkl_total_path = "DL_Project/Data_csv/autogluon_total.pkl"
+def gapyung_load():
+    # pkl_gapyeong_path = "DL_Project/Data_csv/autogluon_gapyeong.pkl"
+    # pkl_pocheon_path = "DL_Project/Data_csv/autogluon_pocheon.pkl"
+    # pkl_total_path = "DL_Project/Data_csv/autogluon_total.pkl"
 
-    with open(pkl_gapyeong_path, 'rb') as gapyeong, \
-         open(pkl_pocheon_path, 'rb') as pocheon, \
-         open(pkl_total_path, 'rb') as total:
-        return pickle.load(gapyeong), pickle.load(pocheon), pickle.load(total)
+    # with open(pkl_gapyeong_path, 'rb') as gapyeong, \
+    #     open(pkl_pocheon_path, 'rb') as pocheon, \
+    #     open(pkl_total_path, 'rb') as total:
+    #     return pickle.load(gapyeong), pickle.load(pocheon), pickle.load(total)
+    gapyung_path = "https://github.com/cc5547/project/blob/main/DL_Project/Data_csv/gapyeong.csv"
+    try :  
+        return pd.read_csv(gapyung_path)
+    except Exception as e : 
+        return st.error(e)
+    
 
 
 
