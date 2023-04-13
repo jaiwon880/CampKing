@@ -60,7 +60,7 @@ def total_load():
     # fi = best_model.varimp(use_pandas=True)
     # fi_subset = fi.loc[:, ['variable', 'relative_importance', 'percentage']]
     fig, ax = plt.subplots(figsize=(16, 12))
-    fi_subset.plot(x='variable', y='relative_importance', kind='barh')
+    total_subset.plot(x='variable', y='relative_importance', kind='barh')
     plt.xlabel('Importance', fontsize=18)
     plt.ylabel('Variable', fontsize=18)
     plt.tick_params(axis='y', labelsize=14)
