@@ -40,12 +40,12 @@ def gapyung_load():
     gapyung = pd.read_csv("DL_Project/Data_csv/gapyeong.csv", encoding = "utf-8")
 
     fig, ax = plt.subplots(figsize=(10, 8))
-    ax.barh(gapyung['feature'], gapyung['importance'])
+    ax.barh(df.index, df.iloc[:, 0])
     ax.set_xlabel('Importance')
+    ax.set_ylabel('Features')
     ax.tick_params(axis='y', labelsize=8)
     ax.set_yticklabels(gapyung['feature'])
     plt.tight_layout()
-
     return st.pyplot(fig)
 
 
