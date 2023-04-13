@@ -57,17 +57,23 @@ def result_chart() :
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
-    fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
-                color_continuous_scale='Blues',
-                labels={'x': 'Importance', 'y': 'index'},
-                height=400)
-    fig.update_layout(
-        title='돼라 ㅋㅋ',
-        showlegend=False,
-        xaxis_title='',
-        yaxis_title='알빠노',
-        font=dict(size=3),
-    )
+    fig, ax = plt.subplots(figsize=(10, 8))
+    fi_subset.plot(kind='barh', ax=ax)
+    ax.set_xlabel('Importance')
+    ax.tick_params(axis='y', labelsize=8)
+    plt.tight_layout()
+    plt.show()
+    # fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
+    #             color_continuous_scale='Blues',
+    #             labels={'x': 'Importance', 'y': 'index'},
+    #             height=400)
+    # fig.update_layout(
+    #     title='돼라 ㅋㅋ',
+    #     showlegend=False,
+    #     xaxis_title='',
+    #     yaxis_title='알빠노',
+    #     font=dict(size=3),
+    # )
 
 
     # fig = go.Figure(go.Bar(
