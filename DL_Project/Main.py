@@ -30,14 +30,24 @@ def main() :
     if df is not None : 
         ui.set_background()
         # ui.title_ment(area, direction)
-        ui.cutting()
+        
 
         with st.sidebar : 
             sidebar_print_df(df)
+
+        if direction == "가평군" :
+            ui.cutting()
+            ui.gapyeong_load()
+            
+        elif direction == "포천시":
+            ui.cutting()
+            ui.pocheon_load()
+
+        elif direcion == "" : 
+            ui.cutting()
+            ui.total_load()
         
-        ui.total_load()
-        ui.gapyeong_load()
-        ui.pocheon_load()
+        
 
         # ui.total_image()
         # ui.refactoring()
