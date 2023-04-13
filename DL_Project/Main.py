@@ -43,9 +43,10 @@ def main() :
         
         gapyeong, pocheon, total = ui.pkl_load()
 
-        st.write(gapyeong.summary())
-        st.write(pocheon.summary())
-        st.write(total.summary())
+        # st.write(gapyeong.summary())
+        # st.write(pocheon.summary())
+        # st.write(total.summary())
+        st.write(dir(gapyeong))
 
         # containers = [st.container() for i in range(len(df.head()))]
         # for i in range(len(df.head())) :
