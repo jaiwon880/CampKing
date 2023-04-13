@@ -57,7 +57,7 @@ def result_chart() :
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
-    fig = px.bar(total, x=total['Importance'], y=total.index,
+    fig = px.bar(total, x=total['Importance'], y=total.index, color = 'Importance'
                 color_continuous_scale='Blues',
                 labels={'x': 'Importance', 'y': 'index'},
                 height=400)
