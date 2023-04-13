@@ -46,3 +46,6 @@ def total_image() :
     return st.image("https://i.imgur.com/qZJvwRB.png"), \
             st.image("https://i.imgur.com/Bgv83pb.png"), \
             st.image("https://i.imgur.com/QGxbZJa.png")
+
+def refactoring() : 
+    return st.write("사용자 에게 도출될 키워드 리뷰, 업체 사진, 객실 정보 등은 한글 화 진행 중 추후 리팩토링..")

@@ -36,7 +36,9 @@ def main() :
         
         ui.total_load()
         ui.total_image()
-
+        
+        ui.refactoring()
+        
     else : ui.start_background()
 
 if __name__ == '__main__' : 
