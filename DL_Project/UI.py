@@ -102,17 +102,10 @@ def total_load():
     # st.pyplot(fig)
 
 
-    fig = px.bar(total, x='Importance', y='Feature', color = 'Importance',
-                color_continuous_scale='Blues',
-                labels={'x': 'Importance', 'y': 'options'},
-                height=400)
-    fig.update_layout(
-        title='돼라 ㅋㅋ',
-        showlegend=False,
-        xaxis_title='',
-        yaxis_title='알빠노',
-        font=dict(size=3),
-    )
+    fig, ax = plt.subplots()
+    ax.plot(total['importance'])
+    st.pyplot(fig)
+    
 
 
     # fig = go.Figure(go.Bar(
