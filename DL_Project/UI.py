@@ -46,7 +46,7 @@ def gapyung_load():
     #     return pickle.load(gapyeong), pickle.load(pocheon), pickle.load(total)
     gapyung_path = "https://github.com/cc5547/project/blob/main/DL_Project/Data_csv/gapyeong.csv"
     try :  
-        return pd.read_csv(gapyung_path)
+        return pd.read_csv(gapyung_path, encoding = "cp949")
     except Exception as e : 
         return st.error(e)
     

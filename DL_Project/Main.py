@@ -38,8 +38,11 @@ def main() :
 
         ui.result_chart()
         ui.cutting()
+
         gapyeong = ui.gapyung_load()
+
         st.dataframe(gapyeong)
+
         # st.write(gapyeong.summary())
         # st.write(pocheon.summary())
         # st.write(total.summary())
