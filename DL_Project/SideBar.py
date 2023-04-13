@@ -18,8 +18,8 @@ class GetSideBar:
         return [""] + list(set(self.split_location(0)))
 
     def get_direction_list(self) : 
-        return [""] + sorted(list(set(self.df[self.split_location(0) == self.area_choice]\
-                                                .iloc[:, 3].apply(lambda x: x.split(' ')[1]))))+["전체"]
+        return ["", "전체"] + sorted(list(set(self.df[self.split_location(0) == self.area_choice]\
+                                                .iloc[:, 3].apply(lambda x: x.split(' ')[1]))))
     
     # def get_address_list(self) : 
     #     return [""] + sorted(list(set(self.df[(self.split_location(0) == self.area_choice)\
