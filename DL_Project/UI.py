@@ -37,12 +37,11 @@ def result_chart() :
     return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
 
 def total_load():
-    gapyung = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
+    total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
     fig, ax = plt.subplots(figsize=(10, 8))
-    ax.barh(gapyung['feature'], gapyung['importance'])
+    ax.barh(total['feature'])
     ax.set_xlabel('Importance')
-    ax.set_ylabel('Features')
     ax.tick_params(axis='y', labelsize=8)
     plt.tight_layout()
 
