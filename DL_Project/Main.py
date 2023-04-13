@@ -45,7 +45,7 @@ def main() :
         # st.write(gapyeong.summary())
         # st.write(pocheon.summary())
         # st.write(total.summary())
-        st.write(dir(gapyeong))
+        st.write(type(gapyeong))
 
         # containers = [st.container() for i in range(len(df.head()))]
         # for i in range(len(df.head())) :
