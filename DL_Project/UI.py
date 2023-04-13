@@ -36,22 +36,41 @@ def cutting() :
 def result_chart() : 
     return st.image("https://i.imgur.com/NuieMp3.png", width = 1200)
 
+# def total_load():
+#     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
+
+#     fig = go.Figure(go.Bar(
+#     x=total['importance'],
+#     y=total.index,
+#     orientation='h' ))
+
+#     fig.update_layout(
+#         height=600,
+#         width=800,
+#         xaxis_title='importance',
+#         yaxis_title='',
+#         )
+
+#     return st.plotly_chart(fig)
+
+
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
     fig = go.Figure(go.Bar(
-    x=total['importance'],
-    y=total.index,
-    orientation='h' ))
+        x=total['importance'],
+        y=total.index,
+        orientation='h'))
 
     fig.update_layout(
         height=600,
         width=800,
         xaxis_title='importance',
-        yaxis_title='',
-        )
+        yaxis_title='Index')
 
-    return st.plotly_chart(fig)
+    return fig
+
+st.plotly_chart(total_load())
 
 
     
