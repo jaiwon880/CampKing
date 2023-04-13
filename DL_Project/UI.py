@@ -67,7 +67,7 @@ def total_load():
     # plt.tight_layout()
     # plt.show()
 
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig = plt.subplots(figsize=(10, 8))
     total_subset.plot(kind='barh', ax=ax)
     ax.set_xlabel('Importance')
     ax.set_ylabel(total.index)
