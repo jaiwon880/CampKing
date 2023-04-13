@@ -17,6 +17,7 @@ class GetResult:
             df = df.rename(columns={'name': '🏕️ 업체명', 'ranking': '⭐ 별점'})
             df.index += 1
             return df
+            
         else : return None
 
     def choice_result_df(self) : 
