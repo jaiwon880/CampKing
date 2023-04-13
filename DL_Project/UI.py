@@ -60,17 +60,16 @@ def total_load():
     # fig, ax = plt.subplots(figsize=(10, 8))
     # total.plot(kind='barh', ax=ax)
     # st.pyplot(fig)
-    total
 
-
-    fig, ax = plt.subplots(figsize=(10, 8))
-    total.plot(kind='barh', ax=ax)
-    ax.set_xlabel('Importance')
-    ax.set_ylabel('Index')
-    ax.set_yticklabels(total.index)
-    ax.tick_params(axis='y', labelsize=8)
-    plt.tight_layout()
-    st.pyplot(fig)
+    st.dataframe(total)
+    # fig, ax = plt.subplots(figsize=(10, 8))
+    # total.plot(kind='barh', ax=ax)
+    # ax.set_xlabel('Importance')
+    # ax.set_ylabel('Index')
+    # ax.set_yticklabels(total.index)
+    # ax.tick_params(axis='y', labelsize=8)
+    # plt.tight_layout()
+    # st.pyplot(fig)
 
     # fi = best_model.varimp(use_pandas=True)
     # fi_subset = fi.loc[:, ['variable', 'relative_importance', 'percentage']]
