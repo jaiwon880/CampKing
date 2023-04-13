@@ -67,7 +67,7 @@ def total_load():
     # plt.tight_layout()
     # plt.show()
 
-    fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h'))
+    fig = go.Figure(go.Bar(x=total['importance'], y=total.index, orientation='h', color=total.index))
     fig.update_layout(
     height=600,
     width=800,
@@ -78,7 +78,7 @@ def total_load():
     # Streamlit에서 그래프 출력
     st.plotly_chart(fig)
 
-    
+
     # fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
     #             color_continuous_scale='Blues',
     #             labels={'x': 'Importance', 'y': 'index'},
