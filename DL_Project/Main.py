@@ -37,11 +37,12 @@ def main() :
             
         elif direction == "포천시":
             print_this("경기 포천시")
-            get.gapyeong_price()
+            get.pocheon_price()
 
         elif direction == "전체":
             print_this("전체")
             get.total_price()
+        else : df.empty
     else : 
         ui.start_background()
 
