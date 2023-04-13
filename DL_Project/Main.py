@@ -37,10 +37,9 @@ def main() :
         ui.title_ment(area, direction)
         ui.cutting()
 
-        with st.sidebar : 
-            sidebar_print_df(df)
+        with st.sidebar : sidebar_print_df(df)
         ui.result_chart()
-        
+        ui.cutting()
         gapyeong, pocheon, total = ui.pkl_load()
 
         # st.write(gapyeong.summary())
@@ -53,8 +52,7 @@ def main() :
         #     with containers[i]:
         #         st.write(df.loc[i, 1])
 
-    else : 
-        ui.start_background()
+    else : ui.start_background()
 
 if __name__ == '__main__' : 
     main()
