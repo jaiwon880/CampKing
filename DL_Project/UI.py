@@ -58,10 +58,9 @@ def result_chart() :
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv",index_col =0, encoding="utf-8")
 
-
     fig, ax = plt.subplots(figsize=(10, 8))
     total.plot(kind='barh', ax=ax)
-    return st.pyplot_chart(fig)
+    return st.pyplot(fig)
 
     # st.dataframe(total)
 
