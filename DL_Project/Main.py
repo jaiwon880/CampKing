@@ -35,6 +35,8 @@ def main() :
         with st.sidebar : sidebar_print_df(df)
         
         ui.total_load()
+        ui.gapyeong_load()
+        ui.pocheon_load()
 
         # ui.total_image()
         
