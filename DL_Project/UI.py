@@ -68,17 +68,9 @@ def total_load():
         xaxis_title='importance',
         yaxis_title='Index')
 
-    return fig
+    return fig  # plotly 그래프 객체 반환
 
-st.plotly_chart(total_load())
-
-
-    
-
-
-
-
-
+st.plotly_chart(total_load())  # 반환된 plotly 그래프 객체를 plotly_chart() 함수에 전달
 
 
 
