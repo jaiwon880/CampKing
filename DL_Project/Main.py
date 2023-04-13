@@ -27,7 +27,6 @@ def main() :
 
     if df is not None : 
         ui.set_background()
-        # ui.title_ment(area, direction)
 
         with st.sidebar : 
             ui.sidebar_print_df(df)
