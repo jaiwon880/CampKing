@@ -11,7 +11,9 @@ class GetData:
                     "DL_Project/Data_csv/pocheon.csv"]
 
         self.df = self.load_data()
-        self.total, self.gapyeong, self.pocheon = self.load_area_price()
+        self.total, \
+        self.gapyeong, \
+        self.pocheon = self.load_area_price()
 
     def load_data(self):
         try :  
@@ -28,4 +30,8 @@ class GetData:
         except Exception as e:
             return st.error(e)
 
-    def create_data(self) : return self.df, self.total, self.gapyeong, self.pocheon
+    def create_data(self) : 
+        return self.df
+
+    def create_price(self) : 
+        return self.total, self.gapyeong, self.pocheon

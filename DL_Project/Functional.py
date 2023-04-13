@@ -1,12 +1,15 @@
 from SideBar import GetSideBar
-# from Data import GetData
-# import numpy as np
+from Data import GetData
 
 class GetResult:
     def __init__(self) -> None:
         self.df, \
         self.area, \
         self.direction = GetSideBar().choice_result_sidebar()
+
+        self.total, \
+        self.gapyeong, \
+        self.pocheon = GetData().create_price()
 
     def handle_df(self, df) :
         if df is not None :
