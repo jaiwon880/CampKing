@@ -61,7 +61,7 @@ def total_load():
 
     fig, ax = plt.subplots(figsize=(10, 8))
     total.plot(kind='barh', ax=ax)
-    st.pyplot(fig)
+    return st.pyplot_chart(fig)
 
     # st.dataframe(total)
 
