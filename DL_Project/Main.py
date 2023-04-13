@@ -42,7 +42,6 @@ def main() :
 
         ui.gapyung_load()
 
-        st.dataframe(gapyeong)
 
         # st.write(gapyeong.summary())
         # st.write(pocheon.summary())
