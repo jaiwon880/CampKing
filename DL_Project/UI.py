@@ -57,12 +57,16 @@ def result_chart() :
 def total_load():
     total = pd.read_csv("DL_Project/Data_csv/total.csv", encoding="utf-8")
 
-    fig, ax = plt.subplots(figsize=(10, 8))
-    fi_subset.plot(kind='barh', ax=ax)
-    ax.set_xlabel('Importance')
-    ax.tick_params(axis='y', labelsize=8)
+    fi = best_model.varimp(use_pandas=True)
+    fi_subset = fi.loc[:, ['variable', 'relative_importance', 'percentage']]
+    fig, ax = plt.subplots(figsize=(16, 12))
+    fi_subset.plot(x='variable', y='relative_importance', kind='barh')
+    plt.xlabel('Importance', fontsize=18)
+    plt.ylabel('Variable', fontsize=18)
+    plt.tick_params(axis='y', labelsize=14)
     plt.tight_layout()
     plt.show()
+    # fig = go.Figure(go.Bar(x=df['importance'], y=df.index, orientation='h'))
     # fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
     #             color_continuous_scale='Blues',
     #             labels={'x': 'Importance', 'y': 'index'},
