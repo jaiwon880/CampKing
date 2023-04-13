@@ -42,7 +42,7 @@ def total_load():
     fig, ax = plt.subplots(figsize=(10, 8))
     total.plot(kind='barh', ax=ax)
 
-    return st.pyplot(fig), st.write(total_ranking_keyword)
+    return st.image("https://i.imgur.com/qZJvwRB.png"), st.pyplot(fig), st.write(total_ranking_keyword)
 
 def gapyeong_load():
     gapyeong = pd.read_csv("DL_Project/Data_csv/gapyeong.csv",index_col =0, encoding="utf-8")
@@ -52,7 +52,7 @@ def gapyeong_load():
     fig1, ax = plt.subplots(figsize=(10, 8))
     gapyeong.plot(kind='barh', ax=ax)
 
-    return st.pyplot(fig1), st.write(gapyeong_ranking_keyword)
+    return st.image("https://i.imgur.com/Bgv83pb.png"), st.pyplot(fig1), st.write(gapyeong_ranking_keyword)
 
 def pocheon_load():
     pocheon = pd.read_csv("DL_Project/Data_csv/pocheon.csv",index_col =0, encoding="utf-8")
@@ -62,12 +62,8 @@ def pocheon_load():
     fig2, ax = plt.subplots(figsize=(10, 8))
     pocheon.plot(kind='barh', ax=ax)
 
-    return st.pyplot(fig2), st.write(pocheon_ranking_keyword)
+    return st.image("https://i.imgur.com/QGxbZJa.png"), st.pyplot(fig2), st.write(pocheon_ranking_keyword)
 
-def total_image() : 
-    return st.image("https://i.imgur.com/qZJvwRB.png"), \
-            st.image("https://i.imgur.com/Bgv83pb.png"), \
-            st.image("https://i.imgur.com/QGxbZJa.png")
 
 def refactoring() : 
     ment = "사용자 에게 도출될 키워드 리뷰 카운드(%별 수), 업체 사진(image), 객실 정보(info) 등은 한글 화 진행 중 추후 리팩토링.."
