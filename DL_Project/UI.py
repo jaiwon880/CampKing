@@ -67,21 +67,6 @@ def total_load():
     # plt.tight_layout()
     # plt.show()
 
-    # 막대 그래프 생성
-    fig, ax = plt.subplots(figsize=(10, 8))
-    total.plot(kind='barh', ax=ax)
-
-    # 축 레이블 설정
-    ax.set_xlabel('Importance')
-    ax.set_ylabel('Feature')
-    ax.tick_params(axis='y', labelsize=8)
-
-    # 그래프 레이아웃 설정
-    plt.tight_layout()
-
-    # Streamlit에서 그래프 출력
-    st.pyplot(fig)
-
     # fig, ax = plt.subplots(figsize=(10, 8))
     # total_subset.plot(kind='barh', ax=ax)
     # ax.set_xlabel('Importance')
@@ -101,18 +86,33 @@ def total_load():
     # # Streamlit에서 그래프 출력
     # st.plotly_chart(fig)
 
+    # # 막대 그래프 생성
+    # fig, ax = plt.pyplot(figsize=(10, 8))
+    # total.plot(kind='barh', ax=ax)
 
-    # fig = px.bar(total, x='Importance', y=total.index, color = 'Importance'
-    #             color_continuous_scale='Blues',
-    #             labels={'x': 'Importance', 'y': 'index'},
-    #             height=400)
-    # fig.update_layout(
-    #     title='돼라 ㅋㅋ',
-    #     showlegend=False,
-    #     xaxis_title='',
-    #     yaxis_title='알빠노',
-    #     font=dict(size=3),
-    # )
+    # # 축 레이블 설정
+    # ax.set_xlabel('Importance')
+    # ax.set_ylabel('Feature')
+    # ax.tick_params(axis='y', labelsize=8)
+
+    # # 그래프 레이아웃 설정
+    # plt.tight_layout()
+
+    # # Streamlit에서 그래프 출력
+    # st.pyplot(fig)
+
+
+    fig = px.bar(total, x='Importance', y='Feature', color = 'Importance',
+                color_continuous_scale='Blues',
+                labels={'x': 'Importance', 'y': 'options'},
+                height=400)
+    fig.update_layout(
+        title='돼라 ㅋㅋ',
+        showlegend=False,
+        xaxis_title='',
+        yaxis_title='알빠노',
+        font=dict(size=3),
+    )
 
 
     # fig = go.Figure(go.Bar(
