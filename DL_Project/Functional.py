@@ -38,17 +38,19 @@ class GetResult:
         if self.direction == "전체" :
             df = self.total
             image_path = "https://i.imgur.com/qZJvwRB.png"
+            return df, image_path
 
         elif self.direction == "가평군" :
             df = self.gapyeong
             image_path = "https://i.imgur.com/Bgv83pb.png"
+            return df, image_path
 
         elif self.direction == "포천시" :
             df = self.pocheon
             image_path = "https://i.imgur.com/QGxbZJa.png"
-        else : pass
+            return df, image_path
 
-        return df, image_path
+        else : pass
 
     def get_price(self, df, image_path):
         if self.direction is not None and not "":
