@@ -45,7 +45,7 @@ class GetResult:
         else : return None, None
 
     def get_price(self):
-        df, iamge_path = handle_price()
+        df, image_path = handle_price()
 
         if df and image_path is not None :
             keyword = pd.DataFrame(df["importance"][:11]).transpose()
