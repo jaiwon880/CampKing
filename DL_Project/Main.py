@@ -42,6 +42,7 @@ def main() :
         elif direction == "전체":
             print_this(area, direction)
             get.get_price()
+            
         else : df.empty
     else : 
         ui.start_background()

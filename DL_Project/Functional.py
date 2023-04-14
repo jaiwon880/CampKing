@@ -62,4 +62,4 @@ class GetResult:
             st.image(image_path)
             st.pyplot(fig)
             st.write(keyword)
-        else : pass
+        else : return None
