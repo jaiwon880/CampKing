@@ -15,6 +15,10 @@ class GetResult:
         self.total, \
         self.gapyeong, \
         self.pocheon = GetData().create_price()
+        
+        self.image_path = ["https://i.imgur.com/qZJvwRB.png", \
+                            "https://i.imgur.com/Bgv83pb.png", \
+                            "https://i.imgur.com/QGxbZJa.png"]
 
     def handle_df(self, df) :
         if df is not None :
@@ -50,18 +54,16 @@ class GetResult:
             image_path = "https://i.imgur.com/QGxbZJa.png"
             return df, image_path
 
-        else : pass
+        else : return None, None
 
     def get_price(self):
-        if self.direction is not None and not "":
-            df, image_path = self.handle_price()
+        df, iamge_path = handle_price()
 
-            keyword = pd.DataFrame(df["importance"][:11]).transpose()
+        keyword = pd.DataFrame(df["importance"][:11]).transpose()
 
-            fig, ax = plt.subplots(figsize=(10, 8))
-            df.plot(kind="barh", ax=ax)
+        fig, ax = plt.subplots(figsize=(10, 8))
+        df.plot(kind="barh", ax=ax)
 
-            st.image(image_path)
-            st.pyplot(fig)
-            st.write(keyword)
-        else : return None
+        st.image(image_path)
+        st.pyplot(fig)
+        st.write(keyword)
