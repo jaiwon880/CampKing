@@ -30,9 +30,11 @@ def main() :
 
         with st.sidebar : 
             ui.sidebar_print_df(df)
-
-        print_this(area, direction)
-        get.get_price()
+        
+        if direction == "전체" or "가평군" or "포천시" :
+            print_this(area, direction)
+            get.get_price()
+        else : ui.refactoring()
     else : 
         ui.start_background()
 
