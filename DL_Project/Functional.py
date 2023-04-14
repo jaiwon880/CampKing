@@ -56,4 +56,4 @@ class GetResult:
             st.image(image_path)
             st.pyplot(fig)
             st.write(keyword)
-        else : st.write("충분하지 않다!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        else : pass
