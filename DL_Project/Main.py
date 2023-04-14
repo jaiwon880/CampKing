@@ -43,7 +43,7 @@ def main() :
             print_this(area, direction)
             get.get_price()
             
-        else : df.empty
+        else : pass
     else : 
         ui.start_background()
 

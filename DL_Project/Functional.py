@@ -39,21 +39,9 @@ class GetResult:
         return self.choice_result_df(), self.area, self.direction
 
     def hadle_price(self) : 
-        if self.direction == "전체" :
-            df = self.total
-            image_path = "https://i.imgur.com/qZJvwRB.png"
-            return df, image_path
-
-        elif self.direction == "가평군" :
-            df = self.gapyeong
-            image_path = "https://i.imgur.com/Bgv83pb.png"
-            return df, image_path
-
-        elif self.direction == "포천시" :
-            df = self.pocheon
-            image_path = "https://i.imgur.com/QGxbZJa.png"
-            return df, image_path
-
+        if self.direction == "전체" : return self.total, self.image_path[0]
+        elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
+        elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
         else : return None, None
 
     def get_price(self):
