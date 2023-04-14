@@ -37,6 +37,7 @@ def main() :
         elif direction == "전체" or "가평군" or "포천시" : 
             print_this(area, direction)
             get.get_price()
+        else : pass
             
     else : 
         ui.start_background()
