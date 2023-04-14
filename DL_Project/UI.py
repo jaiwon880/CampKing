@@ -34,11 +34,11 @@ def title_ment(area, direction) :
                         👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
 
-def print_direction(direction) : 
+def print_direction(area, direction) : 
     return st.markdown(f"<div style='background-color: green; \
                         padding: 10px; color: white; font-size: 48px;\
                         font-weight: bold; display: inline-block;'> \
-                        👉{direction} \
+                        👉{area} {direction} \
                         </div>", unsafe_allow_html=True)
 
 def refactoring() : 
