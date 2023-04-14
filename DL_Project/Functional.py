@@ -47,7 +47,7 @@ class GetResult:
     def get_price(self):
         df, image_path = self.handle_price()
 
-        if df and image_path is not None :
+        if df is not None and image_path is not None  :
             keyword = pd.DataFrame(df["importance"][:11]).transpose()
 
             fig, ax = plt.subplots(figsize=(10, 8))
