@@ -52,7 +52,7 @@ class GetResult:
 
         else : pass
 
-    def get_price(self, df, image_path):
+    def get_price(self):
         if self.direction is not None and not "":
             df, image_path = self.handle_price()
 
