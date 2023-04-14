@@ -16,7 +16,7 @@ def set_BGM():
                         unsafe_allow_html=True)
 
 def print_this(area, direction) : 
-    return ui.print_direction(area, direction), ui.cutting()
+    return ui.title_ment(area, direction), ui.cutting()
 
 def main() : 
     ui.set_page()

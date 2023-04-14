@@ -34,7 +34,7 @@ class GetResult:
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
-    def get_price(self):
+    def hadle_price(self) : 
         if self.direction == "전체" :
             df = self.total
             image_path = "https://i.imgur.com/qZJvwRB.png"
@@ -48,11 +48,18 @@ class GetResult:
             image_path = "https://i.imgur.com/QGxbZJa.png"
         else : pass
 
-        keyword = pd.DataFrame(df["importance"][:11]).transpose()
+        return df, image_path
 
-        fig, ax = plt.subplots(figsize=(10, 8))
-        df.plot(kind="barh", ax=ax)
+    def get_price(self, df, image_path):
+        if self.direction is not None and not "":
+            df, image_path = self.handle_price()
 
-        st.image(image_path)
-        st.pyplot(fig)
-        st.write(keyword)
+            keyword = pd.DataFrame(df["importance"][:11]).transpose()
+
+            fig, ax = plt.subplots(figsize=(10, 8))
+            df.plot(kind="barh", ax=ax)
+
+            st.image(image_path)
+            st.pyplot(fig)
+            st.write(keyword)
+        else : pass
