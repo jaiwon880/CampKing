@@ -38,7 +38,7 @@ class GetResult:
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
-    def hadle_price(self) : 
+    def handle_price(self) : 
         if self.direction == "전체" : return self.total, self.image_path[0]
         elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
         elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
