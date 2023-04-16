@@ -12,10 +12,9 @@ def set_page():
 
 class User_Interface :
     def __init__(self) -> None:
-        pass
+        self.cut = st.markdown("---")
         
-    def cutting(self): 
-        st.markdown("---")
+    def cutting(self): return self.cut
 
     def set_background(self): 
         st.markdown("""<style>
