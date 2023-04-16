@@ -1,8 +1,9 @@
 import UI as ui
 import streamlit as st
-
-
 from Functional import GetResult  
+
+import base64
+from pydub.playback import play
 
 def main() : 
     ui.set_page()
