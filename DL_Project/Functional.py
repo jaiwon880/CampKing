@@ -74,9 +74,12 @@ class GetResult:
         fig.update_xaxes(tickformat=",.0f")
         st.plotly_chart(fig)
 
-        df = df.sort_values(by='🤜가격 산정', ascending=False)
-        keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
-        st.dataframe(keyword)
+        # df = df.sort_values(by='🤜가격 산정', ascending=False)
+        # keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
+        # st.dataframe(keyword)
+
+        for i in range(0, len(df.columns), 10):
+            st.dataframe(df.iloc[:, i:i+10]).transpose()
 
 
     def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
