@@ -80,9 +80,10 @@ class GetResult:
             df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
             
-            colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
-            fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
+            # colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
+            # fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
             
+            fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"]))
             fig.update_layout(title='🤜 가격 산정 결과', xaxis_title='🤜 가격', yaxis_title='🤜 순위')
             fig.update_xaxes(tickformat=".0f원")
 
