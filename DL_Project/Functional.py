@@ -62,6 +62,7 @@ class GetResult:
         
         fig.update_layout(
             title='😁 옵션 별 가격 순위표 😁', 
+            title_font=dict(size=24),
             xaxis_title='가격', 
             yaxis_title='옵션',
             xaxis_title_font_color='black',
