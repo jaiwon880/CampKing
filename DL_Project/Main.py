@@ -1,14 +1,14 @@
 import streamlit as st
-import UI as ui
-
+from UI_UX import User_Interface
+from UI_UX import User_Experience as ux
 from Functional import GetResult  
 
 def main() : 
+    ui = User_Interface()
     ui.set_page()
-    ui.set_BGM()
+    ux().set_BGM()
 
     get = GetResult()
-
     df, area, direction = get.choice_result()
 
     if df is not None : 
