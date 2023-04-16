@@ -39,7 +39,7 @@ def set_page() :
         """
         <style>
         .sidebar .sidebar-content h1, .sidebar .sidebar-content h2, .sidebar .sidebar-content h3, .sidebar .sidebar-content h4, .sidebar .sidebar-content h5, .sidebar .sidebar-content h6, .sidebar .sidebar-content a {
-            color: #333333;
+            color: #8BC34A;
         }
         </style>
         """,
