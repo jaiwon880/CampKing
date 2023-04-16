@@ -84,7 +84,7 @@ class GetResult:
             fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
 
             st.image(image_path)
-            st.plotly_chart(fig)
+            st.plotly_chart(fig, width = 1000)
             st.dataframe(keyword)
         else:
             pass
