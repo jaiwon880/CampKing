@@ -17,15 +17,18 @@ def cutting() :
     st.markdown("---")
 
 def set_page() : 
-    st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", \
+    st.set_page_config(page_title="for Doksan Seo teacher",\
+                        page_icon="🏕️", \
+                        layout="wide", \
                         initial_sidebar_state="auto", \
+
                         # menu_items={
                         #     "Get Help": None,
                         #     "Report a bug": None,
                         #     "About": "This is a demo app for Streamlit. For more info, please visit the official documentation.",
                         # },
                         # menu=None,
-                        theme="dark",
+                        theme="dark"
                         # color="purple",
                         # primaryColor="#f63366",
                         # backgroundColor="#1E1E1E",
