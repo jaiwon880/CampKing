@@ -53,11 +53,11 @@ class GetResult:
         
         fig.update_layout(
             title='😁 옵션 별 가격 순위표 😁', 
-            title_font=dict(size=24, weight='bold'),
+            title_font=dict(size=24),
 
             xaxis_title='가격', 
             xaxis_title_font_color='green',
-            xaxis_title_font=dict(size=16),
+            xaxis_title_font=dict(size=16, weight='bold'),
             # yaxis_title='옵션',
             # yaxis_title_font_color='black',
             # yaxis_title_font=dict(size=14),
