@@ -1,11 +1,12 @@
 import streamlit as st
-from UI_UX import User_Interface, User_Experience as ux
+from UI_UX import User_Interface, User_Experience
 from Functional import GetResult  
 
 def main() : 
     ui = User_Interface()
+    ux = User_Experience()
     ui.set_page()
-    ux().set_BGM()
+    ux.set_BGM()
 
     get = GetResult()
     df, area, direction = get.choice_result()
