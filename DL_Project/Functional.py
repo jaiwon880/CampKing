@@ -39,49 +39,33 @@ class GetResult:
     def get_price(self):
         df = self.handle_price()
 
-        if df is not None :
-            keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
-            colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
-            fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
+        keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
+        colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
+        fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
+        
+        fig.update_layout(
+            title='😁 옵션 별 가격 순위표 😁', 
+            xaxis_title='가격', 
+            yaxis_title='옵션',
+            xaxis_title_font_color='black',
+            yaxis_title_font_color='black',
+
+            xaxis=dict(tickfont=dict(color='green')),
+            yaxis=dict(tickfont=dict(color='green')),
             
-            fig.update_layout(
-                title='😁 옵션 별 가격 순위표 😁', 
-                xaxis_title='가격', 
-                yaxis_title='옵션',
-                xaxis_title_font_color='black',
-                yaxis_title_font_color='black',
+            width = 1200,
+            height = 800,
+            
+            plot_bgcolor='rgb(230, 245, 230)',
+            paper_bgcolor='#e6f5e6'
 
-                xaxis=dict(tickfont=dict(color='green')),
-                yaxis=dict(tickfont=dict(color='green')),
-                
-                width = 1200,
-                height = 800,
-                
-                plot_bgcolor='rgb(230, 245, 230)',
-                paper_bgcolor='#e6f5e6'
-
-                # plot_bgcolor='rgb(255, 255, 204)',
-                # paper_bgcolor='rgb(255, 255, 204)'
-                )
-            fig.update_xaxes(tickformat=",.0f")
-
-            st.plotly_chart(fig)
-
-            st.markdown(
-                f"""
-                <style>
-                    .dataframe {{ color: black; background-color: {'lightblue'}; }}
-                    .dataframe td {{ font-size: 14px; }}
-                    .dataframe th {{ font-size: 16px; }}
-                </style>
-                """,
-                unsafe_allow_html=True
+            # plot_bgcolor='rgb(255, 255, 204)',
+            # paper_bgcolor='rgb(255, 255, 204)'
             )
+        fig.update_xaxes(tickformat=",.0f")
 
-            st.dataframe(keyword)
-
-        else:
-            pass
+        st.plotly_chart(fig)
+        st.dataframe(keyword)
 
     def handle_price(self) : 
         if self.direction == "전체" : return self.total
