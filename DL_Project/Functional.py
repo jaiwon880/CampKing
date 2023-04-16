@@ -67,8 +67,19 @@ class GetResult:
 
             st.plotly_chart(fig)
 
-            style = {'backgroundColor': 'lightblue'}
-            st.dataframe(keyword.style.set_properties(**style))
+            st.markdown(
+                f"""
+                <style>
+                    .dataframe {{ color: black; background-color: {background_color}; }}
+                    .dataframe td {{ font-size: 14px; }}
+                    .dataframe th {{ font-size: 16px; }}
+                </style>
+                """,
+                unsafe_allow_html=True
+            )
+
+            st.dataframe(keyword)
+
         else:
             pass
 
