@@ -39,7 +39,7 @@ class GetData:
     def rename_df(self, df) : 
         df = df.rename(columns={"importance" : "🤜가격 산정"})
         df = df.rename(index={\
-        'name': '이름(인지도)🌞',\
+        'name': '인지도🌞',\
         'ranking': '리뷰 별점⭐',\
         'homepage': '홈페이지🌐',\
         'max_standard': '최대 인원수👥',\
@@ -95,8 +95,9 @@ class GetData:
         'visitor_shade': '그늘막/텐트/파라솔☂️',\
         'visitor_temperature': '온도/냉방/난방❄️',\
         'visitor_wide': '넓이/공간📏',\
-        'visitor_worthy': '방문 가치💯', \
-        'visitor_electricity': '전기⚡️'
+        'visitor_worthy': '방문 가치💯',\
+        'visitor_electricity': '전기⚡️',\
+        'visitor_party': '파티시설🎉'
         })
         
         return df
