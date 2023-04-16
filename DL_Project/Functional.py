@@ -68,7 +68,7 @@ class GetResult:
     #         st.dataframe(keyword)
     #     else :
     #         pass
-    def get_price(self):
+    def get_price(self) :
         df, image_path = self.handle_price()
 
         if df is not None and image_path is not None:
