@@ -84,7 +84,7 @@ class GetResult:
             fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
             # fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
             
-            fig.update_layout(title='옵션 별 가격 순위표', xaxis_title='가격', yaxis=dict(title='옵션', title_standoff=10, textangle=0))
+            fig.update_layout(title='옵션 별 가격 순위표', xaxis_title='가격', yaxis_title='옵션')
             fig.update_xaxes(tickformat=".0f")
             
             st.image(image_path)
