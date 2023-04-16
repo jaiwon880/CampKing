@@ -66,8 +66,10 @@ class GetResult:
                 yaxis_title='옵션',
                 width = 1200,
                 height = 800,
-                plot_bgcolor='rgb(255, 255, 204)',
-                paper_bgcolor='rgb(255, 255, 204)',
+                plot_bgcolor='#F8F8FF',
+                paper_bgcolor='#F8F8FF',
+                # plot_bgcolor='rgb(255, 255, 204)',
+                # paper_bgcolor='rgb(255, 255, 204)',
                 font_color='black'
                 )
             fig.update_xaxes(tickformat=".0f")
