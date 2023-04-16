@@ -18,7 +18,7 @@ class GetResult:
         self.pocheon = GetData().create_price()
         
     def choice_result(self) : 
-        return self.choice_result_df(), self.area, self.direction
+        return self.handle_df(self.df), self.area, self.direction
 
     def choice_result_df(self) : 
         return self.handle_df(self.df) if self.df is not None else None
