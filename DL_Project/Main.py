@@ -4,8 +4,8 @@ from Functional import GetResult
 
 def main() : 
     ui = User_Interface()
-    ux = User_Experience()
     ui.set_page()
+    ux = User_Experience()
     ux.set_BGM()
 
     get = GetResult()
