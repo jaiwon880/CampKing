@@ -53,7 +53,7 @@ class GetResult:
             df = df.rename(columns={\
                                     "importance" : "🤜가격 산정", \
                                     "info_poolvilla" : "🛁풀 빌라"
-                                    }, inplace = True)
+                                    })
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
             
             fig, ax = plt.subplots(figsize=(10, 8))
