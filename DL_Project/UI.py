@@ -12,7 +12,7 @@ def set_BGM():
                     unsafe_allow_html = True)          
     except Exception as e : 
             return st.error(e)
-            
+
 def cutting() : 
     st.markdown("---")
 
@@ -21,17 +21,19 @@ def set_page() :
                         initial_sidebar_state="expanded")
 
 def set_background():
+    set_bg_path = "https://i.imgur.com/PSeW0pm.gif"
     st.markdown("""<style>
                 .main {
-                        background-image: url('https://i.imgur.com/PSeW0pm.gif');
+                        background-image: url(set_bg_path);
                         background-size: cover;
                     }
                     </style> """, unsafe_allow_html=True)
 
 def start_background() : 
+    start_bg_path = "https://i.imgur.com/idnsDBs.gif"
     st.markdown("""<style>
                 .main {
-                        background-image: url('https://i.imgur.com/idnsDBs.gif');
+                        background-image: url(start_bg_path);
                         background-size: cover;
                     }
                 </style> """, unsafe_allow_html=True)
