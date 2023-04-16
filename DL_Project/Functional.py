@@ -17,9 +17,9 @@ class GetResult:
         self.gapyeong, \
         self.pocheon = GetData().create_price()
         
-        self.image_path = ["https://i.imgur.com/qZJvwRB.png", \
-                            "https://i.imgur.com/Bgv83pb.png", \
-                            "https://i.imgur.com/QGxbZJa.png"]
+        # self.image_path = ["https://i.imgur.com/qZJvwRB.png", \
+        #                     "https://i.imgur.com/Bgv83pb.png", \
+        #                     "https://i.imgur.com/QGxbZJa.png"]
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
@@ -40,8 +40,7 @@ class GetResult:
         else : return None
 
     def get_price(self):
-        df, image_path = self.handle_price()
-        df = self.rename_df(df)
+        df = self.rename_df(self.handle_price())
 
         if df is not None and image_path is not None:
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
@@ -66,10 +65,10 @@ class GetResult:
             pass
 
     def handle_price(self) : 
-        if self.direction == "전체" : return self.total, self.image_path[0]
-        elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
-        elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
-        else : return None, None
+        if self.direction == "전체" : return self.total
+        elif self.direction == "가평군" : return self.gapyeong
+        elif self.direction == "포천시" : return self.pocheon
+        else : return None
 
     def rename_df(self, df) : 
         df = df.rename(columns={"importance" : "🤜가격 산정"})
