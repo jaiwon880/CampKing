@@ -27,11 +27,11 @@ def start_background() :
                     }
                 </style> """, unsafe_allow_html=True)
 
-def title_ment(area, direction) : 
+def title_ment(area, direction, count) : 
     st.markdown(f"<div style='background-color: green; \
                     padding: 10px; color: white; font-size: 48px;\
                     font-weight: bold; display: inline-block;'> \
-                    👉{area} {direction} \
+                    👉{area} {direction} {count} \
                     </div>", unsafe_allow_html=True)
 
 def refactoring() : 
