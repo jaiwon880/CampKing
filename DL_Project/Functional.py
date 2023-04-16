@@ -68,7 +68,7 @@ class GetResult:
     #         st.dataframe(keyword)
     #     else :
     #         pass
-    def get_price(self) :
+    def get_price(self):
         df, image_path = self.handle_price()
 
         if df is not None and image_path is not None:
@@ -80,12 +80,13 @@ class GetResult:
             df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
 
-            fig = px.bar(df, x='🤜가격 산정', y=df.index, orientation='h')
+            fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
+            
             fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
             fig.update_xaxes(tickformat=".0f")
-
+            
             st.image(image_path)
-            st.plotly_chart(fig, width=1000)
+            st.plotly_chart(fig, width = 1000)
             st.dataframe(keyword)
         else:
             pass
