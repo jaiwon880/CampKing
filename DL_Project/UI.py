@@ -21,7 +21,7 @@ def set_page() :
                         page_icon="🏕️", \
                         layout="wide", \
                         initial_sidebar_state="auto", \
-                        primaryColor="#292929", \
+                        # primaryColor="#292929", \
                         secondaryBackgroundColor="#292929",\
                         textColor="#FFFFFF",\
                         # menu_items={
