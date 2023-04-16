@@ -65,8 +65,7 @@ class GetResult:
         n = len(df)
 
         # 색상 랜덤 선택
-        colors = [f'rgb({random.randint(r[0], r[1])},{random.randint(g[0], g[1])},{random.randint(b[0], b[1])})'
-                for r, g, b in zip(color_range, color_range, color_range, color_range, color_range)]   
+        colors = [f'rgb({random.randint(r[0], r[1])},{random.randint(g[0], g[1])},{random.randint(b[0], b[1])})'for r, g, b in zip(color_range, color_range, color_range, color_range, color_range)]   
         # ================================================================== 
         fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
         
