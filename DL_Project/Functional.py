@@ -72,6 +72,7 @@ class GetResult:
                 'name': '이름(인지도)🌞',\
                 'ranking': '리뷰 별점⭐',\
                 'info_glamping': '글램핑🏕️',\
+                'info_poolvilla': '풀빌라 수영장🏊',\
                 'roomname': '객실명🛏️',\
                 'info_caravan': '카라반🚐',\
                 'max_standard': '최대 인원수👥',\
