@@ -9,7 +9,7 @@ from Functional import GetResult
 
 def main() : 
     ui.set_page()
-    set_BGM()
+    ui.set_BGM()
 
     get = GetResult()
     df, area, direction = get.get_choice_result()
