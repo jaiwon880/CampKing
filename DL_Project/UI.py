@@ -21,19 +21,17 @@ def set_page() :
                         initial_sidebar_state="expanded")
 
 def set_background():
-    set_bg_path = "https://i.imgur.com/PSeW0pm.gif"
     st.markdown("""<style>
                 .main {
-                        background-image: url(set_bg_path);
+                        background-image: url('https://i.imgur.com/PSeW0pm.gif');
                         background-size: cover;
                     }
                     </style> """, unsafe_allow_html=True)
 
 def start_background() : 
-    start_bg_path = "https://i.imgur.com/idnsDBs.gif"
     st.markdown("""<style>
                 .main {
-                        background-image: url(start_bg_path);
+                        background-image: url('https://i.imgur.com/idnsDBs.gif');
                         background-size: cover;
                     }
                 </style> """, unsafe_allow_html=True)

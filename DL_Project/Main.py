@@ -4,8 +4,6 @@ import UI as ui
 # from pydub.playback import play
 from Functional import GetResult  
 
-
-
 def main() : 
     ui.set_page()
     ui.set_BGM()
