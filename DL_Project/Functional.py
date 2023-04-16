@@ -56,8 +56,9 @@ class GetResult:
                 
                 width = 1200,
                 height = 800,
-
-                plot_bgcolor='rgb(255, 255, 204)',
+                
+                # plot_bgcolor='rgb(255, 255, 204)',
+                plot_bgcolor='e2f3ea',
                 paper_bgcolor='rgb(255, 255, 204)'
                 )
             fig.update_xaxes(tickformat=",.0f")
