@@ -1,4 +1,5 @@
 import streamlit as st
+import UI_UX
 from UI_UX import User_Interface, User_Experience
 from Functional import GetResult  
 

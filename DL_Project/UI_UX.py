@@ -13,11 +13,8 @@ class User_Interface :
     def __init__(self) -> None:
         self.cut = st.markdown("---")
         
-
     def cutting(self): return self.cut
     
-        
-
     def set_background(self):
         # https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02
         # https://i.imgur.com/PSeW0pm.gif
