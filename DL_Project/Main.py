@@ -1,4 +1,4 @@
-import UI as ui, ux
+import UI as ui
 import streamlit as st
 import base64
 import pickle
