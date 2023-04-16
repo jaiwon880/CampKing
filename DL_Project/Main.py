@@ -1,5 +1,5 @@
-import UI as ui
 import streamlit as st
+import UI as ui
 from Functional import GetResult  
 
 import base64
