@@ -38,6 +38,8 @@ class GetResult:
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
+
+
     def handle_price(self) : 
         if self.direction == "전체" : return self.total, self.image_path[0]
         elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
@@ -56,5 +58,7 @@ class GetResult:
 
             st.image(image_path)
             st.pyplot(fig)
-            st.write(keyword)
-        else : pass
+            st.DataFrame(keyword)
+
+        else :
+            pass
