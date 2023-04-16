@@ -66,7 +66,9 @@ class GetResult:
             fig.update_xaxes(tickformat=",.0f")
 
             st.plotly_chart(fig)
-            st.dataframe(keyword)
+            
+            style = {'backgroundColor': 'lightblue'}
+            st.dataframe(keyword.style.set_properties(**style))
         else:
             pass
 
