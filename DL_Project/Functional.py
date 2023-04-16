@@ -70,8 +70,8 @@ class GetResult:
             xaxis=dict(tickfont=dict(color='green')),
             yaxis=dict(tickfont=dict(color='green')),
             
-            width = 1200,
-            height = 800,
+            width = 1400,
+            height = 1000,
             
             plot_bgcolor='rgb(230, 245, 230)',
             paper_bgcolor='#e6f5e6'
