@@ -39,7 +39,7 @@ def start_background() :
                 </style> """, unsafe_allow_html=True)
 
 def title_ment(area, direction, count) : 
-    st.markdown(f"<div style='background-color:  #dde7e7; \
+    st.markdown(f"<div style='background-color:  #e8e2d6 ; \
                     padding: 10px; color: white; font-size: 48px;\
                     font-weight: bold; display: inline-block;'> \
                     👉{area} {direction} {count}곳 의 업체 결과\
