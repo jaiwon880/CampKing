@@ -3,6 +3,7 @@ from Data import GetData
 
 import streamlit as st
 import random
+import math
 import colorsys
 import pandas as pd
 
@@ -74,12 +75,14 @@ class GetResult:
         fig.update_xaxes(tickformat=",.0f")
         st.plotly_chart(fig)
 
-        # df = df.sort_values(by='🤜가격 산정', ascending=False)
-        keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
-        st.dataframe(keyword)
+        # keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
+        # st.dataframe(keyword)
 
-        # for i in range(0, len(df.columns), 10):
-        #     st.dataframe(df.iloc[:, i:i+10]).transpose()
+        for i in range(math.ceil(num_rows/10)):
+            start_idx = i * 10
+            end_idx = min(start_idx+10, num_rows)
+            keyword = pd.DataFrame(df["🤜가격 산정"][start_idx:end_idx]).transpose()
+            st.dataframe(keyword)
 
 
     def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
