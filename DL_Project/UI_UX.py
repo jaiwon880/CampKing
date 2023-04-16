@@ -3,17 +3,19 @@ import base64
 from pydub.playback import play
 from Functional import GetResult
 
+def set_page(self): 
+    st.set_page_config(page_title="for Doksan Seo teacher",
+                        page_icon="🏕️", 
+                        layout="wide", 
+                        initial_sidebar_state="auto",
+                        )
 class User_Interface :
     def __init__(self) -> None:
         self.cut = st.markdown("---")
-        self.page = st.set_page_config(page_title="for Doksan Seo teacher",
-                           page_icon="🏕️", 
-                           layout="wide", 
-                           initial_sidebar_state="auto",
-                          )
+        
 
     def cutting(self): return self.cut
-    def set_page(self): return self.page
+    
         
 
     def set_background(self):

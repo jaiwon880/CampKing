@@ -3,8 +3,8 @@ from UI_UX import User_Interface, User_Experience
 from Functional import GetResult  
 
 def main() : 
+    UI_UX.set_page()
     ui = User_Interface()
-    ui.set_page()
     ux = User_Experience()
     ux.set_BGM()
 
