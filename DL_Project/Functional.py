@@ -74,7 +74,7 @@ class GetResult:
     def rename_df(self, df) : 
         df = df.rename(columns={"importance" : "🤜가격 산정"})
         df = df.rename(index={\
-        "info_bogcheung": "복청숙🏠",\
+        "info_bogcheung": "복층식🏠",\
         'name': '이름(인지도)🌞',\
         'ranking': '리뷰 별점⭐',\
         'info_glamping': '글램핑🏕️',\
