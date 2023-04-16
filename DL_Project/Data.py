@@ -96,7 +96,8 @@ class GetData:
         "visitor_worthy": "방문 가치💯",\
         "visitor_party": "파티하기 좋아요🥳",\
         "visitor_bug": "벌레 조심🐛", \
-        'visitor_nearby': '인근 시설🏨'
+        'visitor_nearby': '인근 시설🏨'\
+        'visitor_electricity': '전기💡'
         })
         
         return df
