@@ -54,7 +54,7 @@ class GetResult:
                 # paper_bgcolor='rgb(255, 255, 204)'
                 )
             # fig.update_xaxes(tickformat=",.0f", tickprefix="$")
-            fig.update_xaxes(tickformat=" ,.0f")
+            fig.update_xaxes(tickformat=",.0f")
 
             st.plotly_chart(fig)
             st.dataframe(keyword)
