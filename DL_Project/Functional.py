@@ -48,7 +48,7 @@ class GetResult:
 
     def get_price(self):
         df, image_path = self.handle_price()
-        df = self.rename_df() if df is not None else ""
+        df = self.rename_df()
 
         if df is not None and image_path is not None:
             df = df.rename(columns={"importance" : "🤜가격 산정"})
