@@ -17,7 +17,7 @@ class GetResult:
         self.gapyeong, \
         self.pocheon = GetData().create_price()
         
-    def get_choice_result(self) : 
+    def choice_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
     def choice_result_df(self) : 

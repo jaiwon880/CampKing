@@ -1,8 +1,7 @@
 import streamlit as st
 import UI as ui
-from Functional import GetResult  
-
 import base64
+from Functional import GetResult  
 from pydub.playback import play
 
 def main() : 
@@ -10,7 +9,7 @@ def main() :
     ui.set_BGM()
     get = GetResult()
 
-    df, area, direction = get.get_choice_result()
+    df, area, direction = get.choice_result()
 
     if df is not None : 
         ui.set_background()
