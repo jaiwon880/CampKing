@@ -46,24 +46,48 @@ class GetResult:
         elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
         else : return None, None
 
-    def get_price(self):
-        plt.rcParams['font.family'] = 'Malgun Gothic'
-        df, image_path = self.handle_price()
+    # def get_price(self):
+    #     plt.rcParams['font.family'] = 'Malgun Gothic'
+    #     df, image_path = self.handle_price()
 
-        if df is not None and image_path is not None  :
-            df = df.rename(index={\
-                                    'name': '이름', \
-                                    'info_poolvila' : "풀빌라"
+    #     if df is not None and image_path is not None  :
+    #         df = df.rename(index={\
+    #                                 'name': '이름', \
+    #                                 'info_poolvila' : "풀빌라"
                                     
-                                    })
-            df = df.rename(columns={"importance" : "🤜가격 산정"})
-            keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
+    #                                 })
+    #         df = df.rename(columns={"importance" : "🤜가격 산정"})
+    #         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
             
-            fig, ax = plt.subplots(figsize=(10, 8))
-            df.plot(kind="barh", ax=ax)
+    #         fig, ax = plt.subplots(figsize=(10, 8))
+    #         df.plot(kind="barh", ax=ax)
 
-            st.image(image_path)
-            st.pyplot(fig)
-            st.dataframe(keyword)
-        else :
-            pass
+    #         st.image(image_path)
+    #         st.pyplot(fig)
+    #         st.dataframe(keyword)
+    #     else :
+    #         pass
+    def get_price(self):
+    df, image_path = self.handle_price()
+
+    if df is not None and image_path is not None:
+        df = df.rename(index={\
+                                'name': '이름', \
+                                'info_poolvilla' : "풀빌라"
+                                
+                                })
+        df = df.rename(columns={"importance" : "🤜가격 산정"})
+        keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
+
+        fig = go.Figure(go.Bar(
+            y=df.index,
+            x=df["🤜가격 산정"],
+            orientation='h'))
+        
+        fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
+
+        st.image(image_path)
+        st.plotly_chart(fig)
+        st.dataframe(keyword)
+    else:
+        pass
