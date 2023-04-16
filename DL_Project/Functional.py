@@ -53,7 +53,7 @@ class GetResult:
             fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
             
             fig.update_layout(
-                title='옵션 별 가격 순위표', 
+                title=':smile: 옵션 별 가격 순위표 :smile:', 
                 xaxis_title='가격', 
                 yaxis_title='옵션',
                 width = 1200,
