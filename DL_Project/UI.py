@@ -22,29 +22,6 @@ def set_page() :
                         layout="wide", \
                         initial_sidebar_state="auto", \
                         )
-    # 사이드바 배경색 변경
-    st.markdown(
-        """
-        <style>
-        .sidebar .sidebar-content {
-            background-color: #8BC34A;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # 사이드바 글꼴 색상 변경
-    st.markdown(
-        """
-        <style>
-        .sidebar .sidebar-content h1, .sidebar .sidebar-content h2, .sidebar .sidebar-content h3, .sidebar .sidebar-content h4, .sidebar .sidebar-content h5, .sidebar .sidebar-content h6, .sidebar .sidebar-content a {
-            color: #8BC34A;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
 def set_background():
     # https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02

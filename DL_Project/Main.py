@@ -1,7 +1,6 @@
 import streamlit as st
 import UI as ui
-# import base64
-# from pydub.playback import play
+
 from Functional import GetResult  
 
 def main() : 

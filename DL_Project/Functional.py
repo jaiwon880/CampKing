@@ -16,12 +16,6 @@ class GetResult:
         self.total, \
         self.gapyeong, \
         self.pocheon = GetData().create_price()
-        
-    def choice_result(self) : 
-        return self.handle_df(self.df), self.area, self.direction
-
-    def choice_result_df(self) : 
-        return self.handle_df(self.df) if self.df is not None else None
 
     def handle_df(self, df) :
         if df is not None :
@@ -36,8 +30,11 @@ class GetResult:
             
         else : return None
 
-    def price_result(self):
-        df = self.handle_price()
+    def handle_price(self, dic) : 
+        if dic == "전체" : df = self.total
+        elif dic == "가평군" : df = self.gapyeong
+        elif dic == "포천시" : df = self.pocheon
+        else : df = None
 
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
         colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
@@ -61,11 +58,10 @@ class GetResult:
             )
         fig.update_xaxes(tickformat=",.0f")
 
-        st.plotly_chart(fig)
-        st.dataframe(keyword)
+        return st.plotly_chart(fig), st.dataframe(keyword)
 
-    def handle_price(self) : 
-        if self.direction == "전체" : return self.total
-        elif self.direction == "가평군" : return self.gapyeong
-        elif self.direction == "포천시" : return self.pocheon
-        else : return None
+
+    def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
+
+    def price_result(self): return self.handle_price(self.direction)
+
