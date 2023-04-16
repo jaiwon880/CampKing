@@ -21,25 +21,30 @@ def set_page() :
                         page_icon="🏕️", \
                         layout="wide", \
                         initial_sidebar_state="auto", \
-                        # primaryColor="#292929", \
-                        secondaryBackgroundColor="#292929",\
-                        textColor="#FFFFFF",\
-                        # menu_items={
-                        #     "Get Help": None,
-                        #     "Report a bug": None,
-                        #     "About": "This is a demo app for Streamlit. For more info, please visit the official documentation.",
-                        # },
-                        # menu=None,
-                        # theme="dark",
-                        # color="purple",
-                        # primaryColor="#f63366",
-                        # backgroundColor="#1E1E1E",
-                        # secondaryBackgroundColor="#2f2f2f",
-                        # textColor="#ffffff",
-                        # font="sans serif",
-                        # font_size="medium",
-                        # css=None
                         )
+    # 사이드바 배경색 변경
+    st.markdown(
+        """
+        <style>
+        .sidebar .sidebar-content {
+            background-color: #f0f0f0;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # 사이드바 글꼴 색상 변경
+    st.markdown(
+        """
+        <style>
+        .sidebar .sidebar-content h1, .sidebar .sidebar-content h2, .sidebar .sidebar-content h3, .sidebar .sidebar-content h4, .sidebar .sidebar-content h5, .sidebar .sidebar-content h6, .sidebar .sidebar-content a {
+            color: #333333;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 def set_background():
     # https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02
