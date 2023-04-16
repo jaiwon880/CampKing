@@ -11,12 +11,12 @@ def set_BGM():
     audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
     audio_file = open(audio_path, 'rb').read()
 
-    return st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
-                        {base64.b64encode(audio_file).decode()}"></audio>',\
-                        unsafe_allow_html=True)
+    st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
+                {base64.b64encode(audio_file).decode()}"></audio>',\
+                unsafe_allow_html=True)
 
 def print_this(area, direction, count) : 
-    return ui.title_ment(area, direction, count), ui.cutting()
+    ui.title_ment(area, direction, count), ui.cutting()
 
 def main() : 
     ui.set_page()
