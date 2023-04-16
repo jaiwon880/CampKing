@@ -34,8 +34,7 @@ def main() :
             get.get_price()
 
         else : ui.refactoring()
-    else : 
-        ui.start_background()
+    else : ui.start_background()
 
 if __name__ == '__main__' : 
     main()
