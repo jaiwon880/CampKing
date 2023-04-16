@@ -35,7 +35,7 @@ def title_ment(area, direction) :
                     </div>", unsafe_allow_html=True)
 
 def refactoring() : 
-    ment = "사용자 에게 도출될 키워드 리뷰 카운드(%별 수), 업체 사진(image), 객실 정보(info) 등은 한글 화 진행 중 추후 리팩토링.."
+    ment = "업체가 10개 미만입니다. 분석에 의미가 없습니다."
     st.markdown(f"<div style='background-color: white; \
                 padding: 10px; color: green; font-size: 48px;\
                 font-weight: bold; display: inline-block;'> \
