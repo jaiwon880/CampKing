@@ -41,7 +41,7 @@ class GetResult:
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
         # colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
         # ==========================================================================================================================================
-        색상 범위 조정을 위한 매개변수
+        # 색상 범위 조정을 위한 매개변수
         saturation = 0.5
         lightness = 0.8
 
@@ -57,7 +57,7 @@ class GetResult:
             v = lightness
             r, g, b = [int(c*255) for c in colorsys.hsv_to_rgb(h, s, v)]
             colors.append(f'rgb({r},{g},{b})')
-        
+        # ==========================================================================================================================================
         fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
         
         fig.update_layout(
