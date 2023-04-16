@@ -49,7 +49,7 @@ class GetResult:
                 xaxis_title='가격', 
                 yaxis_title='옵션',
                 xaxis=dict(tickfont=dict(color='red')),
-                yaxis=dict(tickfont=dict(color='red'),)
+                yaxis=dict(tickfont=dict(color='red'),),
                 width = 1200,
                 height = 800,
                 plot_bgcolor='rgb(255, 255, 204)',
