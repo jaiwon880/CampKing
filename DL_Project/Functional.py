@@ -58,7 +58,8 @@ class GetResult:
             )
         fig.update_xaxes(tickformat=",.0f")
 
-        return st.plotly_chart(fig), st.dataframe(keyword)
+        st.plotly_chart(fig)
+        st.dataframe(keyword)
 
 
     def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
