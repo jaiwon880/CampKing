@@ -12,7 +12,7 @@ def main() :
     df, area, direction = get.choice_result()
 
     if df is not None : 
-        ui.set_background()
+        # ui.set_background()
 
         with st.sidebar : 
             ui.sidebar_print_df(df)
