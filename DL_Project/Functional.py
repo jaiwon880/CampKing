@@ -70,7 +70,7 @@ class GetResult:
             st.markdown(
                 f"""
                 <style>
-                    .dataframe {{ color: black; background-color: {background_color}; }}
+                    .dataframe {{ color: black; background-color: {'lightblue'}; }}
                     .dataframe td {{ font-size: 14px; }}
                     .dataframe th {{ font-size: 16px; }}
                 </style>
