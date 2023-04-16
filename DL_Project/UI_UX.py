@@ -5,14 +5,14 @@ from Functional import GetResult
 
 class User_Interface :
     def __init__(self) -> None:
-        self.cutting = st.markdown("---")
+        self.cut = st.markdown("---")
         self.page = st.set_page_config(page_title="for Doksan Seo teacher",
                            page_icon="🏕️", 
                            layout="wide", 
                            initial_sidebar_state="auto",
                           )
 
-    def cutting(self): return self.cutting
+    def cutting(self): return self.cut
     def set_page(self): return self.page
         
 
