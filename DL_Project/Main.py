@@ -1,6 +1,5 @@
 import streamlit as st
-from UI_UX import User_Interface
-from UI_UX import User_Experience as ux
+from UI_UX import User_Interface, User_Experience as ux
 from Functional import GetResult  
 
 def main() : 
