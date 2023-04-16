@@ -13,7 +13,7 @@ class GetData:
         self.df = self.load_data()
         self.total, \
         self.gapyeong, \
-        self.pocheon = self.load_direction()
+        self.pocheon = self.load_price()
 
     def load_data(self):
         try :  
@@ -21,7 +21,7 @@ class GetData:
         except Exception as e : 
             return st.error(e)
 
-    def load_direction(self) :
+    def load_price(self) :
         try:
             return self.rename_df(pd.read_csv(self.path[1], index_col =0, encoding="utf-8")),\
                     self.rename_df(pd.read_csv(self.path[2], index_col =0, encoding="utf-8")),\
