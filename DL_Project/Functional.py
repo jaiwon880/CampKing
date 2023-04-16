@@ -37,7 +37,6 @@ class GetResult:
         else : return None
 
     def get_price(self):
-        # df = self.rename_df(self.handle_price())
         df = self.handle_price()
 
         if df is not None :
@@ -54,8 +53,8 @@ class GetResult:
                 plot_bgcolor='rgb(255, 255, 204)',
                 # paper_bgcolor='rgb(255, 255, 204)'
                 )
-            # fig.update_xaxes(tickformat=",.0f", tickprefix="$")
-            fig.update_xaxes(tickformat=" ,.0f", ticktext=[f"{val:,}원" for val in fig.data[0].x])
+            fig.update_xaxes(tickformat=",.0f", tickprefix="$")
+            # fig.update_xaxes(tickformat=" ,.0f")
 
             st.plotly_chart(fig)
             st.dataframe(keyword)
