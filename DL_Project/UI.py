@@ -28,7 +28,7 @@ def set_page() :
                         #     "About": "This is a demo app for Streamlit. For more info, please visit the official documentation.",
                         # },
                         # menu=None,
-                        theme="dark"
+                        # theme="dark"
                         # color="purple",
                         # primaryColor="#f63366",
                         # backgroundColor="#1E1E1E",
