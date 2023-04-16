@@ -36,7 +36,7 @@ class GetResult:
             
         else : return None
 
-    def get_price(self):
+    def price_result(self):
         df = self.handle_price()
 
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
@@ -58,9 +58,6 @@ class GetResult:
             
             plot_bgcolor='rgb(230, 245, 230)',
             paper_bgcolor='#e6f5e6'
-
-            # plot_bgcolor='rgb(255, 255, 204)',
-            # paper_bgcolor='rgb(255, 255, 204)'
             )
         fig.update_xaxes(tickformat=",.0f")
 

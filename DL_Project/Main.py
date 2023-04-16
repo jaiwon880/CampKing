@@ -21,7 +21,7 @@ def main() :
         if direction == "전체" or direction == "가평군" or direction == "포천시" :
             ui.title_ment(area, direction, len(df))
             ui.cutting()
-            get.get_price()
+            get.price_result()
 
         else : ui.refactoring_ment()
     else : ui.start_background()
