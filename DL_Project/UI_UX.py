@@ -6,16 +6,15 @@ from Functional import GetResult
 class User_Interface :
     def __init__(self) -> None:
         self.cutting = st.markdown("---")
-
-    def cutting(self): 
-        return self.cutting
-
-    def set_page(self): 
-        st.set_page_config(page_title="for Doksan Seo teacher",
+        self.page = st.set_page_config(page_title="for Doksan Seo teacher",
                            page_icon="🏕️", 
                            layout="wide", 
                            initial_sidebar_state="auto",
                           )
+
+    def cutting(self): return self.cutting
+    def set_page(self): return self.page
+        
 
     def set_background(self):
         # https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02
