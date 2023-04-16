@@ -44,12 +44,12 @@ class GetResult:
         if self.direction == "전체" : return self.total, self.image_path[0]
         elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
         elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
-        else : return "", ""
+        else : return None, None
 
     def get_price(self):
         df, image_path = self.handle_price()
 
-        if df is not "" and image_path is not ""  :
+        if df is not None and image_path is not None  :
             df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
             
