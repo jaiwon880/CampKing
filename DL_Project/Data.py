@@ -96,7 +96,7 @@ class GetData:
         'visitor_temperature': '온도/냉방/난방❄️',\
         'visitor_wide': '넓이/공간📏',\
         'visitor_worthy': '방문 가치💯', \
-        'visitor_electricity': '전기⚡️'ㅎ
+        'visitor_electricity': '전기⚡️'
         })
         
         return df
