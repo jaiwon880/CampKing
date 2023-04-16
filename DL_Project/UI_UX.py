@@ -12,23 +12,27 @@ def set_page():
 
 class User_Interface :
     def __init__(self) -> None:
-        self.cut = st.markdown("---")
-        self.background_set = st.markdown("""<style>
-                                            .main {
-                                                    background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');
-                                                    background-size: cover;
-                                                }
-                                                </style> """, unsafe_allow_html=True)
-        self.background_start = st.markdown("""<style>
-                                            .main {
-                                                    background-image: url('https://i.imgur.com/idnsDBs.gif');
-                                                    background-size: cover;
-                                                }
-                                            </style> """, unsafe_allow_html=True)
-    
-    def cutting(self): return self.cut
-    def set_background(self): return self.background_set
-    def start_background(self): return self.background_start
+        pass
+        
+    def cutting(self): 
+        st.markdown("---")
+
+    def set_background(self): 
+        st.markdown("""<style>
+                    .main {
+                            background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');
+                            background-size: cover;
+                        }
+                        </style> """, unsafe_allow_html=True)
+        
+    def start_background(self): 
+        st.markdown("""<style>
+                    .main {
+                            background-image: url('https://i.imgur.com/idnsDBs.gif');
+                            background-size: cover;
+                        }
+                    </style> """, unsafe_allow_html=True)
+
     def title_ment(self, area, direction, count) : 
         st.markdown(f"<div style='background-color: green; \
                             padding: 10px; color: white; font-size: 48px;\
