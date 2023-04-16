@@ -20,6 +20,11 @@ class GetResult:
         self.image_path = ["https://i.imgur.com/qZJvwRB.png", \
                             "https://i.imgur.com/Bgv83pb.png", \
                             "https://i.imgur.com/QGxbZJa.png"]
+    def get_result(self) : 
+        return self.choice_result_df(), self.area, self.direction
+
+    def choice_result_df(self) : 
+        return self.handle_df(self.df) if self.df is not None else None
 
     def handle_df(self, df) :
         if df is not None :
@@ -38,19 +43,6 @@ class GetResult:
             
         else : return None
 
-    def choice_result_df(self) : 
-        return self.handle_df(self.df) if self.df is not None else None
-
-    def get_result(self) : 
-        return self.choice_result_df(), self.area, self.direction
-
-
-    def handle_price(self) : 
-        if self.direction == "전체" : return self.total, self.image_path[0]
-        elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
-        elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
-        else : return None, None
-
     def get_price(self):
         df, image_path = self.handle_price()
         df = self.rename_df(df)
@@ -66,11 +58,8 @@ class GetResult:
                 yaxis_title='옵션',
                 width = 1200,
                 height = 800,
-                # plot_bgcolor='#F8F8FF',
-                # paper_bgcolor='#F8F8FF',
                 plot_bgcolor='rgb(255, 255, 204)',
-                # paper_bgcolor='rgb(255, 255, 204)',
-                font_color='black'
+                # paper_bgcolor='rgb(255, 255, 204)'
                 )
             fig.update_xaxes(tickformat=".0f")
             
@@ -79,6 +68,12 @@ class GetResult:
             st.dataframe(keyword)
         else:
             pass
+
+    def handle_price(self) : 
+        if self.direction == "전체" : return self.total, self.image_path[0]
+        elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
+        elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
+        else : return None, None
 
     def rename_df(self, df) : 
         df = df.rename(columns={"importance" : "🤜가격 산정"})
