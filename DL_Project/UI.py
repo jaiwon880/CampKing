@@ -25,7 +25,7 @@ def set_background():
     # https://i.imgur.com/PSeW0pm.gif
     st.markdown("""<style>
                 .main {
-                        background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');
+                        background-image: url('https://i.imgur.com/PSeW0pm.gif');
                         background-size: cover;
                     }
                     </style> """, unsafe_allow_html=True)
