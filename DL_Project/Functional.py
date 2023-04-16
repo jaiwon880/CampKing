@@ -4,7 +4,7 @@ from Data import GetData
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plotly
 
 class GetResult:
     def __init__(self) -> None:
@@ -79,10 +79,7 @@ class GetResult:
         df = df.rename(columns={"importance" : "🤜가격 산정"})
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
 
-        fig = go.Figure(go.Bar(
-            y=df.index,
-            x=df["🤜가격 산정"],
-            orientation='h'))
+        fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
         
         fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
 
