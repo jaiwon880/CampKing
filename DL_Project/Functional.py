@@ -68,23 +68,23 @@ class GetResult:
     #     else :
     #         pass
     def get_price(self):
-    df, image_path = self.handle_price()
+        df, image_path = self.handle_price()
 
-    if df is not None and image_path is not None:
-        df = df.rename(index={\
-                                'name': '이름', \
-                                'info_poolvilla' : "풀빌라"
-                                
-                                })
-        df = df.rename(columns={"importance" : "🤜가격 산정"})
-        keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
+        if df is not None and image_path is not None:
+            df = df.rename(index={\
+                                    'name': '이름', \
+                                    'info_poolvilla' : "풀빌라"
+                                    
+                                    })
+            df = df.rename(columns={"importance" : "🤜가격 산정"})
+            keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
 
-        fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
-        
-        fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
+            fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
+            
+            fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
 
-        st.image(image_path)
-        st.plotly_chart(fig)
-        st.dataframe(keyword)
-    else:
-        pass
+            st.image(image_path)
+            st.plotly_chart(fig)
+            st.dataframe(keyword)
+        else:
+            pass
