@@ -83,7 +83,7 @@ class GetResult:
             start_idx = i * split_count
             end_idx = min(start_idx+split_count, len(df))
             keyword = pd.DataFrame(df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
-            st.dataframe(keyword, wudth = 1400)
+            st.dataframe(keyword, width = 1400)
 
 
     def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
