@@ -95,7 +95,8 @@ class GetData:
         "info_womenonly": "여성 전용👩‍🦰",\
         "visitor_worthy": "방문 가치💯",\
         "visitor_party": "파티하기 좋아요🥳",\
-        "visitor_bug": "벌레 조심🐛"
+        "visitor_bug": "벌레 조심🐛", \
+        'visitor_nearby': '인근 시설🏨'
         })
         
         return df
