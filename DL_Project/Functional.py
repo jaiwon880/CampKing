@@ -82,7 +82,8 @@ class GetResult:
             fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
             
             fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
-
+            fig.update_xaxes(tickformat=".0f")
+            
             st.image(image_path)
             st.plotly_chart(fig, width = 1000)
             st.dataframe(keyword)
