@@ -3,7 +3,7 @@ import base64
 from pydub.playback import play
 from Functional import GetResult
 
-def set_page(self): 
+def set_page(): 
     st.set_page_config(page_title="for Doksan Seo teacher",
                         page_icon="🏕️", 
                         layout="wide", 
