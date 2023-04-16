@@ -81,7 +81,7 @@ class GetResult:
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
 
         fig = px.bar(df, x='🤜가격 산정', y=df.index, orientation='h')
-        fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='순위')
+        fig.update_layout(title='가격 산정 결과', xaxis_title='가격', yaxis_title='')
         fig.update_xaxes(tickformat=".0f")
 
         st.image(image_path)
