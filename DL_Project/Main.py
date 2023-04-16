@@ -1,12 +1,20 @@
 import streamlit as st
 import UI as ui
 import base64
-from Functional import GetResult  
 from pydub.playback import play
+from Functional import GetResult  
 
+def set_BGM():
+    audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
+    audio_file = open(audio_path, 'rb').read()
+
+    st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
+                {base64.b64encode(audio_file).decode()}"></audio>',\
+                unsafe_allow_html = True) 
 def main() : 
     ui.set_page()
-    ui.set_BGM()
+    set_BGM()
+
     get = GetResult()
 
     df, area, direction = get.choice_result()
