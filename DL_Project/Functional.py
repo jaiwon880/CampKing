@@ -58,7 +58,7 @@ class GetResult:
                 )
             fig.update_xaxes(tickformat=".0f")
             
-            st.image(image_path)
+            # st.image(image_path)
             st.plotly_chart(fig)
             st.dataframe(keyword)
         else:
