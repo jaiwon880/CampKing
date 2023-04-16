@@ -58,7 +58,7 @@ class GetResult:
 
             st.image(image_path)
             st.pyplot(fig)
-            st.DataFrame(keyword)
+            st.dataframe(keyword)
 
         else :
             pass
