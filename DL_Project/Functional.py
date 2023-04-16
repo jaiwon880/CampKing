@@ -67,7 +67,9 @@ class GetResult:
                 xaxis_title='가격', 
                 yaxis_title='옵션',
                 width = 1200,
-                height = 800
+                height = 800,
+                plot_bgcolor='rgb(255, 255, 204)',
+                paper_bgcolor='rgb(255, 255, 204)'
                 )
             fig.update_xaxes(tickformat=".0f")
             
