@@ -77,11 +77,13 @@ class GetResult:
 
         # keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
         # st.dataframe(keyword)
+
         split_count = 11
         for i in range(math.ceil(len(df)/split_count)):
             start_idx = i * 10
             end_idx = min(start_idx+split_count, len(df))
             keyword = pd.DataFrame(df["🤜가격 산정"][start_idx:end_idx]).transpose()
+            keyword.round(1)
             st.dataframe(keyword)
 
 
