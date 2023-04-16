@@ -57,13 +57,13 @@ class GetResult:
 
             xaxis_title='가격', 
             xaxis_title_font_color='black',
-            xaxis_title_font=dict(size=14),
-            yaxis_title='옵션',
-            yaxis_title_font_color='black',
-            yaxis_title_font=dict(size=14),
+            xaxis_title_font=dict(size=16),
+            # yaxis_title='옵션',
+            # yaxis_title_font_color='black',
+            # yaxis_title_font=dict(size=14),
 
-            xaxis=dict(tickfont=dict(color='green'), tickfont_size = 16),
-            yaxis=dict(tickfont=dict(color='green'), tickfont_size = 16),
+            xaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
+            yaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             
             width = 1400,
             height = 800,
