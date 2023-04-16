@@ -57,7 +57,6 @@ class GetResult:
             # fig.update_xaxes(tickformat=",.0f", tickprefix="$")
             fig.update_xaxes(tickformat=" ,.0f", ticktext=[f"{val:,}원" for val in fig.data[0].x])
 
-            # st.image(image_path)
             st.plotly_chart(fig)
             st.dataframe(keyword)
         else:

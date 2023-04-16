@@ -5,15 +5,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 from pydub.playback import play
-from Functional import GetResult
-
-def set_BGM():
-    audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
-    audio_file = open(audio_path, 'rb').read()
-
-    st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
-                {base64.b64encode(audio_file).decode()}"></audio>',\
-                unsafe_allow_html = True)    
+from Functional import GetResult  
 
 def main() : 
     ui.set_page()

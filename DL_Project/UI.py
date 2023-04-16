@@ -7,6 +7,14 @@ import matplotlib.pyplot as plt
 def cutting() : 
     st.markdown("---")
 
+def set_BGM():
+    audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
+    audio_file = open(audio_path, 'rb').read()
+
+    st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
+                {base64.b64encode(audio_file).decode()}"></audio>',\
+                unsafe_allow_html = True)  
+
 def set_page() : 
     st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", \
                         initial_sidebar_state="expanded")
