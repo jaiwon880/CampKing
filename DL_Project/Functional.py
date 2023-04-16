@@ -66,7 +66,7 @@ class GetResult:
             yaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             
             width = 1400,
-            height = 800,
+            height = 1500,
             
             plot_bgcolor='rgb(230, 245, 230)',
             paper_bgcolor='#e6f5e6'
