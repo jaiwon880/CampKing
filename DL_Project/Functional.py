@@ -66,13 +66,13 @@ class GetResult:
                 title='옵션 별 가격 순위표', 
                 xaxis_title='가격', 
                 yaxis_title='옵션',
-                width = 1000,
+                width = 1200,
                 height = 800
                 )
             fig.update_xaxes(tickformat=".0f")
             
             st.image(image_path)
-            st.plotly_chart(fig, width = 1000)
+            st.plotly_chart(fig)
             st.dataframe(keyword)
         else:
             pass
