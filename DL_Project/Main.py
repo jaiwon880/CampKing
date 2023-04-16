@@ -1,10 +1,7 @@
 import UI as ui
 import streamlit as st
 
-import pickle
-import matplotlib.pyplot as plt
 
-from pydub.playback import play
 from Functional import GetResult  
 
 def main() : 
