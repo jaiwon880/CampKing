@@ -20,7 +20,7 @@ def main() :
     set_BGM()
 
     get = GetResult()
-    df, area, direction = get.get_result()
+    df, area, direction = get.get_choice_result()
 
     if df is not None : 
         ui.set_background()
