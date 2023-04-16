@@ -78,7 +78,7 @@ class GetResult:
         # keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
         # st.dataframe(keyword)
         
-        for i in range(math.ceil(len(df)/10)):
+        for i in range(math.ceil(len(df)/11)):
             start_idx = i * 10
             end_idx = min(start_idx+10, len(df))
             keyword = pd.DataFrame(df["🤜가격 산정"][start_idx:end_idx]).transpose()
