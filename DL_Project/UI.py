@@ -18,7 +18,7 @@ def cutting() :
 
 def set_page() : 
     st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", \
-                        initial_sidebar_state="expanded", \
+                        initial_sidebar_state="auto", \
                         # menu_items={
                         #     "Get Help": None,
                         #     "Report a bug": None,
