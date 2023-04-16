@@ -28,10 +28,6 @@ class GetResult:
 
     def handle_df(self, df) :
         if df is not None :
-            # df = df.drop_duplicates(subset=['name'], keep='first')
-            # df.sort_values(by='ranking', ascending=False, inplace=True)
-            # df = df[['name', 'ranking']].reset_index(drop=True)
-            # df = df.rename(columns={'name': '🏕️ 업체명', 'ranking': '⭐ 별점'})
             df = (df.drop_duplicates(subset=['name'], keep='first')\
                     .sort_values(by='ranking', ascending=False)\
                     [['name', 'ranking']]\
@@ -53,7 +49,7 @@ class GetResult:
             fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
             
             fig.update_layout(
-                title=':smile: 옵션 별 가격 순위표 :smile:', 
+                title='😁 옵션 별 가격 순위표 😁', 
                 xaxis_title='가격', 
                 yaxis_title='옵션',
                 width = 1200,
