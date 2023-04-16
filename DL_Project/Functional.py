@@ -49,7 +49,7 @@ class GetResult:
                 xaxis_title='가격', 
                 yaxis_title='옵션',
                 xaxis_title_font_color='black',
-                yaxis_title_font_color='black'
+                yaxis_title_font_color='black',
 
                 xaxis=dict(tickfont=dict(color='green')),
                 yaxis=dict(tickfont=dict(color='green')),
