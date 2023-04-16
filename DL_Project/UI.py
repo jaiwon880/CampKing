@@ -21,7 +21,9 @@ def set_page() :
                         page_icon="🏕️", \
                         layout="wide", \
                         initial_sidebar_state="auto", \
-                        backgroundColor="#1E1E1E",
+                        primaryColor="#292929", \
+                        secondaryBackgroundColor="#292929",\
+                        textColor="#FFFFFF",\
                         # menu_items={
                         #     "Get Help": None,
                         #     "Report a bug": None,
