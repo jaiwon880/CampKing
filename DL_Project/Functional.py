@@ -17,9 +17,6 @@ class GetResult:
         self.gapyeong, \
         self.pocheon = GetData().create_price()
         
-        # self.image_path = ["https://i.imgur.com/qZJvwRB.png", \
-        #                     "https://i.imgur.com/Bgv83pb.png", \
-        #                     "https://i.imgur.com/QGxbZJa.png"]
     def get_result(self) : 
         return self.choice_result_df(), self.area, self.direction
 
