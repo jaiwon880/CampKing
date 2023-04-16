@@ -40,9 +40,10 @@ class GetResult:
 
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
         # colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
+        
         # 색상 범위 조정을 위한 매개변수
-        saturation = 0.7
-        lightness = 0.5
+        saturation = 0.5
+        lightness = 0.8
 
         # 데이터프레임의 길이
         n = len(df)
@@ -50,7 +51,7 @@ class GetResult:
         # 랜덤한 RGB 값 생성 후 HSV로 변환하여 색상 범위를 조정하고 다시 RGB로 변환
         colors = []
         for i in range(n):
-            r, g, b = [random.randint(0, 255) for j in range(3)]
+            r, g, b = [random.randint(150, 255) for j in range(3)]  # 밝은 색상을 위해 범위를 150~255로 조정
             h, s, v = colorsys.rgb_to_hsv(r/255, g/255, b/255)
             s = saturation
             v = lightness
