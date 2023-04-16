@@ -48,4 +48,4 @@ def sidebar_print_df(df) :
         st.write("# Worst!"), st.dataframe(df.tail(), width=600)
 
     else : 
-        st.write("업체가 충분하지 않거나 없습니다.")
+        st.write("분석할 업체의 수 가 충분하지 않습니다.")
