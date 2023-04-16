@@ -2,8 +2,7 @@ import streamlit as st
 import base64
 from pydub.playback import play
 
-def cutting() : 
-    st.markdown("---")
+
 
 def set_BGM():
     audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
@@ -12,6 +11,8 @@ def set_BGM():
     st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
                 {base64.b64encode(audio_file).decode()}"></audio>',\
                 unsafe_allow_html = True)  
+def cutting() : 
+    st.markdown("---")
 
 def set_page() : 
     st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", \
@@ -40,7 +41,7 @@ def title_ment(area, direction, count) :
                     👉{area} {direction} {count}곳 의 업체 결과\
                     </div>", unsafe_allow_html=True)
 
-def refactoring() : 
+def refactoring_ment() : 
     ment = "업체가 10개 미만입니다. 분석에 의미가 없습니다."
     st.markdown(f"<div style='background-color: white; \
                 padding: 10px; color: green; font-size: 48px;\

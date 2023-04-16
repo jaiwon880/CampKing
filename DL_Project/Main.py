@@ -8,8 +8,8 @@ from pydub.playback import play
 def main() : 
     ui.set_page()
     ui.set_BGM()
-
     get = GetResult()
+
     df, area, direction = get.get_choice_result()
 
     if df is not None : 
@@ -23,7 +23,7 @@ def main() :
             ui.cutting()
             get.get_price()
 
-        else : ui.refactoring()
+        else : ui.refactoring_ment()
     else : ui.start_background()
 
 if __name__ == '__main__' : 
