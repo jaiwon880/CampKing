@@ -56,7 +56,7 @@ class GetResult:
                 plot_bgcolor='rgb(255, 255, 204)',
                 # paper_bgcolor='rgb(255, 255, 204)'
                 )
-            fig.update_xaxes(tickformat=",.0f")
+            fig.update_xaxes(tickformat=",.0f원")
             
             # st.image(image_path)
             st.plotly_chart(fig)
