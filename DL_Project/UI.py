@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
-
+import base64
 def cutting() : 
     st.markdown("---")
 

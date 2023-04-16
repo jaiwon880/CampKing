@@ -1,6 +1,6 @@
 import UI as ui
 import streamlit as st
-import base64
+
 import pickle
 import matplotlib.pyplot as plt
 
