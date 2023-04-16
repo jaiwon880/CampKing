@@ -27,7 +27,7 @@ def set_page() :
         """
         <style>
         .sidebar .sidebar-content {
-            background-color: #f0f0f0;
+            background-color: #8BC34A;
         }
         </style>
         """,
