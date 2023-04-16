@@ -49,7 +49,7 @@ class GetResult:
 
         if df is not None and image_path is not None  :
             keyword = pd.DataFrame(df["importance"][:11]).transpose()
-
+            df = df.rename(columns{"importance" : "🤜가격 산정"})
             fig, ax = plt.subplots(figsize=(10, 8))
             df.plot(kind="barh", ax=ax)
 
