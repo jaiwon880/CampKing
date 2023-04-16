@@ -56,7 +56,7 @@ class GetResult:
             title_font=dict(size=24),
 
             xaxis_title='가격', 
-            xaxis_title_font_color='black',
+            xaxis_title_font_color='yellow',
             xaxis_title_font=dict(size=16),
             # yaxis_title='옵션',
             # yaxis_title_font_color='black',
