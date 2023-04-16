@@ -90,7 +90,7 @@ class GetData:
         'visitor_noise': '소음🔇',\
         'visitor_bed': '침대/이불🛏️',\
         'visitor_pet': '애완동물🐶',\
-        "info_menonly": "남성 전용🧔‍♂️",\
+        "info_menonly": "남성 전용🧔",\
         "info_partyroom": "파티룸🎉",\
         "info_womenonly": "여성 전용👩‍🦰",\
         "visitor_worthy": "방문 가치💯",\
