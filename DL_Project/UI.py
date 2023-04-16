@@ -31,7 +31,7 @@ def title_ment(area, direction, count) :
     st.markdown(f"<div style='background-color: green; \
                     padding: 10px; color: white; font-size: 48px;\
                     font-weight: bold; display: inline-block;'> \
-                    👉{area} {direction} {count} 개의 업체 \
+                    👉{area} {direction} {count}곳 의 업체 결과\
                     </div>", unsafe_allow_html=True)
 
 def refactoring() : 
