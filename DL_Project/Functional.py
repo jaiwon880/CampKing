@@ -44,7 +44,7 @@ class GetResult:
         if self.direction == "전체" : return self.total, self.image_path[0]
         elif self.direction == "가평군" : return self.gapyeong, self.image_path[1]
         elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
-        else : return None, None
+        else : return "", ""
 
     def get_price(self):
         df, image_path = self.handle_price()
