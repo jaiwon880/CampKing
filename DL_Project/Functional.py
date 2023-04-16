@@ -47,42 +47,20 @@ class GetResult:
         elif self.direction == "포천시" : return self.pocheon, self.image_path[2]
         else : return None, None
 
-    # def get_price(self):
-    #     plt.rcParams['font.family'] = 'Malgun Gothic'
-    #     df, image_path = self.handle_price()
-
-    #     if df is not None and image_path is not None  :
-    #         df = df.rename(index={\
-    #                                 'name': '이름', \
-    #                                 'info_poolvila' : "풀빌라"
-                                    
-    #                                 })
-    #         df = df.rename(columns={"importance" : "🤜가격 산정"})
-    #         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
-            
-    #         fig, ax = plt.subplots(figsize=(10, 8))
-    #         df.plot(kind="barh", ax=ax)
-
-    #         st.image(image_path)
-    #         st.pyplot(fig)
-    #         st.dataframe(keyword)
-    #     else :
-    #         pass
     def get_price(self):
         df, image_path = self.handle_price()
 
         if df is not None and image_path is not None:
             df = df.rename(index={\
                                     'name': '이름', \
-                                    'info_poolvilla' : "풀빌라"
-                                    
+                                    'ranking' : '리뷰 별점',\
+                                    'info_poolvilla' : '풀빌라'
                                     })
             df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
 
             colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
             fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
-            # fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h'))
             
             fig.update_layout(title='옵션 별 가격 순위표', xaxis_title='가격', yaxis_title='옵션')
             fig.update_xaxes(tickformat=".0f")
