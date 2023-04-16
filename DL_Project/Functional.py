@@ -47,6 +47,7 @@ class GetResult:
         else : return None, None
 
     def get_price(self):
+        plt.rcParams['font.family'] = 'Malgun Gothic'
         df, image_path = self.handle_price()
 
         if df is not None and image_path is not None  :
