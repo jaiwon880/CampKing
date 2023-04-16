@@ -13,7 +13,7 @@ def set_BGM():
 
     st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
                 {base64.b64encode(audio_file).decode()}"></audio>',\
-                unsafe_allow_html=True)    
+                unsafe_allow_html = True)    
 
 def main() : 
     ui.set_page()
@@ -32,10 +32,8 @@ def main() :
             ui.title_ment(area, direction, len(df))
             ui.cutting()
             get.get_price()
-            
-        else : 
-            ui.refactoring()
-            
+
+        else : ui.refactoring()
     else : 
         ui.start_background()
 
