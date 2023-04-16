@@ -49,7 +49,7 @@ class GetResult:
     def get_price(self):
         df, image_path = self.handle_price()
 
-        if df is not None and image_path is not None  :
+        if df is not "" and image_path is not ""  :
             df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
             
