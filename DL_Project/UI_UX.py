@@ -25,24 +25,22 @@ class User_Interface :
                                                     background-size: cover;
                                                 }
                                             </style> """, unsafe_allow_html=True)
-        self.memt_title = st.markdown(f"<div style='background-color: green; \
-                            padding: 10px; color: white; font-size: 48px;\
-                            font-weight: bold; display: inline-block;'> \
-                            👉{area} {direction} {count}곳 의 업체 결과\
-                            </div>", unsafe_allow_html=True)  
-        self.ment_refactoring = st.markdown(f"<div style='background-color: white; \
-                        padding: 10px; color: green; font-size: 48px;\
-                        font-weight: bold; display: inline-block;'> \
-                        👉{ment} \
-                        </div>", unsafe_allow_html=True)
     
     def cutting(self): return self.cut
     def set_background(self): return self.background_set
     def start_background(self): return self.background_start
-    def title_ment(self, area, direction, count) : return self.memt_title
+    def title_ment(self, area, direction, count) : 
+        st.markdown(f"<div style='background-color: green; \
+                            padding: 10px; color: white; font-size: 48px;\
+                            font-weight: bold; display: inline-block;'> \
+                            👉{area} {direction} {count}곳 의 업체 결과\
+                            </div>", unsafe_allow_html=True) 
     def refactoring_ment(self): 
-        ment = "업체가 10개 미만입니다. 분석에 의미가 없습니다."
-        return self.ment_refactoring
+        st.markdown(f"<div style='background-color: white; \
+                        padding: 10px; color: green; font-size: 48px;\
+                        font-weight: bold; display: inline-block;'> \
+                        👉{ment} \
+                        </div>", unsafe_allow_html=True)
     def sidebar_print_df(self, df):
         if len(df) > 10 :
             st.write("# Best!"), st.dataframe(df.head(), width=600)
