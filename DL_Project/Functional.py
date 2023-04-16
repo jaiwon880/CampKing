@@ -50,10 +50,12 @@ class GetResult:
         df, image_path = self.handle_price()
 
         if df is not None and image_path is not None  :
-            df = df.rename(columns={\
-                                    "importance" : "🤜가격 산정", \
-                                    "info_poolvilla" : "🛁풀 빌라"
+            df = df.rename(index={\
+                                    'name': '이름', \
+                                    'info_poolvila' : "풀빌라"
+                                    
                                     })
+            df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
             
             fig, ax = plt.subplots(figsize=(10, 8))
@@ -62,6 +64,5 @@ class GetResult:
             st.image(image_path)
             st.pyplot(fig)
             st.dataframe(keyword)
-
         else :
             pass
