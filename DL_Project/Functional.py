@@ -55,7 +55,7 @@ class GetResult:
                 # paper_bgcolor='rgb(255, 255, 204)'
                 )
             # fig.update_xaxes(tickformat=",.0f", tickprefix="$")
-            fig.update_xaxes(tickformat=" ,.0f 원")
+            fig.update_xaxes(tickformat=" ,.0f", ticktext=[f"{val:,}원" for val in fig.data[0].x])
 
             # st.image(image_path)
             st.plotly_chart(fig)
