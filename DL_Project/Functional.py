@@ -74,7 +74,7 @@ class GetResult:
         fig.update_xaxes(tickformat=",.0f")
         st.plotly_chart(fig)
 
-        # keyword = keyword.sort_values(by=0, ascending=False)
+        df = df.sort_values(by='🤜가격 산정', ascending=False)
         keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
         st.dataframe(keyword)
 
