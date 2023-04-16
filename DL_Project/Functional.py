@@ -56,9 +56,7 @@ class GetResult:
         df = self.rename_df(df)
 
         if df is not None and image_path is not None:
-            df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
-
             colors = ['rgb({},{},{})'.format(random.randint(0,255), random.randint(0,255), random.randint(0,255)) for i in range(len(df))]
             fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
             
@@ -80,6 +78,7 @@ class GetResult:
             pass
 
     def rename_df(self, df) : 
+        df = df.rename(columns={"importance" : "🤜가격 산정"})
         df = df.rename(index={\
         "info_bogcheung": "복청숙🏠",\
         'name': '이름(인지도)🌞',\
@@ -133,4 +132,5 @@ class GetResult:
         'visitor_bed': '침대/이불🛏️',\
         'visitor_pet': '애완동물🐶'\
         })
+        
         return df
