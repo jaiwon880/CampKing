@@ -52,9 +52,9 @@ class GetResult:
 
         if df is not None and image_path is not None:
             df = df.rename(index={\
-                                    'name': '이름', \
-                                    'ranking' : '리뷰 별점',\
-                                    'info_poolvilla' : '풀빌라'
+                                    'name': '이름(인지도)🌞', \
+                                    'ranking' : '리뷰 별점⭐',\
+                                    'info_poolvilla' : '풀빌라🛁'
                                     })
             df = df.rename(columns={"importance" : "🤜가격 산정"})
             keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
