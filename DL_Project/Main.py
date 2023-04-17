@@ -22,6 +22,7 @@ def main() :
             ui.title_ment()
             ui.cutting()
             ui.print_graph()
+            ui.print_df()
 
         else : ui.refactoring_ment()
     else : ui.start_background()
