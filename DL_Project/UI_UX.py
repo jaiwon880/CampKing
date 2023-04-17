@@ -99,7 +99,7 @@ class User_Interface :
             xaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             yaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             
-            width = 800,
+            width = 1000,
             height = 1400,
             
             plot_bgcolor='rgb(230, 245, 230)',
