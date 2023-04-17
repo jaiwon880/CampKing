@@ -108,7 +108,8 @@ class User_Interface :
             end_idx = min(start_idx+self.split_count, len(self.price_df))
             
             keywor_price = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).round(0).astype(int)
-            st.write(keywor_price.T.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '50px')]}]), width=1200)
+            st.write(keywor_price.to_string(index=False, header=False), unsafe_allow_html=True)
+            # st.write(keywor_price.T.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '50px')]}]), width=1200)
             # st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
         # for i in range(math.ceil(len(self.price_df)/self.split_count)):
