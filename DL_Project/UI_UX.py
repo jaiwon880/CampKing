@@ -115,7 +115,7 @@ class User_Interface :
 
 class User_Experience(User_Interface) :
     def __init__(self) -> None:
-        super().__init__()
+        # super().__init__()
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
         self.audio = open(self.audio_path, 'rb').read()
 
