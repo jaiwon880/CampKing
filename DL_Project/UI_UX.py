@@ -21,6 +21,7 @@ class User_Interface :
         self.get = GetResult()
         self.df, self.area, self.direction = self.get.choice_result()
         self.price_df = self.get.price_result()
+        
         self.ment = "대 수술 유지보수중"
         self.split_count = 10
 
