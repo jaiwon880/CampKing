@@ -111,7 +111,7 @@ class User_Interface :
         # ========================================================================================================================
         df = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]].round(0).astype(int)
         df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[:1]])
-        df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.index])
+        df = df.apply(lambda x: ['background-color: green' if x.name != 0 else '' for i in x], axis=0)
 
         st.dataframe(df, width = 400, height = 1650)
 
