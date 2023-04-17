@@ -34,7 +34,7 @@ class User_Interface :
 
     def choice_result(self) : return self.df, self.direction
 
-    def get_col(self) : return self.left_column, self.right_column
+    def get_column(self) : return self.left_column, self.right_column
 
     def cutting(self): return st.markdown("---")
 
