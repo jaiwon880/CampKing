@@ -110,7 +110,7 @@ class User_Interface :
             keywor_price = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
             st.dataframe(keywor_price, width = 1400)
 
-class User_Experience :
+class User_Experience(User_Interface) :
     def __init__(self) -> None:
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
         self.audio = open(self.audio_path, 'rb').read()
