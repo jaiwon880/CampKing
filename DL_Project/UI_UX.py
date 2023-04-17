@@ -16,10 +16,11 @@ class User_Interface :
 
         self.cut = st.markdown("---")
         self.ment = "대 수술 유지보수중"
-
+        
+    def cutting(self): return self.cut
     def choice_result(self) : return self.df, self.direction
     def price_print(self) : return self.get.price_result() if self.df is not None else None
-    def cutting(self): return self.cut
+    
 
     def set_background(self) : st.markdown("""<style>
                                             .main {
