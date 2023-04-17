@@ -63,14 +63,14 @@ class User_Interface :
         lightness = 0.8
 
         colors = []
-        for i in range(len(price_df)):
+        for i in range(len(self.price_df)):
             r, g, b = [random.randint(150, 255) for j in range(3)]  # 밝은 색상을 위해 범위를 150~255로 조정
             h, s, v = colorsys.rgb_to_hsv(r/255, g/255, b/255)
             s = saturation
             v = lightness
             r, g, b = [int(c*255) for c in colorsys.hsv_to_rgb(h, s, v)]
             colors.append(f'rgb({r},{g},{b})')
-        fig = go.Figure(go.Bar(y=price_df.index, x=price_df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
+        fig = go.Figure(go.Bar(y=self.price_df.index, x=self.price_df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
         
         fig.update_layout(
             title='😁 옵션 별 가격 순위표 😁', 
