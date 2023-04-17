@@ -114,7 +114,11 @@ class User_Interface :
         st.dataframe(keyword_price, width = 400, height = 1650)
 
     def style_dataframe(self, df):
-        return df.style.background_gradient(cmap='Greens')
+        # return df.style.background_gradient(cmap='Greens')
+        styled_df = df.style.background_gradient(cmap='PuBu', subset=df.columns[1:]).set_properties(**{'text-align': 'center'})
+        styled_df = styled_df.set_table_styles([dict(selector='th', props=[('text-align', 'center'), ('background-color', '#e6f5e6')])])
+        styled_df = styled_df.set_properties(**{'font-size': '1.5vw', 'color': 'black', 'border': '1px solid black'})
+        return styled_df
         
 class User_Experience :
     def __init__(self) -> None:
