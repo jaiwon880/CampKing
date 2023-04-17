@@ -2,9 +2,7 @@ from SideBar import GetSideBar
 from Data import GetData
 
 import streamlit as st
-import random
-import math
-import colorsys
+
 import pandas as pd
 
 import plotly.graph_objects as go

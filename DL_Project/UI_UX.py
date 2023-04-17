@@ -1,4 +1,8 @@
 import streamlit as st
+
+import random
+import math
+import colorsys
 import base64
 from pydub.playback import play
 from Functional import GetResult
