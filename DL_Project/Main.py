@@ -16,7 +16,8 @@ def main() :
     if df is not None : 
         ui.set_background()
 
-        with st.sidebar : ui.sidebar_print_df()
+        with st.sidebar : 
+            ui.sidebar_print_df()
         
         if direction not in ["전체", "가평군", "포천시"] :
             ui.refactoring_ment()
@@ -25,9 +26,9 @@ def main() :
 
             with left_col : 
                 ui.print_graph()
-                ui.title_ment()
+                ui.result_ment()
                 ui.cutting()
-                
+
             with right_col : 
                 ui.print_df()
     else : 

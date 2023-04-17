@@ -52,7 +52,7 @@ class User_Interface :
                                                 }
                                             </style> """, unsafe_allow_html=True)
 
-    def title_ment(self) : st.markdown(f"<div style='background-color: green; \
+    def result_ment(self) : st.markdown(f"<div style='background-color: green; \
                                                                 padding: 10px; color: white; font-size: 48px;\
                                                                 font-weight: bold; display: inline-block;'> \
                                                                 👉{self.area} {self.direction} {len(self.df)} 곳 의 업체 결과\
