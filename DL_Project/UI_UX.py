@@ -30,7 +30,7 @@ class User_Interface :
         
         self.ment = "수술 중😑"
         self.split_count = 10 # 프레임 자르는 개수 기준 
-        self.left_column, self.right_column = st.columns([2, 8])
+        self.left_column, self.right_column = st.columns([3, 7])
 
     def choice_result(self) : return self.df, self.direction
 
