@@ -13,11 +13,13 @@ class User_Interface :
     def __init__(self) -> None:
         self.get = GetResult()
         self.df, self.area, self.direction = self.get.choice_result()
+        self.price = self.get.price_result()
         self.ment = "대 수술 유지보수중"
 
     def cutting(self): return st.markdown("---")
     def choice_result(self) : return self.df, self.direction
-    def price_print(self) : return self.get.price_result()
+    # def price_print(self) : return self.get.price_result()
+    def price_print(self) :return self.price
 
     def set_background(self) : st.markdown("""<style>
                                             .main {
