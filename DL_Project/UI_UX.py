@@ -11,10 +11,12 @@ def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
 
 class User_Interface :
     def __init__(self) -> None:
+        get = GetResult()
         self.df, \
         self.area, \
-        self.direction = GetResult().choice_result()
-        self.price = GetResult().price_result()
+        self.direction = get.choice_result()
+        self.price = get.price_result()
+
 
         self.cut = st.markdown("---")
         self.ment = "유지보수중"
