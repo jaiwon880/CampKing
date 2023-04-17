@@ -139,7 +139,7 @@ class User_Interface :
         sorted_df = df[['🤜가격 산정']].sort_values(by='🤜가격 산정', ascending=True).head(40)
 
         # 인덱스와 가격 컬럼만 선택하여 출력
-        result_df = sorted_df.reset_index()[['index', '🤜가격 산정']]
+        result_df = sorted_df.reset_index()[[index, '🤜가격 산정']]
 
 class User_Experience :
     def __init__(self) -> None:
