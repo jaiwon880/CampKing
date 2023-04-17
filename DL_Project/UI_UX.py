@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.graph_objects as go
 import matplotlib.pyplot as plotly
 import random
-import math
 import colorsys
 import base64
 from pydub.playback import play
