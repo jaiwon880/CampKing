@@ -88,4 +88,7 @@ class GetResult:
 
     def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
 
-    def price_result(self): return self.handle_price(self.direction) if self.df is not None else ""
+    def price_result(self): 
+        if self.df is not None :
+            return self.handle_price(self.direction)
+        else pass
