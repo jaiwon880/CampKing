@@ -17,8 +17,7 @@ class User_Interface :
 
     def cutting(self): return st.markdown("---")
     def choice_result(self) : return self.df, self.direction
-    def price_print(self) : return self.get.price_result() if self.df is not None else None
-    
+    def price_print(self) : return self.get.price_result()
 
     def set_background(self) : st.markdown("""<style>
                                             .main {
