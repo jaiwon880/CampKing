@@ -36,7 +36,7 @@ class User_Interface :
 
     def get_col(self) : return self.left_column, self.right_column
 
-    def cutting(self): return st.markdown("---")
+    def cutting(self): st.markdown("---")
 
     def set_background(self) : st.markdown("""<style>
                                             .main {
@@ -66,8 +66,9 @@ class User_Interface :
         if len(self.df) > 10 :
             st.write("# Best!"), st.dataframe(self.df.head(), width=600)
             st.write("# Worst!"), st.dataframe(self.df.tail(), width=600)
-        else : 
-            st.write("분석할 업체의 수 가 충분하지 않습니다.")  
+        else : st.write("분석할 업체의 수 가 충분하지 않습니다.")  
+         
+            
 
     def print_graph(self) :
         saturation = 0.5
