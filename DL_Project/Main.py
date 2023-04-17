@@ -10,7 +10,7 @@ def main() :
     hadle_ux().set_BGM()
 
     ui = handle_ui()
-    left_col, right_col = ui.get_col()
+    
     df, direction = ui.choice_result()
 
     if df is not None : 
@@ -23,8 +23,11 @@ def main() :
         else:
             ui.title_ment()
             ui.cutting()
-            with left_col : ui.print_graph()
-            with right_col : ui.print_df()
+            left_col, right_col = ui.get_col()
+            with left_col : 
+                ui.print_graph()
+            with right_col : 
+                ui.print_df()
     else : 
         ui.start_background()
 
