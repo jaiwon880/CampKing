@@ -18,7 +18,7 @@ def main() :
 
         with st.sidebar : ui.sidebar_print_df()
         
-        if direction not in ["전체", "가평군", "포천시"]:
+        if direction not in ["전체", "가평군", "포천시"] :
             ui.refactoring_ment()
         else:
             ui.title_ment()
