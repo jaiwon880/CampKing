@@ -132,8 +132,8 @@ class User_Interface :
         #     st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
         # for i in range(0, len(self.price_df), self.split_count):
-        #     keywor_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
-        #     st.dataframe(keywor_price, 500)
+        #     keyword_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
+        #     st.dataframe(keyword_price, width = 500)
         # ===========================
         sorted_df = df[['🤜가격산정']].sort_values(by='🤜가격산정', ascending=True).head(40)
         sorted_df.columns = ['🤜옵션','🤜가격산정'] # 컬럼명 변경
