@@ -110,8 +110,9 @@ class User_Interface :
         #     st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
         df = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]].round(0).astype(int)
+        df = df.index.set_names(['옵션'], inplace=True)
         df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[:1]])
-        df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[0]])
+        df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, "옵션"])
         
         st.dataframe(df, width = 400, height = 1650)
 
