@@ -36,7 +36,7 @@ class User_Interface :
 
     def get_col(self) : return self.left_column, self.right_column
 
-    def cutting(self): st.markdown("---")
+    def cutting(self): return st.markdown("---")
 
     def set_background(self) : st.markdown("""<style>
                                             .main {
