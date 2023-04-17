@@ -98,7 +98,7 @@ class User_Interface :
             yaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             
             width = 1000,
-            height = 1400,
+            height = 1500,
             
             plot_bgcolor='rgb(230, 245, 230)',
             paper_bgcolor='#e6f5e6'
@@ -136,7 +136,7 @@ class User_Interface :
         #     st.dataframe(keyword_price, width = 500)
         # ========================================================================================================================
         keyword_price = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]]
-        st.dataframe(keyword_price)
+        st.dataframe(keyword_price, width)
 
 
 class User_Experience :
