@@ -19,6 +19,7 @@ def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
 class User_Interface :
     def __init__(self) -> None:
         self.get = GetResult()
+
         self.df, \
         self.area, \
         self.direction = self.get.choice_result()
@@ -105,8 +106,9 @@ class User_Interface :
         for i in range(math.ceil(len(self.price_df)/self.split_count)):
             start_idx = i * self.split_count
             end_idx = min(start_idx+self.split_count, len(self.price_df))
-            keyword = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
-            st.dataframe(keyword, width = 1400)
+            
+            keywor_price = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
+            st.dataframe(keywor_price, width = 1400)
 
 class User_Experience :
     def __init__(self) -> None:
