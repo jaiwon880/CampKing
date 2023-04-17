@@ -24,8 +24,9 @@ class User_Interface :
         self.ment = "대 수술 유지보수중"
         self.split_count = 10
 
-    def cutting(self): return st.markdown("---")
     def choice_result(self) : return self.df, self.direction
+    
+    def cutting(self): return st.markdown("---")
 
     def set_background(self) : st.markdown("""<style>
                                             .main {
