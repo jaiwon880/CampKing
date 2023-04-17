@@ -112,15 +112,3 @@ class User_Experience :
     def set_BGM(self) : st.markdown(f'<audio autoplay loop="true" src="data:audio/mp3;base64,\
                                         {base64.b64encode(self.audio).decode()}"></audio>',\
                                         unsafe_allow_html = True)
-
-
-
-
-
-
-
-
-
-
-
-

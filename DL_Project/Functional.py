@@ -30,7 +30,8 @@ class GetResult:
         elif dic == "포천시" : return self.pocheon
         else : return
 
-    def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
+    def choice_result(self) : 
+        return self.handle_df(self.df), self.area, self.direction
 
     def price_result(self) : 
         return self.handle_price(self.direction)
