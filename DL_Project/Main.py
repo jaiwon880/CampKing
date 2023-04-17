@@ -8,10 +8,9 @@ def main() :
     
     User_Experience().set_BGM()
 
-    # get = GetResult()
-    # df, area, direction = get.choice_result()
     ui = User_Interface()
-    df = ui.choice_result_df()
+    df, direction = ui.choice_result()
+
     if df is not None : 
         ui.set_background()
 
@@ -21,7 +20,7 @@ def main() :
         if direction == "전체" or direction == "가평군" or direction == "포천시" :
             ui.title_ment()
             ui.cutting()
-            get.price_result()
+            ui.price_print()
 
         else : ui.refactoring_ment()
     else : ui.start_background()

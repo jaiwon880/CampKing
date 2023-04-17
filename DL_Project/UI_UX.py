@@ -14,11 +14,13 @@ class User_Interface :
         self.df, \
         self.area, \
         self.direction = GetResult().choice_result()
+        self.price = GetResult().price_result()
 
         self.cut = st.markdown("---")
         self.ment = "유지보수중"
 
-    def choice_result_df(self) : return self.df
+    def choice_result(self) : return self.df, self.direction
+    def price_print(self) : return self.price
     def cutting(self): return self.cut
 
     def set_background(self) : st.markdown("""<style>
