@@ -114,10 +114,8 @@ class User_Interface :
         st.dataframe(keyword_price, width = 400, height = 1650)
 
     def style_dataframe(self, df):
-        return df.style \
-            .background_gradient(cmap='Greens', subset=df[df >= 500]) \
-            .background_gradient(cmap='YlOrBr', subset=df[(df >= 300) & (df < 500)]) \
-            .background_gradient(cmap='Reds', subset=df[df < 300])
+        return df.style.background_gradient(cmap='Greens')
+        
 class User_Experience :
     def __init__(self) -> None:
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
