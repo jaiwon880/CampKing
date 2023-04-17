@@ -108,7 +108,7 @@ class User_Interface :
             end_idx = min(start_idx+self.split_count, len(self.price_df))
             
             keywor_price = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
-            st.dataframe(keywor_price, width = 1200)
+            st.dataframe(keywor_price, width = 1000)
         # for i in range(0, len(self.price_df), self.split_count):
         #     keywor_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
         #     st.dataframe(keywor_price, width=1400)
