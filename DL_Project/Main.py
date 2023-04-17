@@ -25,12 +25,11 @@ def main() :
             left_col, right_col = ui.get_column()
 
             with left_col : 
-                ui.result_ment()
-                ui.cutting()
                 ui.print_df()
-                
 
             with right_col : 
+                ui.result_ment()
+                ui.cutting()
                 ui.print_graph()
     else : 
         ui.start_background()
