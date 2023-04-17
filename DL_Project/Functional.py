@@ -38,7 +38,7 @@ class GetResult:
         elif dic == "가평군" : df = self.gapyeong
         elif dic == "포천시" : df = self.pocheon
         else : df = None
-
+        if df is None : return
         saturation = 0.5
         lightness = 0.8
 

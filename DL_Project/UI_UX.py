@@ -15,7 +15,6 @@ class User_Interface :
         self.df, self.area, self.direction = get.choice_result()
         self.price = get.price_result() if self.df is not None else None
 
-
         self.cut = st.markdown("---")
         self.ment = "대 수술 유지보수중"
 
