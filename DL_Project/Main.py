@@ -25,7 +25,7 @@ def main() :
             left_col, right_col = ui.set_column()
 
             with left_col : 
-                ui.print_df()
+                ui.print_price()
 
             with right_col : 
                 ui.result_ment()

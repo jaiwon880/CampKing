@@ -69,8 +69,6 @@ class User_Interface :
             st.write("# Worst!"), st.dataframe(self.df.tail(), width=600)
         else : st.write("분석할 업체의 수 가 충분하지 않습니다.")  
          
-            
-
     def print_graph(self) :
         saturation = 0.5
         lightness = 0.8
@@ -109,7 +107,7 @@ class User_Interface :
 
         st.plotly_chart(fig)
 
-    def print_df(self) :
+    def print_price(self) :
         # for i in range(math.ceil(len(self.price_df) / self.split_count)):
         #     start_idx = i * self.split_count
         #     end_idx = min(start_idx + self.split_count, len(self.price_df))
