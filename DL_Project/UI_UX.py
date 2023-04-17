@@ -95,11 +95,11 @@ class User_Interface :
         fig.update_xaxes(tickformat=",.0f")
         st.plotly_chart(fig)
 
-    def print_price_df(self) :
-        for i in range(math.ceil(len(price_df)/self.split_count)):
+    def print_df(self) :
+        for i in range(math.ceil(len(self.price_df)/self.split_count)):
             start_idx = i * self.split_count
-            end_idx = min(start_idx+self.split_count, len(price_df))
-            keyword = pd.DataFrame(price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
+            end_idx = min(start_idx+self.split_count, len(self.price_df))
+            keyword = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
             st.dataframe(keyword, width = 1400)
 
 class User_Experience :
