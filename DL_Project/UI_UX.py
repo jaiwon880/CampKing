@@ -136,7 +136,7 @@ class User_Interface :
         #     st.dataframe(keyword_price, width = 500)
         # ========================================================================================================================
         keyword_price = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]].round(0).astype(int)
-        st.dataframe(keyword_price, width = 500, height = 1600)
+        st.dataframe(keyword_price, width = 500, height = 1800)
 
 
 class User_Experience :
