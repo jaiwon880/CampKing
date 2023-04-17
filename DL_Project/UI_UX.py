@@ -89,13 +89,13 @@ class User_Interface :
             yaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             
             width = 1200,
-            height = 1200,
+            height = 1300,
             
             plot_bgcolor='rgb(230, 245, 230)',
             paper_bgcolor='#e6f5e6'
             )
         fig.update_xaxes(tickformat=",.0f")
-        
+
         st.plotly_chart(fig)
 
     def print_df(self) :
