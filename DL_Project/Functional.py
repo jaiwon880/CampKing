@@ -37,8 +37,9 @@ class GetResult:
         if dic == "전체" : df = self.total
         elif dic == "가평군" : df = self.gapyeong
         elif dic == "포천시" : df = self.pocheon
-        else : df = None
-        if df is None : return
+        else : return
+        # if df is None : return
+
         saturation = 0.5
         lightness = 0.8
 
@@ -87,7 +88,3 @@ class GetResult:
 
     def price_result(self) : 
         return self.handle_price(self.direction)
-    # def price_result(self): 
-    #     if self.df is not None :
-    #         return self.handle_price(self.direction) if self.direction != "" else None
-    #     else : pass
