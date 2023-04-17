@@ -13,8 +13,8 @@ from Functional import GetResult
 def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
                                     page_icon="🏕️", 
                                     layout="wide", 
-                                    initial_sidebar_state="auto",), \
-                left_col, right_col = st.colums([8,  2])
+                                    initial_sidebar_state="auto",)
+
 
 
 
@@ -32,6 +32,8 @@ class User_Interface :
         self.split_count = 10 # 프레임 자르는 개수 기준 
 
     def choice_result(self) : return self.df, self.direction
+
+    def get_col(self) : left_column, right_column = st.columns([8, 2])
 
     def cutting(self): return st.markdown("---")
 

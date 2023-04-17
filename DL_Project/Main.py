@@ -7,10 +7,11 @@ def hadle_ux() : return User_Experience()
 
 def main() : 
     UI_UX.set_page()
-    
     hadle_ux().set_BGM()
 
     ui = handle_ui()
+    ui.get_col()
+
     df, direction = ui.choice_result()
 
     if df is not None : 
