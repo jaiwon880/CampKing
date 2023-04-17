@@ -137,7 +137,7 @@ class User_Interface :
         # ===========================
         sorted_df = self.df[['🤜가격 산정']].sort_values(by='🤜가격 산정', ascending=True).head(40)
         sorted_df.reset_index(inplace=True) # 인덱스 초기화
-        sorted_df.columns = ['인덱스', '🤜가격 산정'] # 컬럼명 변경
+        sorted_df.columns = ['🤜가격 산정'] # 컬럼명 변경
         st.dataframe(sorted_df) # 결과 출력
 
 
