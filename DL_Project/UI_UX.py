@@ -37,10 +37,10 @@ class User_Interface :
                                                 }
                                             </style> """, unsafe_allow_html=True)
 
-    def title_ment(self, area, direction, count) : st.markdown(f"<div style='background-color: green; \
+    def title_ment(self) : st.markdown(f"<div style='background-color: green; \
                                                                 padding: 10px; color: white; font-size: 48px;\
                                                                 font-weight: bold; display: inline-block;'> \
-                                                                👉{self.area} {self.direction} 곳 의 업체 결과\
+                                                                👉{self.area} {self.direction} {len(self.df)} 곳 의 업체 결과\
                                                                 </div>", unsafe_allow_html=True) 
     def refactoring_ment(self) : st.markdown(f"<div style='background-color: white; \
                                                 padding: 10px; color: green; font-size: 48px;\
