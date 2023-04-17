@@ -114,8 +114,8 @@ class User_Interface :
         st.dataframe(keyword_price, width = 400, height = 1650)
 
     def style_dataframe(self, df):
-        # return df.style.background_gradient(cmap='Greens')
-        return df.style.applymap(lambda x: 'background-color: #e1f3d8' if x == 'greens' else '')
+        return df.style.background_gradient(cmap='Greens').background_gradient(subset=pd.IndexSlice[:], cmap='Greens')
+        # return df.style.applymap(lambda x: 'background-color: #e1f3d8' if x == 'greens' else '')
 
 class User_Experience :
     def __init__(self) -> None:
