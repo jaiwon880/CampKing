@@ -115,16 +115,7 @@ class User_Interface :
 
     def style_dataframe(self, df):
         # return df.style.background_gradient(cmap='Greens')
-        background_color = 'rgb(176, 226, 172)'
-        border_color = 'rgb(56, 114, 85)'
-        font_color = 'rgb(114, 75, 22)'
-        
-        return (df.style
-                .set_properties(**{'background-color': background_color,
-                                'color': font_color,
-                                'border-color': border_color})
-                .applymap(lambda x: f'background-color: {border_color};' \
-                if pd.isnull(x) else '', subset=pd.IndexSlice[:, ['🤜가격 산정']]))
+        return df.style.applymap(lambda x: 'background-color: #e1f3d8' if x == 'greens' else '')
 
 class User_Experience :
     def __init__(self) -> None:
