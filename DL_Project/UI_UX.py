@@ -99,7 +99,7 @@ class User_Interface :
             xaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             yaxis=dict(tickfont=dict(color='green'), tickfont_size = 20),
             
-            width = 1000,
+            width = 800,
             height = 1400,
             
             plot_bgcolor='rgb(230, 245, 230)',
@@ -135,7 +135,7 @@ class User_Interface :
         # ========================================================================================================================
         for i in range(0, len(self.price_df), self.split_count):
             keywor_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
-            st.dataframe(keywor_price, 300)
+            st.dataframe(keywor_price, 500)
 
 class User_Experience :
     def __init__(self) -> None:
