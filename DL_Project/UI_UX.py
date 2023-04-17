@@ -43,7 +43,7 @@ class User_Interface :
                                                 background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');
                                                 background-size: cover;
                                                 }
-                                            </style> """, unsafe_allow_html=Truet)
+                                            </style> """, unsafe_allow_html=True)
         
     def start_background(self): st.markdown("""<style>
                                             .main {
