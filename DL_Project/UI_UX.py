@@ -20,8 +20,9 @@ class User_Interface :
     def __init__(self) -> None:
         self.get = GetResult()
         self.df, self.area, self.direction = self.get.choice_result()
-        self.price = self.get.price_result()
+        self.price_df = self.get.price_result()
         self.ment = "대 수술 유지보수중"
+        self.split_count = 10
 
     def cutting(self): return st.markdown("---")
     def choice_result(self) : return self.df, self.direction
@@ -58,19 +59,18 @@ class User_Interface :
             st.write("분석할 업체의 수 가 충분하지 않습니다.")  
 
     def print_graph(self) :
-        df = self.price
         saturation = 0.5
         lightness = 0.8
 
         colors = []
-        for i in range(len(df)):
+        for i in range(len(price_df)):
             r, g, b = [random.randint(150, 255) for j in range(3)]  # 밝은 색상을 위해 범위를 150~255로 조정
             h, s, v = colorsys.rgb_to_hsv(r/255, g/255, b/255)
             s = saturation
             v = lightness
             r, g, b = [int(c*255) for c in colorsys.hsv_to_rgb(h, s, v)]
             colors.append(f'rgb({r},{g},{b})')
-        fig = go.Figure(go.Bar(y=df.index, x=df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
+        fig = go.Figure(go.Bar(y=price_df.index, x=price_df["🤜가격 산정"], orientation='h', marker=dict(color=colors)))
         
         fig.update_layout(
             title='😁 옵션 별 가격 순위표 😁', 
@@ -95,11 +95,11 @@ class User_Interface :
         fig.update_xaxes(tickformat=",.0f")
         st.plotly_chart(fig)
 
-        split_count = 10
-        for i in range(math.ceil(len(df)/split_count)):
-            start_idx = i * split_count
-            end_idx = min(start_idx+split_count, len(df))
-            keyword = pd.DataFrame(df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
+    def print_price_df(self) :
+        for i in range(math.ceil(len(price_df)/self.split_count)):
+            start_idx = i * self.split_count
+            end_idx = min(start_idx+self.split_count, len(price_df))
+            keyword = pd.DataFrame(price_df["🤜가격 산정"][start_idx:end_idx]).transpose().round(0).astype(int)
             st.dataframe(keyword, width = 1400)
 
 class User_Experience :
