@@ -30,7 +30,7 @@ class User_Interface :
         
         self.ment = "수술 중😑"
         self.split_count = 10 # 프레임 자르는 개수 기준 
-        self.left_column, self.right_column = st.columns([8, 2])
+        self.left_column, self.right_column = st.columns([2, 8])
 
     def choice_result(self) : return self.df, self.direction
 
@@ -53,10 +53,11 @@ class User_Interface :
                                             </style> """, unsafe_allow_html=True)
 
     def result_ment(self) : st.markdown(f"<div style='background-color: green; \
-                                                                padding: 10px; color: white; font-size: 48px;\
-                                                                font-weight: bold; display: inline-block;'> \
-                                                                👉{self.area} {self.direction} {len(self.df)} 곳 의 업체 결과\
-                                                                </div>", unsafe_allow_html=True) 
+                                            padding: 10px; color: white; font-size: 48px;\
+                                            font-weight: bold; display: inline-block;'> \
+                                            👉{self.area} {self.direction} {len(self.df)} 곳 의 업체 결과\
+                                            </div>", unsafe_allow_html=True) 
+
     def refactoring_ment(self) : st.markdown(f"<div style='background-color: white; \
                                                 padding: 10px; color: green; font-size: 48px;\
                                                 font-weight: bold; display: inline-block;'> \
