@@ -26,11 +26,11 @@ def main() :
 
             with left_col : 
                 ui.print_df()
-                
-            with right_col : 
-                ui.print_graph()
                 ui.result_ment()
                 ui.cutting()
+
+            with right_col : 
+                ui.print_graph()
     else : 
         ui.start_background()
 
