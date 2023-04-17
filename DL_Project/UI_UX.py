@@ -134,6 +134,12 @@ class User_Interface :
         for i in range(0, len(self.price_df), self.split_count):
             keywor_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
             st.dataframe(keywor_price, 500)
+        # ===========================
+        # 가격 기준 오름차순으로 정렬하여 상위 40개만 선택
+        sorted_df = df[['🤜가격 산정']].sort_values(by='🤜가격 산정', ascending=True).head(40)
+
+        # 인덱스와 가격 컬럼만 선택하여 출력
+        result_df = sorted_df.reset_index()[['index', '🤜가격 산정']]
 
 class User_Experience :
     def __init__(self) -> None:
