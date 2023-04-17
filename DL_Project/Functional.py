@@ -1,12 +1,6 @@
 from SideBar import GetSideBar
 from Data import GetData
 
-import streamlit as st
-
-
-
-
-
 class GetResult:
     def __init__(self) -> None:
         self.df, \
