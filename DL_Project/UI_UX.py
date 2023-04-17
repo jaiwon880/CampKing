@@ -115,7 +115,7 @@ class User_Interface :
             merged_df = pd.concat(dfs, axis=1)
             
             # 줄바꿈 무시하고 출력하기
-            st.write(merged_df.to_string(index=False, header=False, col_space=12, line_width=100000), unsafe_allow_html=True)
+            st.write(merged_df.to_string(index=True, header=False, col_space=12, line_width=100000), unsafe_allow_html=True)
             # st.write(keywor_price.T.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '50px')]}]), width=1200)
             # st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
