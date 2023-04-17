@@ -28,7 +28,7 @@ class User_Interface :
 
         self.price_df = self.get.price_result()
         
-        self.ment = "대 수술 유지보수중"
+        self.ment = "# 수술 중😑"
         self.split_count = 10 # 프레임 자르는 개수 기준 
         self.left_column, self.right_column = st.columns([8, 2])
 
