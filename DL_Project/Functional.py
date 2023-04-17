@@ -75,9 +75,6 @@ class GetResult:
         fig.update_xaxes(tickformat=",.0f")
         st.plotly_chart(fig)
 
-        # keyword = pd.DataFrame(df["🤜가격 산정"][:11]).transpose()
-        # st.dataframe(keyword)
-
         split_count = 10
         for i in range(math.ceil(len(df)/split_count)):
             start_idx = i * split_count
@@ -88,7 +85,9 @@ class GetResult:
 
     def choice_result(self) : return self.handle_df(self.df), self.area, self.direction
 
-    def price_result(self): 
-        if self.df is not None :
-            return self.handle_price(self.direction) if self.direction != "" else None
-        else : pass
+    def price_result(self) : 
+        return self.handle_price(self.direction)
+    # def price_result(self): 
+    #     if self.df is not None :
+    #         return self.handle_price(self.direction) if self.direction != "" else None
+    #     else : pass
