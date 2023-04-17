@@ -14,7 +14,7 @@ class User_Interface :
         self.df, \
         self.area, \
         self.direction = GetResult().choice_result()
-        self.price = GetResult().price_result()
+        # self.price = GetResult().price_result()
 
         self.cut = st.markdown("---")
         self.ment = "유지보수중"
