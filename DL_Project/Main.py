@@ -20,7 +20,7 @@ def main() :
         if direction == "전체" or direction == "가평군" or direction == "포천시" :
             ui.title_ment()
             ui.cutting()
-            # ui.price_print()
+            ui.price_print()
 
         else : ui.refactoring_ment()
     else : ui.start_background()
