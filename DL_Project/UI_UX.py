@@ -15,7 +15,7 @@ class User_Interface :
         self.df, \
         self.area, \
         self.direction = get.choice_result()
-        self.price = get.price_result()
+        self.price = get.price_result() if df is not None else None
 
 
         self.cut = st.markdown("---")
