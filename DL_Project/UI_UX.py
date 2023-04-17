@@ -23,7 +23,6 @@ class User_Interface :
         self.price_df = self.get.price_result()
         
         self.ment = "수술 중😑"
-        self.split_count = 10 # 프레임 자르는 개수 기준 
         self.left_column, self.right_column = st.columns([3, 7])
 
     def choice_result(self) : return self.df, self.direction
@@ -32,36 +31,36 @@ class User_Interface :
 
     def cutting(self): return st.markdown("---")
 
-    def set_background(self) : st.markdown("""<style>
-                                            .main {
-                                                background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');
-                                                background-size: cover;
-                                                }
+    def set_background(self) : st.markdown("""<style>.main {
+                                            background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');
+                                            background-size: cover; }
                                             </style> """, unsafe_allow_html=True)
         
-    def start_background(self): st.markdown("""<style>
-                                            .main {
-                                                background-image: url('https://i.imgur.com/idnsDBs.gif');
-                                                background-size: cover;
-                                                }
+    def start_background(self): st.markdown("""<style>.main {
+                                            background-image: url('https://i.imgur.com/idnsDBs.gif');
+                                            background-size: cover; }
                                             </style> """, unsafe_allow_html=True)
 
-    def result_ment(self) : st.markdown(f"<div style='background-color: green; \
+    def result_ment(self) : st.markdown(f"<div style='background-color: green;\
                                             padding: 10px; color: white; font-size: 48px;\
-                                            font-weight: bold; display: inline-block;'> \
+                                            font-weight: bold; display: inline-block;'>\
                                             👉{self.area} {self.direction} {len(self.df)}개 의 업체 분석 결과\
                                             </div>", unsafe_allow_html=True) 
 
-    def refactoring_ment(self) : st.markdown(f"<div style='background-color: white; \
+    def refactoring_ment(self) : st.markdown(f"<div style='background-color: white;\
                                                 padding: 10px; color: green; font-size: 48px;\
-                                                font-weight: bold; display: inline-block;'> \
-                                                👉{self.ment} \
+                                                font-weight: bold; display: inline-block;'>\
+                                                👉{self.ment}\
                                                 </div>", unsafe_allow_html=True)
     def sidebar_print_df(self):
         if len(self.df) > 10 :
-            st.write("# Best!"), st.dataframe(self.df.head(), width=600)
-            st.write("# Worst!"), st.dataframe(self.df.tail(), width=600)
-        else : st.write("분석할 업체의 수 가 충분하지 않습니다.")  
+            st.write("# Best!")
+            st.dataframe(self.df.head(), width=600)
+
+            st.write("# Worst!")
+            st.dataframe(self.df.tail(), width=600)
+        else : 
+            st.write("분석할 업체의 수 가 충분하지 않습니다.")
          
     def print_graph(self) :
         saturation = 0.5
@@ -111,8 +110,14 @@ class User_Interface :
         #     st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
         keyword_price = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]].round(0).astype(int)
+        keyword_price = style_dataframe(keyword_price)
         st.dataframe(keyword_price, width = 400, height = 1650)
 
+    def style_dataframe(self, df):
+        return df.style \
+            .background_gradient(cmap='Greens', subset=df[df >= 500]) \
+            .background_gradient(cmap='YlOrBr', subset=df[(df >= 300) & (df < 500)]) \
+            .background_gradient(cmap='Reds', subset=df[df < 300])
 class User_Experience :
     def __init__(self) -> None:
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
