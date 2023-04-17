@@ -19,11 +19,14 @@ def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
 class User_Interface :
     def __init__(self) -> None:
         self.get = GetResult()
-        self.df, self.area, self.direction = self.get.choice_result()
+        self.df, \
+        self.area, \
+        self.direction = self.get.choice_result()
+
         self.price_df = self.get.price_result()
         
         self.ment = "대 수술 유지보수중"
-        self.split_count = 10
+        self.split_count = 10 # 프레임 자르는 개수 기준 
 
     def choice_result(self) : return self.df, self.direction
 
