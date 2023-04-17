@@ -11,8 +11,8 @@ def main() :
     # get = GetResult()
     # df, area, direction = get.choice_result()
     ui = User_Interface()
-
-    if ui.choice_result_df() is not None : 
+    df = ui.choice_result_df()
+    if df is not None : 
         ui.set_background()
 
         with st.sidebar : 
