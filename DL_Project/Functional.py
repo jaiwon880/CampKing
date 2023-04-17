@@ -34,9 +34,9 @@ class GetResult:
         else : return None
 
     def handle_price(self, dic) : 
-        if dic == "전체" : df = self.total
-        elif dic == "가평군" : df = self.gapyeong
-        elif dic == "포천시" : df = self.pocheon
+        if dic == "전체" : return self.total
+        elif dic == "가평군" : return self.gapyeong
+        elif dic == "포천시" : return self.pocheon
         else : return
 
         # saturation = 0.5
