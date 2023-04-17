@@ -11,14 +11,14 @@ def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
 
 class User_Interface :
     def __init__(self) -> None:
-        get = GetResult()
-        self.df, self.area, self.direction = get.choice_result()
+        self.get = GetResult()
+        self.df, self.area, self.direction = self.get.choice_result()
 
         self.cut = st.markdown("---")
         self.ment = "대 수술 유지보수중"
 
     def choice_result(self) : return self.df, self.direction
-    def price_print(self) : return get.price_result() if self.df is not None else None
+    def price_print(self) : return self.get.price_result() if self.df is not None else None
     def cutting(self): return self.cut
 
     def set_background(self) : st.markdown("""<style>
