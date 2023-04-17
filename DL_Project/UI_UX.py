@@ -115,11 +115,17 @@ class User_Interface :
 
     def style_dataframe(self, df):
         # return df.style.background_gradient(cmap='Greens')
-        styled_df = df.style.background_gradient(cmap='PuBu', subset=df.columns[1:]).set_properties(**{'text-align': 'center'})
-        styled_df = styled_df.set_table_styles([dict(selector='th', props=[('text-align', 'center'), ('background-color', '#e6f5e6')])])
-        styled_df = styled_df.set_properties(**{'font-size': '1.5vw', 'color': 'black', 'border': '1px solid black'})
-        return styled_df
+        background_color = 'rgb(176, 226, 172)'
+        border_color = 'rgb(56, 114, 85)'
+        font_color = 'rgb(114, 75, 22)'
         
+        return (df.style
+                .set_properties(**{'background-color': background_color,
+                                'color': font_color,
+                                'border-color': border_color})
+                .applymap(lambda x: f'background-color: {border_color};' \
+                if pd.isnull(x) else '', subset=pd.IndexSlice[:, ['🤜가격 산정']]))
+
 class User_Experience :
     def __init__(self) -> None:
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
