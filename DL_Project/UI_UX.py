@@ -54,7 +54,7 @@ class User_Interface :
 
     def title_ment(self) : st.markdown(f"<div style='background-color: green; \
                                                                 padding: 10px; color: white; font-size: 48px;\
-                                                                font-weight: bold; display: block;'> \
+                                                                font-weight: bold; display: inline-block;'> \
                                                                 👉{self.area} {self.direction} {len(self.df)} 곳 의 업체 결과\
                                                                 </div>", unsafe_allow_html=True) 
     def refactoring_ment(self) : st.markdown(f"<div style='background-color: white; \
