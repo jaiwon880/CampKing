@@ -110,17 +110,11 @@ class User_Interface :
         #     st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
         keyword_price = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]].round(0).astype(int)
-        keyword_price = self.style_dataframe(keyword_price)
+        keyword_price = self.price_df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, self.price_df.columns[:1]])
         st.dataframe(keyword_price, width = 400, height = 1650)
 
     def style_dataframe(self, df):
-        styler = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[0]])
-    
-        # 나머지 컬럼에 대해서는 background gradient를 적용하지 않음
-        for column in df.columns[1:]:
-            styler = styler.background_gradient(subset=pd.IndexSlice[:, column], cmap='Greens_r')
-        
-        return df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[0:2]]), styler
+        return 
 class User_Experience :
     def __init__(self) -> None:
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
