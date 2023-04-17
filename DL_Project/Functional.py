@@ -5,8 +5,7 @@ import streamlit as st
 
 import pandas as pd
 
-import plotly.graph_objects as go
-import matplotlib.pyplot as plotly
+
 
 class GetResult:
     def __init__(self) -> None:
