@@ -3,7 +3,7 @@ from Data import GetData
 
 import streamlit as st
 
-import pandas as pd
+
 
 
 
