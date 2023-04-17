@@ -111,9 +111,6 @@ class User_Interface :
         # ========================================================================================================================
         df = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]].round(0).astype(int)
         df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[:1]])
-        # df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, "옵션"])
-        # df.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, "옵션"])
-        
         st.dataframe(df, width = 400, height = 1650)
 
 class User_Experience :
