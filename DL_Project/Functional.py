@@ -24,7 +24,7 @@ class GetResult:
             
         else : return None
 
-    def handle_price(self, dic) : 
+    def handle_direction(self, dic) : 
         if dic == "전체" : return self.total
         elif dic == "가평군" : return self.gapyeong
         elif dic == "포천시" : return self.pocheon
@@ -34,4 +34,4 @@ class GetResult:
         return self.handle_df(self.df), self.area, self.direction
 
     def price_result(self) : 
-        return self.handle_price(self.direction)
+        return self.handle_direction(self.direction)
