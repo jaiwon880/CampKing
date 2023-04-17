@@ -113,9 +113,8 @@ class User_Interface :
         #     keywor_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
         #     st.dataframe(keywor_price, width=1400)
 
-class User_Experience(User_Interface) :
+class User_Experience :
     def __init__(self) -> None:
-        # super().__init__()
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
         self.audio = open(self.audio_path, 'rb').read()
 
