@@ -103,12 +103,19 @@ class User_Interface :
         st.plotly_chart(fig)
 
     def print_df(self) :
-        for i in range(math.ceil(len(self.price_df)/self.split_count)):
+        for i in range(math.ceil(len(self.price_df) / self.split_count)):
             start_idx = i * self.split_count
-            end_idx = min(start_idx+self.split_count, len(self.price_df))
+            end_idx = min(start_idx + self.split_count, len(self.price_df))
+
+            dfs = []
+            for col in self.price_df.columns:
+                dfs.append(self.price_df[col][start_idx:end_idx].round(0).astype(int))
             
-            keywor_price = pd.DataFrame(self.price_df["🤜가격 산정"][start_idx:end_idx]).round(0).astype(int)
-            st.write(keywor_price.to_string(index=False, header=False), unsafe_allow_html=True)
+            # 수평으로 병합하기
+            merged_df = pd.concat(dfs, axis=1)
+            
+            # 줄바꿈 무시하고 출력하기
+            st.write(merged_df.to_string(index=False, header=False, col_space=12, line_width=100000), unsafe_allow_html=True)
             # st.write(keywor_price.T.style.set_table_styles([{'selector': 'th', 'props': [('max-width', '50px')]}]), width=1200)
             # st.dataframe(keywor_price, width = 1200)
         # ========================================================================================================================
