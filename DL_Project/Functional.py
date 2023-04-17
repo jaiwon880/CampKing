@@ -90,5 +90,5 @@ class GetResult:
 
     def price_result(self): 
         if self.df is not None :
-            return self.handle_price(self.direction)
+            return self.handle_price(self.direction) if self.direction != "" else None
         else : pass

@@ -12,9 +12,7 @@ def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
 class User_Interface :
     def __init__(self) -> None:
         get = GetResult()
-        self.df, \
-        self.area, \
-        self.direction = get.choice_result()
+        self.df, self.area, self.direction = get.choice_result()
         self.price = get.price_result() if self.df is not None else None
 
 
