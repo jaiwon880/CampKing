@@ -45,10 +45,10 @@ class User_Interface :
                                                 font-weight: bold; display: inline-block;'> \
                                                 👉{self.ment} \
                                                 </div>", unsafe_allow_html=True)
-    def sidebar_print_df(self, df):
-        if len(df) > 10 :
-            st.write("# Best!"), st.dataframe(df.head(), width=600)
-            st.write("# Worst!"), st.dataframe(df.tail(), width=600)
+    def sidebar_print_df(self):
+        if len(self.df) > 10 :
+            st.write("# Best!"), st.dataframe(self.df.head(), width=600)
+            st.write("# Worst!"), st.dataframe(self.df.tail(), width=600)
         else : 
             st.write("분석할 업체의 수 가 충분하지 않습니다.")  
 
