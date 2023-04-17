@@ -135,7 +135,7 @@ class User_Interface :
         #     keyword_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
         #     st.dataframe(keyword_price, width = 500)
         # ========================================================================================================================
-        keyword_price = self.df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]]
+        keyword_price = self.price_df.sort_values(by="🤜가격 산정")[["🤜가격 산정"]]
         st.dataframe(keyword_price)
 
 
