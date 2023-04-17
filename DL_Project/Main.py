@@ -21,10 +21,12 @@ def main() :
         if direction not in ["전체", "가평군", "포천시"] :
             ui.refactoring_ment()
         else:
-            ui.title_ment()
-            ui.cutting()
-            ui.print_graph()
-            ui.print_df()
+            with left_col :
+                ui.title_ment()
+                ui.cutting()
+                ui.print_graph()
+            with right_co2 :
+                ui.print_df()
     else : 
         ui.start_background()
 

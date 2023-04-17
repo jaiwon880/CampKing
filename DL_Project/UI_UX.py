@@ -13,8 +13,10 @@ from Functional import GetResult
 def set_page() : st.set_page_config(page_title="for Doksan Seo teacher",
                                     page_icon="🏕️", 
                                     layout="wide", 
-                                    initial_sidebar_state="auto",
-                                    )
+                                    initial_sidebar_state="auto",), \
+                left_col, right_col = st.colums([8,  2])
+
+
 
 class User_Interface :
     def __init__(self) -> None:
