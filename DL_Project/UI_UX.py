@@ -25,7 +25,7 @@ class User_Interface :
         self.split_count = 10
 
     def choice_result(self) : return self.df, self.direction
-    
+
     def cutting(self): return st.markdown("---")
 
     def set_background(self) : st.markdown("""<style>
@@ -45,7 +45,7 @@ class User_Interface :
     def title_ment(self) : st.markdown(f"<div style='background-color: green; \
                                                                 padding: 10px; color: white; font-size: 48px;\
                                                                 font-weight: bold; display: inline-block;'> \
-                                                                👉{self.ment} {self.direction} {len(self.df)} 곳 의 업체 결과\
+                                                                👉{self.area} {self.direction} {len(self.df)} 곳 의 업체 결과\
                                                                 </div>", unsafe_allow_html=True) 
     def refactoring_ment(self) : st.markdown(f"<div style='background-color: white; \
                                                 padding: 10px; color: green; font-size: 48px;\
