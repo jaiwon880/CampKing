@@ -95,6 +95,7 @@ class User_Interface :
             paper_bgcolor='#e6f5e6'
             )
         fig.update_xaxes(tickformat=",.0f")
+        
         st.plotly_chart(fig)
 
     def print_df(self) :

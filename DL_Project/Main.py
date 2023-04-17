@@ -14,7 +14,7 @@ def main() :
     df, direction = ui.choice_result()
 
     if df is not None : 
-        # ui.set_background()
+        ui.set_background()
 
         with st.sidebar : ui.sidebar_print_df()
         
