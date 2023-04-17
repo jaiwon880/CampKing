@@ -134,7 +134,7 @@ class User_Interface :
         # ========================================================================================================================
         for i in range(0, len(self.price_df), self.split_count):
             keywor_price = self.price_df.iloc[i:i+self.split_count]["🤜가격 산정"].astype(int).round(0).transpose()
-            st.dataframe(keywor_price, width=1400)
+            st.dataframe(keywor_price, width=300)
 
 class User_Experience :
     def __init__(self) -> None:
