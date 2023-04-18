@@ -25,11 +25,11 @@ class User_Interface :
         self.ment = "수술 중😑"
         self.left_column, self.right_column = st.columns([3, 7])
 
-    def choice_result(self) : return self.df, self.direction
-
     def set_column(self) : return self.left_column, self.right_column
 
     def cutting(self): return st.markdown("---")
+
+    def choice_result(self) : return self.df, self.direction
 
     def set_background(self) : st.markdown("""<style>.main {
                                             background-image: url('https://t1.daumcdn.net/cfile/blog/99C6924C5B65B8BD02');

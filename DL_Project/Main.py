@@ -31,7 +31,7 @@ def main() :
                 ui.result_ment()
                 ui.cutting()
                 ui.print_graph()
-    else : 
+    else :
         ui.start_background()
 
 if __name__ == '__main__' : 
