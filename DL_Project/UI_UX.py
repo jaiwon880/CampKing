@@ -14,13 +14,13 @@ def set_page() : st.set_page_config(page_title="for Doksan Seo teacher", page_ic
 
 class User_Interface :
     def __init__(self) -> None:
-        self.get = GetResult()
+        func_get = GetResult()
 
         self.df, \
         self.area, \
-        self.direction = self.get.choice_result()
+        self.direction = func_get.choice_result()
 
-        self.price_df = self.get.price_result()
+        self.price_df = func_get.price_result()
         
         self.ment = "수술 중😑"
         self.left_column, self.right_column = st.columns([3, 7])
