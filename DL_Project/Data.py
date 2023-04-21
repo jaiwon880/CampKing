@@ -10,12 +10,12 @@ class GetData:
                     "DL_Project/Data_csv/gapyeong.csv",\
                     "DL_Project/Data_csv/pocheon.csv"]
 
-        self.df = self.load_data()
+        self.df = self.load_df()
         self.total, \
         self.gapyeong, \
         self.pocheon = self.load_price()
 
-    def load_data(self):
+    def load_df(self):
         try :  
             return pd.read_csv(self.path[0])
         except Exception as e : 
