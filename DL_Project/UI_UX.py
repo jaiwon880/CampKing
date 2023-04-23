@@ -12,7 +12,7 @@ from Functional import GetResult
 
 def set_page() : st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", initial_sidebar_state="auto")
 
-class User_Interface :
+class UserInterface :
     def __init__(self) -> None:
         func_get = GetResult()
 
@@ -113,7 +113,7 @@ class User_Interface :
         df = df.style.background_gradient(cmap='Greens', subset=pd.IndexSlice[:, df.columns[:1]])
         st.dataframe(df, width = 400, height = 1650)
 
-class User_Experience :
+class UserExperience :
     def __init__(self) -> None:
         self.audio_path = "DL_Project/Data_csv/outdoor_crackling_fire_sound.mp3"
         self.audio = open(self.audio_path, 'rb').read()
