@@ -22,8 +22,10 @@ class GetSideBar:
     
     def set_choice_result_data(self):
         if self.area_choice != "" and self.direction_choice != "":
-            if self.area_choice == "경기" and self.direction_choice == "전체":
+            if self.direction_choice == "전체":
                 return self.df[(self.split_location(0) == self.area_choice)]
+            # if self.area_choice == "경기" and self.direction_choice == "전체":
+            #     return self.df[(self.split_location(0) == self.area_choice)]
             else:
                 return self.df[(self.split_location(0) == self.area_choice)\
                         & (self.split_location(1) == self.direction_choice)]
