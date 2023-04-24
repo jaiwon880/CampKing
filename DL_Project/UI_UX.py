@@ -10,11 +10,10 @@ from pydub.playback import play
 from Functional import GetResult
 
 
-# def set_page() : st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", initial_sidebar_state="auto")
+def set_page() : st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", initial_sidebar_state="auto")
 
 class UserInterface :
     def __init__(self) -> None:
-        return self.st.set_page_config(page_title="for Doksan Seo teacher", page_icon="🏕️", layout="wide", initial_sidebar_state="auto")
         func_get = GetResult()
 
         self.df, \

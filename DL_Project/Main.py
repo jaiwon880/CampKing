@@ -6,7 +6,7 @@ def handle_ui() : return UserInterface()
 def handle_ux() : return UserExperience()
 
 def main() : 
-    # UI_UX.set_page()
+    UI_UX.set_page()
     handle_ux().set_BGM()
 
     ui = handle_ui()
