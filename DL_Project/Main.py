@@ -16,12 +16,13 @@ def main() :
     if df is not None : 
         ui.set_background()
 
-        with st.sidebar : 
+        with st.sidebar :
             ui.sidebar_print_df()
         
         if direction not in ["전체", "가평군", "포천시"] :
             ui.refactoring_ment()
-        else:
+
+        else :
             left_col, right_col = ui.set_column()
 
             with left_col : 
