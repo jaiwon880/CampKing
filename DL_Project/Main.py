@@ -1,16 +1,16 @@
 import streamlit as st
 import UI_UX
-from UI_UX import UserInterface, UserExperience
+from UI_UX import User_Interface, User_Experience
 
-def handle_ui() : return UserInterface()
-def hadle_ux() : return UserExperience()
+def handle_ui() : return User_Interface()
+def handle_ux() : return User_Experience()
 
 def main() : 
     UI_UX.set_page()
-    ui = handle_ui()
-    ux = hadle_ux()
-    ux.set_BGM()
+    handle_ux().set_BGM()
 
+    ui = handle_ui()
+    
     df, direction = ui.choice_result()
 
     if df is not None : 
