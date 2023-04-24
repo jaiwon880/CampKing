@@ -1,9 +1,9 @@
 import streamlit as st
 import UI_UX
-from UI_UX import User_Interface, User_Experience
+from UI_UX import UserInterface, UserExperience
 
-def handle_ui() : return User_Interface()
-def handle_ux() : return User_Experience()
+def handle_ui() : return UserInterface()
+def handle_ux() : return UserExperience()
 
 def main() : 
     UI_UX.set_page()
